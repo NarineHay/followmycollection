@@ -23,7 +23,7 @@ $sql="SELECT * FROM aboutus WHERE id=1";
                     <div class="p-3 card stacked-form">
                         <!-- <button class="btn btn-primary">Add News</button> -->
                         <div class="card-header mb-4">
-                            <h4 class="card-title">Add Publication</h4>
+                            <h4 class="card-title">Add Content</h4>
                         </div>
                        
                         <form>

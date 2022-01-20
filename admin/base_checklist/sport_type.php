@@ -70,6 +70,14 @@
                                     include "../footer.php";
                                     ?>
     <script src="../my_js/sport_type.js"></script>
+    <script>
+        $(function(){
+            $('#datatables_info').parent().remove()
+            $('#datatables_length').remove()
+            $('.pagination').remove()
+            $('#datatables_filter').remove()
+        })
+    </script>
     
 </body>
 </html>

@@ -17,7 +17,7 @@ if(isset($_GET['public_id'])){
 ?>
 <link rel="stylesheet" type="text/css" href="css/navbar-body.css">
 <link rel="stylesheet" type="text/css" href="css/index.css">
-<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/style.css">m
 <link rel="stylesheet" type="text/css" href="css/news.css">
 
 </head>

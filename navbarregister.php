@@ -110,7 +110,7 @@ $img = $navbarimg['image'];
                           echo '<li class="dropdown">
                                <a class="dropdown-item s_type" href="#">'.$row['sport_type'].'</a>
                                <ul class="dropdown-menu">
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1900-1949</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" h*ref="#" name="checklist">1900-1949</a></li>
                                    <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1950-1979</a></li>
                                    <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1980-1999</a></li>
                                    <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">2000-2009</a></li>
@@ -218,6 +218,17 @@ $img = $navbarimg['image'];
         </ul>
       </li>
 
+    <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="nav-products" href="news.php" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Users
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li class='dropdown-item main-a'><a href="./search-users.php">Group1</a></li>
+            <li class='dropdown-item main-a'><a href="./search-users.php">Group2</a></li>
+            <li class='dropdown-item main-a'><a href="./search-users.php">Group3</a></li>
+        </ul>
+    </li>
+
 
       <!-- <li class="nav-item">
         <a class="nav-link disabled" href="#">Post services</a>
@@ -257,7 +268,7 @@ $img = $navbarimg['image'];
         <a class="nav-link disabled" href="aboutus.php">About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Contacts</a>
+        <a class="nav-link disabled" href="contact.php">Contacts</a>
       </li>
     </ul>
   </div>

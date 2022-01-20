@@ -3,7 +3,10 @@ include "header.php";
 include "config/con1.php";
 
 include "classes/pagination.php";
-
+$add_publication="";
+if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
+    $add_publication="<a href='./create_publication.php'><button class='px-3 py-2 add_publication'>+Add publication</button></a>";
+}
 
 
 ?>
@@ -13,7 +16,7 @@ include "classes/pagination.php";
 <!-- link fontawsome for like and dislike buttons -->
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
-<link rel="stylesheet" type="text/css" href="css/news.css">
+<link rel="stylesheet" type="text/css" href="css/news.css?2">
 
 <link rel="stylesheet" type="text/css" href="css/publications.css">
 <link rel="stylesheet" href="css/pagination.css">
@@ -39,6 +42,10 @@ include "classes/pagination.php";
     
     }
 
+.rotate-icon{
+    transform: rotate(180deg);
+    transition: .3s;
+}
 </style>
 
 <?php 
@@ -49,28 +56,33 @@ include "classes/pagination.php";
     <div class="d-flex flex-wrap justify-content-center news_filter">
             <div class="mx-auto news_first">
                
-                <h5 class="my-2">Apply filters</h5>
-                    <div id="accordion">
-                    <div class="card">
-                        <select class="form-select p-4" aria-label="Default select example" style="border:none" id="period">
-                        <div class="card-header" id="headingTwo">
-                           
-                        </div>  
-                            <optgroup label ="Period" >
-                                <option class="py-3" value="Last week" class="period">Last week</option>
-                                <option class="py-3" value="Last months" class="period">Last months</option>
-                                <option class="py-3" value="Last 3 months" class="period">Last 3 months</option>
-                                <option class="py-3" value="Last 6 months" class="period">Last 6 months</option>
-                                <option class="py-3" value="All news" class="period">All news</option>
-                            </optgroup>
-                        </select>
+                <h6 class="my-2">Apply filters</h6>
+                <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h5 class="mb-0  ">
+                            <button class="w-100 btn btn-link collapsed d-flex justify-content-between" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                <span>Period</span>
+                                <i class='fa fa-caret-down mt-2'></i>
+                            </button>
+                        </h5>
                     </div>
-                
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body">
+                            <p><input type="checkbox" name="period" value="Last week" class="period"><span class="ml-1">Last week</span></p>
+                            <p><input type="checkbox" name="period" value="Last months" class="period"><span class="ml-1">Last months</span></p>
+                            <p><input type="checkbox" name="period" value="Last 3 months" class="period"><span class="ml-1">Last 3 months</span></p>
+                            <p><input type="checkbox" name="period" value="Last 6 months" class="period"><span class="ml-1">Last 6 months</span></p>
+                            <p><input type="checkbox" name="period" value="All news" class="period"><span class="ml-1">All news</span></p>
+                        </div>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-header" id="headingTwo">
                         <h5 class="mb-0">
-                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                            Sports
+                            <button class="w-100 btn btn-link collapsed d-flex justify-content-between" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <span>Sports</span>
+                                <i class='fa fa-caret-down mt-2'></i>
                             </button>
                         </h5>
                     </div>
@@ -91,8 +103,9 @@ include "classes/pagination.php";
                 <div class="card">
                     <div class="card-header" id="headingThree">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        Manufacture
+                        <button class="w-100 btn btn-link collapsed d-flex justify-content-between" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <span>Manufacture</span>
+                            <i class='fa fa-caret-down mt-2'></i>
                         </button>
                     </h5>
                     </div>
@@ -112,8 +125,9 @@ include "classes/pagination.php";
                 <div class="card">
                     <div class="card-header" id="headingfore">
                     <h5 class="mb-0">
-                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapsefore" aria-expanded="false" aria-controls="collapsefor">
-                        All News
+                        <button class="w-100 btn btn-link collapsed d-flex justify-content-between" data-toggle="collapse" data-target="#collapsefore" aria-expanded="false" aria-controls="collapsefor">
+                            <span>All News</span>
+                            <i class='fa fa-caret-down mt-2'></i>
                         </button>
                     </h5>
                     </div>
@@ -129,8 +143,10 @@ include "classes/pagination.php";
                     </div>
                 </div>
     </div>
-    <button  data-attr="filter" class='my-2 py-1 px-5 item_button filter h5 filter-page' >Filter</button>
-        
+    
+    <!-- <button  data-attr="filter" class='new_button my-2 py-1 px-5 clear_filter_button filter h5 filter-page' >Clear filter</button> -->
+    <button  data-attr="filter" class='new_button my-4 py-1 px-5 clear_filter_button filter h5 filter-page' >Filter</button>
+
 
 
 
@@ -142,18 +158,23 @@ include "classes/pagination.php";
 
             <div class="d-flex flex-column news_second">
                 <!-- <h1 class="mx-2">Publications</h1> -->
-                <div class="d-flex justify-content-between">
-                <div><h1 class="font-weight-bold">Publications</h1></div>
-                <div >
-                     <button  data-attr="newest" class='my-2 py-1 px-4 item_button Newest h5 filter-page'>Newest</button>
-                     <button  data-attr="oldest" class='my-2 py-1 px-4 item_button Newest h5 filter-page'>Oldest</button>
-                </div>
+                <div class="d-flex justify-content-between flex-wrap">
+                <div class="ml-3"><h1 class="font-weight-bold">Publications</h1></div>
+
             </div>
+                <div class="ml-3 d-flex justify-content-between">
+                    <div>
+                        <button  data-attr="newest" class='new_button my-2 py-1 px-4 item_button Newest h5 filter-page'>Newest</button>
+                        <button  data-attr="oldest" class='new_button my-2 py-1 px-4 item_button Newest h5 filter-page'>Oldest</button>
+                    </div>
+                    <div><?=$add_publication?></div>
+                </div>
             <div id="news_table">
                 <div id="news">
                 
                     <?php
-                     $sql_last_publications="SELECT*FROM publications where status=1 order by id desc limit 5";
+
+                     $sql_last_publications="SELECT * FROM publications where status=1 order by id desc limit 5";
                      $query_publish=mysqli_query($con, $sql_last_publications);
                         $sql_last_publications_pagination="SELECT*FROM publications where status=1 order by id desc";
                         $query_publish_pagination=mysqli_query($con, $sql_last_publications_pagination);
@@ -161,7 +182,9 @@ include "classes/pagination.php";
                             $pagination->limit=5;
                             $pagination->count_rows=mysqli_num_rows($query_publish_pagination);
                         while($row = mysqli_fetch_assoc( $query_publish)){
-
+                            if($row["role"] == 1) {
+                                $user_name = "admin";
+                            }
                             $sql_like="SELECT COUNT(*) as count_like FROM rating_info WHERE post_id = $row[id] AND rating_action='like'";
                             $query_like=mysqli_query($con,$sql_like);
                             $like_row=mysqli_fetch_assoc($query_like);
@@ -207,14 +230,14 @@ include "classes/pagination.php";
                             $sql_views_count="SELECT COUNT('publication_id') as public_count FROM publication_viewes_count WHERE publication_id='$row[id]'";
                             $sql_views_count_query=mysqli_query($con,$sql_views_count);
                             $sql_fetch_assoc=mysqli_fetch_assoc( $sql_views_count_query);
-                            // hot icon 
+                            // hot icon
                             
                         ?>    
                                 <div class='mx-2 news_item'>
                                     <div class='d-flex justify-content-between p-2'>
                                         <div class='d-flex flex-wrap'>
-                                        <a href="selected_publication.php?public_id=<?= $row['id']?>" target="blank"> <button   class='p-1 item_button filter h5' ><?= $row['title'] ?></button></a>
-                                         
+                                        <a href="selected_publication.php?public_id=<?= $row['id']?>" target="blank"> <button   class='p-1 created_user_name h5' ><?= $row['title'] ?></button></a>
+
                                             <h5 class='mx-3'><?= date('d M Y',strtotime($row['published_date'])) ?></h5>
                                         </div>
                                         <span class='animate_x'>
@@ -225,7 +248,9 @@ include "classes/pagination.php";
                                     </div> 
                                     <div class='p-2 block-ellipsis'>
                                         <p><?= $row['titledescription'] ?></p> 
-                                        <div class='d-flex justify-content-end align-items-center font-weight'>
+                                        <div class='d-flex justify-content-between align-items-center font-weight'>
+                                            <div>Created by: <?= $user_name ?></div>
+                                            <div>
                                         <?php
                                         // hot icon 
                                         $sql_hot_icon = "SELECT COUNT(publication_id) as hot FROM publication_viewes_count where date>NOW()-INTERVAL 3 day and publication_id='$row[id]'";
@@ -235,6 +260,7 @@ include "classes/pagination.php";
                                             echo "<img class='' src='image_publication/hot.png' >";
                                         }
                                         ?>
+
                                             
 
                                             <i class="<?=$like_class ?> like-btn ml-2" data-id='<?=  $row['id'] ?>'></i>
@@ -248,6 +274,7 @@ include "classes/pagination.php";
                                              <img class='ml-2' src='image_publication/view.png'>
                                              <span class='ml-2'><b><?=$sql_fetch_assoc['public_count']?></b></span>
                                             </div>
+                                        </div>
                                         </div>
                                     </div>   
                             <?php
@@ -275,17 +302,33 @@ include "footer.php";
 ?>
 
 <script>
-   
+    $('.btn-link').on('click', function(){
+
+        $('.btn-link').find('.fa-caret-up').toggleClass('fa-caret-up')
+        $('.btn-link').find('.fa').addClass('fa-caret-down')
+        $('.btn-link').find('.fa').not($(this).find('i')).removeClass('rotate-icon')
+
+        $(this).find('i').toggleClass('rotate-icon')
+
+
+    })
+   $('.period').on('change', function(){
+       $('.period').removeClass('active-period')
+       $('.period').prop('checked', false)
+       $(this).prop('checked', true)
+       $(this).addClass('active-period')
+       
+   })
 $(document).ready(function(){
     function filter_data(obj){
         period=''
-        if($('#period').val()=='Last week'){
+        if($('.active-period').val()=='Last week'){
         period='7 DAY'
-        }else if($('#period').val()=="Last months"){
+        }else if($('.active-period').val()=="Last months"){
              period='31 DAY'
-        }else if($('#period').val()=="Last 3 months"){
+        }else if($('.active-period').val()=="Last 3 months"){
             period='93 DAY'
-        }else if($('#period').val()=="Last 6 months"){
+        }else if($('.active-period').val()=="Last 6 months"){
             period='186 DAY'
         }else{
             period='All news'
@@ -367,14 +410,14 @@ $(document).ready(function(){
     $('.pg-link').removeClass('active-link')
     $(this).addClass('active-link')
     
-        period=''
-        if($('#period').val()=='Last week'){
+    period=''
+        if($('.active-period').val()=='Last week'){
         period='7 DAY'
-        }else if($('#period').val()=="Last months"){
+        }else if($('.active-period').val()=="Last months"){
              period='31 DAY'
-        }else if($('#period').val()=="Last 3 months"){
+        }else if($('.active-period').val()=="Last 3 months"){
             period='93 DAY'
-        }else if($('#period').val()=="Last 6 months"){
+        }else if($('.active-period').val()=="Last 6 months"){
             period='186 DAY'
         }else{
             period='All news'
@@ -403,7 +446,6 @@ $(document).ready(function(){
                     data:{filter, sport_type, producer, all_news, limit,page},
                     success:function(rezult){
                         let json=JSON.parse(rezult)
-                        // console.log(rezult)
                             $('#news').html(json.publication)
                             $('.pagination').html(json.pagination)
                     }
