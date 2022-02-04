@@ -7,16 +7,12 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $name2 = $_POST['z2'];
     $name3 = $_POST['z3'];
     $name4 = $_POST['z4'];
-    $name5 = $_POST['z5'];
-    $name6 = $_POST['z6'];
+    $Contact = $_POST['z5'];
+    $Contact_text = $_POST['z6'];
 
     $sql = "UPDATE footer SET 
-    title1 = '$name1',
-    text1 = '$name2',
-    title2 = '$name3',
-    text2 = '$name4',
-    title3 = '$name5',
-    text3 = '$name6'";
+    Contact = '$Contact',
+    Contact_text = '$Contact_text'";
 
 
     $res = mysqli_query($con, $sql);

@@ -16,14 +16,15 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
 ?>
 
 <?php
-    if(isset($_GET["public"])) {
+    if(isset($_GET['private'])) {
+        $id = $_GET['id'];
         $status = 1;
-        $buttons = '<a class="def_passive" href="Custom-checklist.php?private">Privite<a class="def_active" href="Custom-checklist.php?public">Public</a>';
-    }else if(isset($_GET["private"])) {
+        $buttons = '<a class="def_passive" href="Custom-checklist.php?private&">Privite<a class="def_active" href="Custom-checklist.php?public">Public</a>';
+    }else if($_GET['public']) {
+        $id = $_GET['id'];
         $status = 0;
         $buttons = '<a class="def_active" href="Custom-checklist.php?private">Privite</a><a class="def_passive" href="Custom-checklist.php?public">Public</a>';
     }
-    else{}
 
     $_SESSION["def_custom_name_status"]=$status;
 ?>
@@ -55,7 +56,7 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
 
         <div class="add_button">
             <div class="define">
-                <?= $buttons ?>
+
             </div>
             <a href="custom.php">+ Add new</a>
         </div>
@@ -103,7 +104,6 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
                             </tr>";
                         }
 
-
                     ?>
                 </tbody>
             </table>
@@ -128,7 +128,6 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
 </section>
 <?php include "footer.php"; ?>
 
-<script src="js/checklist.js"></script>
 
 </body>
 </html>

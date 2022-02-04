@@ -6,20 +6,21 @@
     font-family: "Tahoma Regular";
     src: url("../fonts/911Fonts.com_TahomaRegular__-_911fonts.com_fonts_ADPX.ttf") format("ttf");
   }
-  /* @font-face {
-    font-family: "Archive Regular";
-    src: url("../fonts/Archive-Regular.ttf") format("ttf"),
-         url("../fonts/Archive-Regular.otf") format("otf");
-  } */
- 
-body{
-font-family: "Tahoma Regular", serif !important; 
+@font-face {
+    font-family: "Bourton";
+    src: url("../fonts/OpenType-TT/Bourton.ttf");
 }
-h2,h3,h4,h5,h6{
-    font-family:  "Tahoma Regular", serif !important ;
+
+@font-face {
+    font-family: "Bootshaus-Regular";
+    src: url("../fonts/Bootshaus-Regular.ttf");
+}
+
+h2,.h2 {
+    font-family:  "Bourton", serif !important ;
     padding: 2px 0 0;
     color: #133960 !important;
-    font-weight: 700 !important;
+    /*font-weight: 700 !important;*/
 
 }
 #logo{
@@ -27,13 +28,22 @@ h2,h3,h4,h5,h6{
     height: 54px;
    
 }
+
+#testimonials {
+    background-color: white;
+}
+
 #fix{
     width: 100%;
     position: fixed;
     z-index: 10;
     top: 0;
+    box-shadow:0 1px 10px;
 }
 
+.releases .collect-card {
+    background: #6ea4ae99 !important;
+}
 
 #head-er{
     padding: 30px 0;
@@ -65,6 +75,11 @@ h2,h3,h4,h5,h6{
     border-bottom-right-radius: 5px !important;;
     border-top-right-radius: 5px !important;
 }
+
+.releases {
+    background: white !important;
+}
+
 #icon-bars{
     color: #fff;
 }
@@ -91,15 +106,28 @@ h2,h3,h4,h5,h6{
 }
 .navbar-nav {
     width: 100%;
-   
+
 }
+
 /* .navbar-nav> li{
 padding: 8px 2%;
 } */
-.navbar-nav> li >a{
+.navbar-nav a {
     color:rgb(19,57,96) !important;
     font-weight: 600;
+    font-family: Bootshaus-Regular, Serif !important;
+    font-size: 17px;
+    letter-spacing: 2px;
 }
+
+.navbar-nav li {
+    color:rgb(19,57,96) !important;
+    font-weight: 600;
+    font-family: Bootshaus-Regular, Serif !important;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
 #nav-products{
   background: unset;
 }
@@ -123,6 +151,11 @@ padding: 8px 2%;
   .dropdown-menu {
     background: #9ed5df !important;
 }
+
+.carusel-card {
+    background: #a8c8ce !important;
+}
+
 .dropdown-item{
     color:rgb(19,57,96) !important;
     font-family: "Tahoma Regular", serif !important; 

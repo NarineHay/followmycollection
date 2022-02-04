@@ -55,6 +55,7 @@ include "header.php";
             }
 
             $content .= '<div class = "first_part">
+                             <input type="hidden" class="users_id" value="' . $users_rows["id"] . '">
                             <div class = "ci_logo_img">
                                 <img src="./images_users/' . $image . '" alt="user image">
                             </div>
@@ -63,7 +64,7 @@ include "header.php";
                                 <span>' . $country . '</span>
                                 <span>' . $city . '</span>
                             </p>
-                            <div>' .
+                            <div class="rating">' .
                                 $star_icons
                             . '</div>
                         </div>';

@@ -2,6 +2,7 @@
   let d=new Date();
   let n=d.getFullYear();
   year.innerHTML='2005-'+n;
+  year1.innerHTML = "2020-"+n;
 $(document).ready(function(){
 
   $('.nav_dr_item').click(function(event){

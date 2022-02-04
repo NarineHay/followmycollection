@@ -2,25 +2,37 @@
 $sql="SELECT * FROM footer";
 $res=mysqli_query($con, $sql);
 $row=mysqli_fetch_assoc($res);
+
+ $select_banners = "SELECT * FROM footer_banner";
+ $banner_query = mysqli_query($con, $select_banners);
+ $content = "";
+
+ while($tox = mysqli_fetch_assoc($banner_query)) {
+     $content .= '<div class="footer_banner"><a href="' . $tox["link"] . '"><img src="/admin/Footer_banner/'.$tox["image"].'" alt=""></a></div>';
+ }
+
 ?>
 <section id="footer">
     <div class="container">
         <div class="row row-collection">
-            <div class="col-md-3 col-sm-6 col-xs-12 row-div">
-                <p><?php echo $row['title1']?></p>
-                <p><?php echo $row['text1']?></p>
+
+            <div class="col-md-5 col-sm-12 col-xs-12 row-div banners">
+                <p>Partners</p>
+                <div>
+                    <?= $content ?>
+                </div>
+
+
             </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 row-div">
-                <p><?php echo $row['title2']?></p>
-                <p><?php echo $row['text2']?></p>
-            </div>
-            <div class="col-md-3 col-sm-6 col-xs-12 row-div">
-                <p><?php echo $row['title3']?></p>
-                <p><?php echo $row['text3']?></p>
+            <div class="col-md-4 col-sm-6 col-xs-12 row-div about_div">
+               <div>
+                   <p><?php echo $row['Contact']?></p>
+                   <p><?php echo $row['Contact_text']?></p>
+               </div>
             </div>
             <div class="col-md-3 col-sm-6 col-xs-12 row-div social-col d-flex justify-content-center">
                 <div classs="social-center">
-                <p>Social media</p>
+                <p>Our Social Media</p>
                 <div class="d-flex justify-content-center">
                      <div class="social-div">
                          <a href="https://www.facebook.com/Card-Collection-268222843700522/" target="_blank">
@@ -43,15 +55,47 @@ $row=mysqli_fetch_assoc($res);
                          </a>
                      </div>
                 </div>
-                <button class="social-button" data-toggle="modal" data-target="#exampleModal">Subscribe to update</button>
+                <button class="social-button btn-warning" data-toggle="modal" data-target="#exampleModal">Subscribe to update</button>
               </div>
             </div>
         </div>
     </div>
 </section>
 <section id="under-footer">
-    <div class="container text-right">
-    <p>&copy WEBEX TECHNOLOGIES LLC &copy<span id="year"></span><p>
+    <div class="container-fluid ">
+        <div class="row">
+
+            <div class="col-md-3 col-sm-6 col-xs-12 pl-5 d-flex align-items-center">
+                <p>&copy Follow My Collection LLC &copy<span id="year1"></span><p>
+            </div>
+            <div class="col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center">
+                <div class="payment_cards">
+                    <img src="payment_cards/american_express.png" alt="">
+                </div>
+                <div class="payment_cards">
+                    <img src="payment_cards/master_card.png" alt="">
+                </div>
+                <div class="payment_cards">
+                    <img src="payment_cards/visa.png" alt="">
+                </div>
+                <div class="payment_cards">
+                    <img src="payment_cards/pay_pal.png" alt="">
+                </div>
+                <div class="payment_cards">
+                    <img src="payment_cards/google_pay.png" alt="">
+                </div>
+                <div class="payment_cards">
+                    <img src="payment_cards/apple_pay.png" alt="">
+                </div>
+                <div class="payment_cards">
+                    <img src="payment_cards/samsung_pay.png" alt="">
+                </div>
+
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12 pr-5 d-flex align-items-center justify-content-end">
+                <p>&copy WEBEX TECHNOLOGIES LLC &copy<span id="year"></span><p>
+            </div>
+        </div>
     </div>
 </section>
 <!----------------------------modal for subscribe------------------------------->
@@ -68,7 +112,7 @@ $row=mysqli_fetch_assoc($res);
         <p>Please enter your email address below to subscribe from FollowMyCollection email updates.</p>
         <input class="mail subscribe_mail form-control place_inp" placeholder="email">
                <p></p>
-              <button class="submi subscribe_btn btn subscribe">Subscribe to update</button>
+              <button class="submi subscribe_btn btn subscribez">Subscribe to update</button>
              <div class="result"></div>
       </div>
     </div>

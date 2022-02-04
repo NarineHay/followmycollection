@@ -26,9 +26,6 @@ $result_banner = mysqli_query($con, $sql_banner);
 <section id="banner" style="background: url('images_banner/<?= $row_banner['image'] ?>')">
     <div class="container">
         <div class="banner-text">
-           <h1><?= $row_banner['tittle'] ?></h1>
-           <p><?= $row_banner['description'] ?></p>
-           <button class="banner-button">More...</button>
         </div>
     </div>
 </section>

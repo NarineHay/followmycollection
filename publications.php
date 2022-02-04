@@ -182,8 +182,14 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
                             $pagination->limit=5;
                             $pagination->count_rows=mysqli_num_rows($query_publish_pagination);
                         while($row = mysqli_fetch_assoc( $query_publish)){
+                            $id = $row['user_id'];
                             if($row["role"] == 1) {
-                                $user_name = "admin";
+                                $user_name = "Admin";
+                            }else {
+                                $select_user_name = "SELECT name from users WHERE id=$id";
+                                $res = mysqli_query($con, $select_user_name);
+                                $toxx = mysqli_fetch_assoc($res);
+                                $user_name = $toxx["name"];
                             }
                             $sql_like="SELECT COUNT(*) as count_like FROM rating_info WHERE post_id = $row[id] AND rating_action='like'";
                             $query_like=mysqli_query($con,$sql_like);
