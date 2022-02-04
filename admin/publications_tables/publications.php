@@ -39,7 +39,6 @@
                                                      <th class='th' data-name='sport_type'>Sport</th>
                                                      <th class='th' data-name='producer'>Producer</th>
                                                      <th class='th' data-name='news_type'>News type</th>
-                                                     <!-- <th >Status</th> -->
                                                      <th class='th' data-name='created_date'>Created date</th>
                                                      <th class='th' data-name='published_date'>Published date</th>
                                                 </tr>
@@ -52,7 +51,6 @@
                                                      <th >Sport</th>
                                                      <th >Producer</th>
                                                      <th >News type</th>
-                                                     <!-- <th >Status</th> -->
                                                      <th >Created date</th>
                                                      <th >Published date</th>
                                                 </tr>

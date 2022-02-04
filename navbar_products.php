@@ -2,6 +2,12 @@
 session_start();
 include "config/con1.php";
 
+//if(isset($_POST['coll_id'])) {
+//    $coll_id=mysqli_real_escape_string($con,$_POST['coll_id']);
+//    $_SESSION['coll_id']=$coll_id;
+//}
+
+
 if(isset($_POST['product'])){
 	$coll_id=mysqli_real_escape_string($con,$_POST['coll_id']);
 	$product=mysqli_real_escape_string($con,$_POST['product']);

@@ -63,6 +63,10 @@
     align-items: center;
     height: 200px;
     cursor: pointer;
+    border: 1px solid #aaa;
+    border-radius: 10px;
+    justify-content: center;
+    margin: 5px;
 }
 .user_name{
     text-transform: capitalize;
@@ -83,8 +87,13 @@
     border-bottom: 1px solid grey
 }
 
-.fa-star {
+.select_rating .fa-star {
     color: gold;
+    font-size:15px;
+}
+
+.rating .fa-star {
+    color: red;
     font-size:15px;
 }
 

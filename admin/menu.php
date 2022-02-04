@@ -115,6 +115,12 @@
                                     </a>
                                 </li>
                                 <li class="nav-item ">
+                                    <a class="nav-link" href="../footer/show_banner.php">
+                                        <span class="sidebar-mini">FB</span>
+                                        <span class="sidebar-normal">Footer Banner</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item ">
                                     <a class="nav-link"  href="../store_rating/changeStoreRating.php">
                                         <span class="sidebar-mini">CS</span>
                                         <span class="sidebar-normal">Change Store</span>

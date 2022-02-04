@@ -25,9 +25,18 @@ require_once "user-logedin.php";
 //       $id=$_SESSION['user'];
 //   }
 
+if(isset($_GET["id"])) {
+    $id = $_GET["id"];
+    $button = "";
+    $checklist_url = "my_checklist.php?id= ". $id;
+}else {
+    $id = $_SESSION['user'];
+    $button = '<button class="add" data-toggle="modal" data-target="#exampleModall">Edit</button>';
+    $checklist_url = "my_checklist.php";
+}
 
 
-$id = $_SESSION['user'];
+
 $sql = "SELECT * FROM users where id = $id";
 $res = mysqli_query($con, $sql);
 $ard = mysqli_fetch_assoc($res);
@@ -47,6 +56,18 @@ $row2 = mysqli_num_rows($res2);
 $sql3 = "SELECT * FROM  new_collection_card WHERE user_id = $id";
 $res3 = mysqli_query($con, $sql3);
 $row3 = mysqli_num_rows($res3);
+
+$select_achivments_admin = "SELECT * FROM Achivments WHERE user_id = $id";
+$res_achivmens_admin = mysqli_query($con, $select_achivments_admin);
+
+$achivments = '';
+$select_achivments = "SELECT ac.achivment_icon FROM `users_achivments` as uac, achivments as ac WHERE uac.achivment_id = ac.id AND uac.user_id = $id";
+$achivments_result = mysqli_query($con , $select_achivments);
+while($achivments_row = mysqli_fetch_assoc($achivments_result)) {
+    $achivments .= '<div class = "ic_des">
+                        <img src="admin/sport_icons/' . $achivments_row['achivment_icon'] . '.png" alt="">
+                    </div>';
+}
 
 
 ?>
@@ -77,7 +98,7 @@ $row3 = mysqli_num_rows($res3);
                     ?>
                 </p>
                 <p class="parag-log">Birth Day <?= $ard['birth_day'] ?> (<?= $result_years["years"]  ?> years) </p>
-                <button class="add" data-toggle="modal" data-target="#exampleModall">Edit</button>
+                <?= $button ?>
             </div>
             <div class="d-flex flex-column k3">
                 <div>
@@ -112,27 +133,7 @@ $row3 = mysqli_num_rows($res3);
                     </div>
                 </div>
                 <div class = "img_p d-flex flex-wrap mt-4">
-                    <div class = "ic_des">
-                        <img src="admin/sport_icons/football.png" alt="">
-                    </div>
-                    <div class = "ic_des">
-                        <img src="admin/sport_icons/hockey.png" alt="">
-                    </div>
-                    <div class = "ic_des">
-                        <img src="admin/sport_icons/soccer.png" alt="">
-                    </div>
-                    <div class = "ic_des">
-                        <img src="admin/sport_icons/baseball.png" alt="">
-                    </div>
-                    <div class = "ic_des">
-                        <img src="admin/sport_icons/basketball.png" alt="">
-                    </div>
-                    <div class = "ic_des">
-                        <img src="admin/sport_icons/autosport.png" alt="">
-                    </div>
-                    <div class = "ic_des">
-                        <img src="admin/sport_icons/wwe.png" alt="">
-                    </div>
+                    <?= $achivments ?>
                 </div>
             </div>
 
@@ -147,7 +148,7 @@ $row3 = mysqli_num_rows($res3);
         </div>
         <div class="cards">
             <div><a href='user-collections.php'> <img src="profile_image/Заливка цветом 8.png"><h5>my collections</h5></a></div>
-            <div><a href="my_checklist.php"><img src="profile_image/Заливка цветом 8 копия.png"><h5>MY CHECKLISTS</h5></a></div>
+            <div><a href="<?= $checklist_url ?>"><img src="profile_image/Заливка цветом 8 копия.png"><h5>MY CHECKLISTS</h5></a></div>
             <div><img src="profile_image/search_engine .png"><h5>Search Engine</h5></div>
             <div><img src="profile_image/Заливка цветом 8 копия 3.png"><h5>my templates</h5></div>
         </div>

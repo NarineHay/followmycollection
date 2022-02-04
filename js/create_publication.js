@@ -1,31 +1,25 @@
-$('.addPublication').on('click',function(){
+$('.addPublication').on('click',function(eee){
+    eee.preventDefault()
     
     let title = $('#title').val()
     let discription = $('#discription').val()
     let sporttype = $('#sporttype').val()
     let producer = $('#producer').val()
-    let newstype =$('#newstype').val()
+    let newstype =$('#news_type').val()
+    let user_id = $(".user_id").val()
 
-   
-    if( $('#title').val() ==''|| $('#discription').val() ==''){
-        $('#rezult').html("<p style='color:red'>Fill all the fields</p>")
-        // alert()
+
+    if( $('#title').val() =='' || $('#discription').val() == ''){
+        $("#result").html("<p class='red'>Fill all the fields</p>")
     }else {
-
-        $.ajax({
-            type: 'POST',
-            url: 'create_publication.php',
-            data: {
-                title: title,
-                discription: discription,
-                sporttype: sporttype,
-                producer: producer,
-                newstype: newstype,
-              
-            },
-            success: function (rezult) {
-                $('#rezult').html("<p style='color: rgb(19,57,96);font-size:20px;font-weight:bold'>"+rezult+"</p>")
+        $.post(
+            "add_publication.php",
+            {title, discription, sporttype, producer, newstype, user_id},
+            function (result) {
+                $("#result").html(result)
             }
-        })
+        )
     }
+
+       
 })

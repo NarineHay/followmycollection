@@ -36,7 +36,7 @@ include "classes/pagination.php";
             $num_sql="SELECT * FROM base_checklist WHERE realese_id='$coll_id'";
             $sql="SELECT * FROM base_checklist WHERE realese_id='$coll_id' LIMIT 0 , 10";
            if(isset($user_id)){
-                $sql_personal_checklist="SELECT * FROM personal_name_checklist WHERE user_id=$user_id";
+                $sql_personal_checklist="SELECT * FROM custom_name_checklist WHERE user_id=$user_id";
                 $res_personal_checklist=mysqli_query($con, $sql_personal_checklist);
            }
            
@@ -193,12 +193,12 @@ include "classes/pagination.php";
                                         </tr>
                                     </thead>
                                     <?php
-                                                $total_rows_query=mysqli_query($con, $num_sql);
-                                                $query=mysqli_query($con, $sql);
-                                                $pagination= new Pagination();
-                                                $pagination->limit=10;
-                                                $pagination->count_rows=mysqli_num_rows($total_rows_query);
-                                                ?>
+                                        $total_rows_query=mysqli_query($con, $num_sql);
+                                        $query=mysqli_query($con, $sql);
+                                        $pagination= new Pagination();
+                                        $pagination->limit=10;
+                                        $pagination->count_rows=mysqli_num_rows($total_rows_query);
+                                    ?>
                                         <tbody id="tbody">
                                         <tr id="num-rows" class="d-none" data-rows="<?=mysqli_num_rows($total_rows_query)?>" ></tr> 
                                              <?php
@@ -250,10 +250,10 @@ include "classes/pagination.php";
                 <label>Select checklist</label>
                 <input type="hidden" value="128" name="user_id">
                 <select type="text" class="form-control namecoll" id="select_name_checklist">
-                    <?php 
+                    <?php
                         while($row_pers_checklist=mysqli_fetch_assoc($res_personal_checklist)){
                             echo "<option value=$row_pers_checklist[id]>$row_pers_checklist[name_of_checklist]</option>";
-                        } 
+                        }
                     ?>
                 </select>
             </div>

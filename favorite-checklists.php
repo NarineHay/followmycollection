@@ -76,9 +76,9 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
                                 $query_checklist_name=mysqli_query($con, $checklist_name);
 
                                 $row_name=mysqli_fetch_assoc($query_checklist_name);
-                                echo "<tr data-collId='".$row['checklist_id']."' class='tr_checklist'>
+                                echo "<tr class='tr_checklist'>
                                     <td>".$count."</td>
-                                    <td class='info'>".$row_name['name_of_collection']."</td>
+                                    <td class='info' data-collId='".$row['checklist_id']."' >".$row_name['name_of_collection']."</td>
                                     <td>
                                         <i class='fa fa-trash' style='font-size:30px; color: #6EA4AE; cursor: pointer'></i></td>
                                 </tr>";
@@ -105,7 +105,6 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
 </section>
 <?php include "footer.php"; ?>
 
-<script src="js/checklist.js"></script>
 <script src="user_js/favorite_checklist.js"></script>
 
 <script>

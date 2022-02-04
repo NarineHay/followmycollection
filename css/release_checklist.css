@@ -11,8 +11,6 @@
     height: auto;
     width: 200px;
     justify-content: space-between;
-    align-items: center;
-    text-align: center;
 }
 .item:nth-child(1){
     margin-top: 113px;
@@ -20,18 +18,16 @@
 
 .rel_checklist_column:nth-child(1){
     flex: 1;
-    background: #6EA4AE;
 }
 .rel_checklist_column:nth-child(2){
     margin-left: 1em;
-    background: #6EA4AE;
     flex: 3;
 }
 .checklist_flex{
     width: 80% !important;
 }
 h1{
-    color: #fff;
+   color: #133960;
 }
 .first_flex{
     width:100%
@@ -53,6 +49,9 @@ h1{
 h3{
     color: #FAD466 !important;
 
+}
+h2{
+    color: #000 !important;
 }
 .item>h3{
     padding: 20px !important;

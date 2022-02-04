@@ -35,12 +35,12 @@ if ($qanak1) {
             <div class="d-flex flex-column  align-items-end rel_checklist_column">
                 <div class="column_first">
                     <div class="item" id="first_item">
-                        <img src="images_rel_checklist/Заливка цветом 4.png"/>
+                        <h2>RELEASES</h2>
 <!-- collections row  count -->
                         <h3 id="k"> <?= $k;?> </h3>
                     </div>
                     <div class="item" id="second_item">
-                        <img class="img-responsive" src="images_rel_checklist/Заливка цветом 5 копия.png"/>
+                        <h2>CHECKLISTS</h2>
                         <!-------- base_checklist row  count -------------------->
                         <h3> <?= $t;?> </h3>
                     </div>
