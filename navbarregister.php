@@ -86,40 +86,38 @@ $img = $navbarimg['image'];
       </li> -->
       <!-- sssssssssssssssssssssssssssssssssssssssss -->
       <li class="nav-item dropdown" >
-        <a class="nav-link dropdown-toggle" id="nav-products" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         Releases
-        </a>
+          <a class="nav-link" href="/select_releases_checklists.php">Releases</a>
         
         <!-- -------- -->
-        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                   
-                   <li class="dropdown">
-                       <a class="dropdown-item main-a" href="#">Checklists</a>
-                       <ul class="dropdown-menu">
-                           <li class="">
-                               <a class="dropdown-item" href="my_checklist.php">My Checklists</a>
+<!--        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+<!---->
+<!--                   <li class="dropdown">-->
+<!--                       <a class="dropdown-item main-a" href="#">Checklists</a>-->
+<!--                       <ul class="dropdown-menu">-->
+<!--                           <li class="">-->
+<!--                               <a class="dropdown-item" href="my_checklist.php">My Checklists</a>-->
                                <!-- <ul class="dropdown-menu">
                                    <li><a class="dropdown-item" href="profile-page.php">Personal</a></li>
                                    <li><a class="dropdown-item" href="profile-page.php">Custom</a></li>
                                </ul> -->
-                           </li>
-                           <?php
-                        $sql="SELECT * FROM sports_type";
-                        $res=mysqli_query($con, $sql);
-                        while($row=mysqli_fetch_assoc($res)){
-                          echo '<li class="dropdown">
-                               <a class="dropdown-item s_type" href="#">'.$row['sport_type'].'</a>
-                               <ul class="dropdown-menu">
-                                   <li><a class="dropdown-item nav_dr_item" h*ref="#" name="checklist">1900-1949</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1950-1979</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1980-1999</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">2000-2009</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">2010-2018</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="" name="checklist">2019-2020</a></li>
-                               </ul>
-                           </li>';
-                        }
-                        ?>
+<!--                           </li>-->
+<!--                           --><?php
+//                        $sql="SELECT * FROM sports_type";
+//                        $res=mysqli_query($con, $sql);
+//                        while($row=mysqli_fetch_assoc($res)){
+//                          echo '<li class="dropdown">
+//                               <a class="dropdown-item s_type" href="#">'.$row['sport_type'].'</a>
+//                               <ul class="dropdown-menu">
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1900-1949</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1950-1979</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1980-1999</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">2000-2009</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">2010-2018</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="" name="checklist">2019-2020</a></li>
+//                               </ul>
+//                           </li>';
+//                        }
+//                        ?>
                            <!-- <li class="dropdown">
                                <a class="dropdown-item" href="#">Add collection</a>
                                <ul class="dropdown-menu">
@@ -128,31 +126,31 @@ $img = $navbarimg['image'];
                                    <li><a class="dropdown-item" href="#">Personal</a></li>
                                </ul>
                            </li> -->
-                       </ul>
-                   </li>
+<!--                       </ul>-->
+<!--                   </li>-->
                    <!-- -----------------------SETS----------------------- -->
-                   
-                   <li class="dropdown">
+
+<!--                   <li class="dropdown">-->
                        <!-- <a class="dropdown-item" href="#">Sets</a> -->
-                       <a class="dropdown-item main-a" href="#">Releases</a>
-                       <ul class="dropdown-menu">
-                           <?php
-                        $sql="SELECT * FROM sports_type";
-                        $res=mysqli_query($con, $sql);
-                        while($row=mysqli_fetch_assoc($res)){
-                          echo '<li class="dropdown">
-                               <a class="dropdown-item s_type" href="#">'.$row['sport_type'].'</a>
-                               <ul class="dropdown-menu">
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1900-1949</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1950-1979</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1980-1999</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2000-2009</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2010-2018</a></li>
-                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2019-2020</a></li>
-                               </ul>
-                           </li>';
-                        }
-                        ?>
+<!--                       <a class="dropdown-item main-a" href="#">Releases</a>-->
+<!--                       <ul class="dropdown-menu">-->
+<!--                           --><?php
+//                        $sql="SELECT * FROM sports_type";
+//                        $res=mysqli_query($con, $sql);
+//                        while($row=mysqli_fetch_assoc($res)){
+//                          echo '<li class="dropdown">
+//                               <a class="dropdown-item s_type" href="#">'.$row['sport_type'].'</a>
+//                               <ul class="dropdown-menu">
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1900-1949</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1950-1979</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1980-1999</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2000-2009</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2010-2018</a></li>
+//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2019-2020</a></li>
+//                               </ul>
+//                           </li>';
+//                        }
+//                        ?>
                            <!-- <li class="dropdown">
                                <a class="dropdown-item" href="#">Add collection</a>
                                <ul class="dropdown-menu">
@@ -161,13 +159,13 @@ $img = $navbarimg['image'];
                                    <li><a class="dropdown-item" href="#">Personal</a></li>
                                </ul>
                            </li> -->
-                       </ul>
-                   </li>
+<!--                       </ul>-->
+<!--                   </li>-->
                    <!-- ----------------New releases calendar--------------------- -->
-                   <li class="">
-                       <a class="dropdown-item main-a" href="#">New releases<p>calendar</p> </a>
-                   </li>
-               </ul>
+<!--                   <li class="">-->
+<!--                       <a class="dropdown-item main-a" href="#">New releases<p>calendar</p> </a>-->
+<!--                   </li>-->
+<!--               </ul>-->
         <!-- -------------------- -->
         
       </li>
