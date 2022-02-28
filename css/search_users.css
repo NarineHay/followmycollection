@@ -97,8 +97,18 @@
     font-size:15px;
 }
 
-@media (min-width: 1200px){
+@media (max-width: 800px){
     /*.container{*/
     /*    max-width: 1420px*/
     /*}*/
+
+}
+@media only screen and (max-width: 1000px) {
+     .d-flex{
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    .flex-item-right{
+        width: 80% !important;
+    }
 }
