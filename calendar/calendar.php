@@ -1,6 +1,7 @@
 <?php
     $select_colors = "SELECT * FROM sports_type";
     $colors_result = mysqli_query($con, $select_colors);
+    $colors_content = "";
 
     while($tox = mysqli_fetch_assoc($colors_result)) {
         $colors_content .= '<div class="sport_colors">
@@ -61,6 +62,7 @@
     </div>
     <div class="right_calendar">
         <?php require "week_calendar.php"?>
+     
     </div>
 
     <script src="js/week_calendar.js"></script>

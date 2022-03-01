@@ -66,7 +66,7 @@ else{
         <a class="nav-link" href="#">Collections</a>
       </li> -->
       <li class="nav-item dropdown" >
-          <a class="nav-link" href="/select_releases_checklists.php">Releases</a>
+          <a class="nav-link" href="select_releases_checklists.php">Releases</a>
 
         <!-- -------- -->
 <!--        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
