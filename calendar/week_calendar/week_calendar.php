@@ -1,5 +1,5 @@
 <?php
-    $days = array("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun");
+    $days = array("Mon", "Tue", "Wed", "Thu", "Fro", "Sat", "Sun");
     $mounth_number = date('n');
     $year = date('Y');$mounth_number = date('n');
 
@@ -13,10 +13,15 @@
 
     for($i = 0; $i < 7; $i++) {
 
-        $table1 .= "<th data-day='" . $week_start . "'>
+        if($week_start > $num_of_days) {
+            $week_start = 1;
+        }
+
+        $table1 .= "<th class='days' data-day='" . $week_start . "'>
                     <span>" . $week_start . "</span>
                     <span>" . $days[$i] . "</span>
                 </th>";
+
         
         if($i < 6) {
             $class = "border";

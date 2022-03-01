@@ -39,8 +39,8 @@
         <div class="data_content">
             <div class="day">Today</div >
             <div class="control">
-                <i class="fas fa-angle-left"></i>
-                <i class="fas fa-angle-right"></i>
+                <i class="fas fa-angle-left before_week"></i>
+                <i class="fas fa-angle-right after_week"></i>
             </div>
             <div class="data">
                 <span class="mounth">February</span>
@@ -60,7 +60,7 @@
         </div>
     </div>
     <div class="right_calendar">
-        <?php require "week_calendar.php"?>
+        <?php require "week_calendar/week_calendar.php" ?>
     </div>
 
     <script src="js/week_calendar.js"></script>
