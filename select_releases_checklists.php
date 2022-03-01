@@ -13,6 +13,8 @@
 ?>
 
     <link rel="stylesheet" type="text/css" href="css/week_calendar.css">
+    <link rel="stylesheet" type="text/css" href="css/relese_checklist_first.css">
+    <script src="js/relese_checklist_first"></script>
 
 <body>
 <?php require "cookie.php"?>
@@ -22,7 +24,9 @@
 
 <section class="section1 my-5">
     <div class="calendar_width">
+        <?php require "relese_checklist/relese_checklist_first.php"?>
         <?php require "calendar/calendar.php"?>
+        
     </div>
 </section>
 
