@@ -1,0 +1,220 @@
+body{
+    padding: 0 !important;
+}
+.sport1{
+    width: 130px;
+    background: #00bcd4;
+    clip-path: polygon(0 59%, 91% 59%, 72% 100%, 0 100%);
+    margin-right: -2px;
+}
+.sport2{
+    clip-path: polygon(19% 49%, 80% 48%, 100% 100%, 0% 100%);
+    margin-left: -35px;
+    color: white;
+    background: lightblue;
+    width: 145px;
+    height: 100px;
+    text-align: center; 
+    padding-top: 60px;
+}
+.sport3{
+    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    background: #aacfdb;
+    width: 130px;
+    margin-left: -25px;
+    color: white; 
+    text-align: center;
+    padding-top: 65px; 
+    font-size: 17px;
+}
+.sport4{
+    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    background: rgb(160 180 187);
+    color: white; 
+    width: 130px; 
+    margin-left: -21px;
+    text-align: center; 
+    padding-top: 65px; 
+    font-size: 17px;
+}
+.sport5{
+    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    background: rgb(129 157 167);
+    color: white; 
+    width: 130px; 
+    margin-left: -21px;
+    text-align: center; 
+    padding-top: 65px; 
+    font-size: 17px;
+}
+.sport6{
+    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%); 
+    background: rgb(60 111 129);
+    color: white;
+    width: 130px;
+    margin-left: -21px;
+    text-align: center;
+    padding-top: 65px; 
+    font-size: 17px;
+}
+.sport7{
+    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    background: rgb(48 90 104);
+    color: white; 
+    width: 130px; 
+    margin-left: -21px;
+    text-align: center; 
+    padding-top: 65px; 
+    font-size: 17px;
+}
+.sport8{
+    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);    
+    background: rgb(40 72 82);
+    color: white; 
+    width: 130px; 
+    margin-left: -21px;
+    text-align: center; 
+    padding-top: 65px; 
+    font-size: 17px;
+}
+.sport9{
+    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);    
+    background: rgb(24 45 52);
+    color: white; 
+    width: 170px; 
+    margin-left: -26px;
+    text-align: center; 
+    padding-top: 65px; 
+    font-size: 17px;
+}
+.box1{
+    border: 1px solid white;
+    width: 160px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 15%;
+    padding: 5px;
+}
+.box2{
+    border: 1px solid white;
+    width: 160px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 15%;
+    padding: 5px;
+}
+.box3{
+    border: 1px solid white;
+    width: 160px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 15%;
+    padding: 5px;
+}
+.box4{
+    border: 1px solid white;
+    width: 160px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 15%;
+    padding: 5px;
+}
+.box5{
+    border: 1px solid white;
+    width: 160px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 15%;
+    padding: 5px;
+}
+.box6{
+    border: 1px solid white;
+    width: 160px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 15%;
+    padding: 5px;
+}
+.box7{
+    border: 1px solid white;
+    width: 160px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 15%;
+    padding: 5px;
+}
+.inliner{
+    width: 100%;
+    height: 23012px;
+    background: lightblue;
+    justify-content: space-around;
+    align-items: center;
+}
+.start{
+    display: flex;
+    width: 100%;
+    height: 250px;
+    justify-content: space-around;
+    margin-top: 0%;
+}
+.nachalo{
+    display: flex;
+    width: 403px; 
+    height: 75px;
+    justify-content: space-around; 
+    padding-top: 25px; 
+    color: darkblue; 
+    font-size: 20px; 
+    margin-top: 8%; 
+    border-radius:12px 12px 12px 12px;
+    box-shadow: 0px 0px 10px #2a1e1e;
+    font-family:'Alfa Slab One', cursive;
+    font-family: 'Secular One', sans-serif; 
+    letter-spacing: 2px;
+}
+.boxer > div{
+    margin-right: 10px;
+}
+#Layer_1{
+   
+  
+    width: 20px;
+    height: 20px;
+}
+#Layer_2{
+    width: 20px;
+    height: 20px;
+}
+#Layer_3{
+    width: 20px;
+    height: 20px;
+}
+#Layer_4{
+    width: 20px;
+    height: 20px;
+}
+#Layer_5{
+    width: 20px;
+    height: 20px;
+}
+#Layer_6{
+    width: 20px;
+    height: 20px;
+}
+.p{
+ font-weight: bold;
+}
