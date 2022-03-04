@@ -97,14 +97,12 @@ body{
     font-size: 17px;
 }
 .box1{
-    border: 1px solid;
+    border: 1px solid rgb(255, 255, 255);
     width: 160px;
     height: 45px;
     text-align: center;
     font-size: 20px;
-    color: #fff;
-    border-radius: 10px;
-    padding: 5px;
+    border-radius: 15%;
 }
 .inliner{
     width: 100%;
@@ -168,8 +166,10 @@ body{
  font-weight: bold;
 }
 
+
 .sss {
     color: gold;
 }
 .favorite_dates{
 }
+

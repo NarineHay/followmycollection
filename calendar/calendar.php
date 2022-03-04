@@ -73,7 +73,12 @@
     </div>
     <div class="right_calendar">
 
-        <?php require "week_calendar/week_calendar.php" ?>
+        <?php 
+        // require "week_calendar/week_calendar.php" 
+            require "year_calendar/year_calendar.php" 
+        
+        
+        ?> 
      
 
     </div>
