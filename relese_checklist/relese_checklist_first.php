@@ -1,4 +1,5 @@
 
+
     <?php
         $sport_types= 'select * from sports_type';
         $sport_types_querry=mysqli_query($con,$sport_types);
@@ -22,6 +23,7 @@
             
         }
     ?>
+
 <div class="start">
          <div class="nachalo">
             <p class="p">CHECKLISTS</p>
@@ -35,10 +37,8 @@
                 <?= $take_types ?>
                 <div class="sport9">MY CHECKLISTS</div> 
         </div>
-        <div class="d-flex innline" style="width: 100%;height: 230px;background: lightblue;justify-content: space-around;align-items: center;">
+        <div class="d-flex innline" style="width: 100%;height: 230px;background: #6EA4AE;justify-content: space-around;align-items: center;">
             <div class="d-flex boxer">
-                   
-
                     <?= $take_dates ?>
             </div>
     </div>
@@ -55,7 +55,7 @@
         <?= $take_types ?>
             
         </div>
-        <div class="d-flex innline" style="width: 100%;height: 230px;background: lightblue;justify-content: space-around;align-items: center;">
+        <div class="d-flex innline" style="width: 100%;height: 230px;background: #6EA4AE;justify-content: space-around;align-items: center;">
             <div class="d-flex boxer">
             <?= $take_dates ?>
             </div>
@@ -66,10 +66,4 @@
             <p class="p">NEW RELEASES CALENDAR</p>
          </div>
     </div>
-                                              
-
-     
-
-
-
 
