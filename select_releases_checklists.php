@@ -5,16 +5,17 @@
         if(!empty($_COOKIE['user'])){
             $user_id=$_COOKIE['user'];
         }
-        if(!empty($_SESSION['user'])){
-            $user_id=$_SESSION['user'];
-        }
+            if(!empty($_SESSION['user'])){
+                $user_id=$_SESSION['user'];
+            }
     }
 
 ?>
 
     <link rel="stylesheet" type="text/css" href="css/week_calendar.css">
     <link rel="stylesheet" type="text/css" href="css/relese_checklist_first.css">
-    <script src="js/relese_checklist_first"></script>
+    <script src="js/relese_checklist_first.js" defer></script>
+
 
 <body>
 <?php require "cookie.php"?>
@@ -29,6 +30,5 @@
         
     </div>
 </section>
-
 
 </body>
