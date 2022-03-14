@@ -7,6 +7,7 @@
     while($tox = mysqli_fetch_assoc($colors_result)) {
         $colors_content .= '<div class="sport_colors">
                                 <div class="sport_background" style="background: ' . $tox["background"] . '; color: ' . $tox["color"] . '">' . $tox['sport_type'] . '</div>
+                                  
                                 <div class="sport_color" style="background: ' . $tox["color"] . '"></div>
                             </div>';
     }
@@ -18,8 +19,31 @@
 
 ?>
 
+
+<div class="father">
+
+<div class="all_mounths">
+  
+</div>
+
+<div class="add">
+        <p class="bdd">JANUARY 2022</p>
+        <p></p>
+</div>
+
+<div class="add-f">
+        <p class="bdd">JANUARY 2022</p>
+        <p></p>
+</div>
+
+</div>
+
+<p></p>
+
 <div class="left">
-    <div class="mounth_year"> <?= $this_mounth ?> <?= $this_year ?> </div>
+    <div class="mounth_year"> <?= $this_mounth ?> <?= $this_year ?> 
+                    <i class="fas fa-angle-left before_week ml-4"></i>
+                    <i class="fas fa-angle-right after_week"></i></div>
     <div class="left_calendar">
         <table class="select_calendar">
             <thead>
@@ -71,17 +95,22 @@
             </select>
         </div>
     </div>
+    
+    
+   
     <div class="right_calendar">
 
         <?php 
-        // require "week_calendar/week_calendar.php" 
-            require "year_calendar/year_calendar.php" 
+        //require "week_calendar/week_calendar.php" 
+        //require "year_calendar/year_calendar.php" 
+        require "mounth_calendar/mounth_calendar.php" 
         
         
         ?> 
      
 
     </div>
+
 
     <script src="js/week_calendar.js"></script>
 
