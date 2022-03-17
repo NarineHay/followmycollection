@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-content: space-between;
-  
+
 }
 
 .box_inside{
@@ -66,7 +66,6 @@
     margin-top: 25px;
     width: 890px;
     height: 480px;
-   
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -101,7 +100,7 @@
     flex-direction: row;
     justify-content: space-between;
 }
-tr{
+.tr{
     font-size: 14px; 
     text-align: center; 
    
@@ -109,6 +108,10 @@ tr{
 .year_cal_cover{
     color: #818181;
     margin-right: 6px;
+}
+
+.tr td {
+    border-radius: 5px;
 }
 
 th {
@@ -127,6 +130,10 @@ th {
     margin-left: 6px;
 }
 
+.ggg td:hover {
+    background-color: #133960;
+    color: white;
+}
 
 @media(min-width:2560px){
     

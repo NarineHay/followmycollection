@@ -1,5 +1,3 @@
-
-
     <?php
         $sport_types= 'select * from sports_type';
         $sport_types_querry=mysqli_query($con,$sport_types);
@@ -7,7 +5,7 @@
         $color_type=2;
         while ($sport_types_row = mysqli_fetch_assoc($sport_types_querry)) {
             $take_types.='
-                <div class="sport'.$color_type.'">'.$sport_types_row['sport_type'].'</div> 
+                <div class="sport'.$color_type.'">'.$sport_types_row['sport_type'].'<div class="shadow"></div></div>
             ';
             $color_type++;
         }
@@ -30,10 +28,11 @@
          </div>
     </div>
     <div class="container-fluid d-flex flex-column p-0 start2">
-        <div class="mayr">
-             <div class="sport1"></div>
-    
-            
+        <div class="mayr d-flex">
+             <div class="sport1">
+                 <div class="shadow"></div>
+             </div>
+
                 <?= $take_types ?>
                 <div class="sport9">MY CHECKLISTS</div> 
         </div>
