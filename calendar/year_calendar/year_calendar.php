@@ -27,6 +27,22 @@
         $mounth = $mounths[$y];
         $first_day = date('w', strtotime("$mounth $year"));
 
+?>
+<table class="calendar">
+    <thead class="calendar_header">
+        <?= $table1 ?>
+    </thead>
+
+    <tbody class="calendar_body">
+        <tr class="empty">
+            <td></td>
+        </tr>
+        <tr class="fel">
+            <?= $trs ?>
+        </tr>
+    </tbody>
+</table>
+
         if($first_day == 0) {
             $first_day = 7;
         }
@@ -392,7 +408,6 @@
 <!--            </table>-->
 <!--        </div>-->
     </div>
-    
 
 </div>
     
@@ -400,14 +415,4 @@
 
 
 
-
-
-	<br>
-    <br>
-	
-
-
-<br>
-<br>
-<br>
 
