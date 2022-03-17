@@ -37,7 +37,7 @@
 
     ?>
 
-
+    <div class="header_calendar">
     <table class="calendar">
         <tbody class="calendar_body">
             <tr class="empty">
@@ -45,7 +45,7 @@
             </tr>
         </tbody>
     </table>
-    <div class="ggg">
+
     <div class="arajin">
         
 <!--        <div class="lll">-->
