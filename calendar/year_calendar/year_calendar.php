@@ -28,6 +28,7 @@
         $first_day = date('w', strtotime("$mounth $year"));
 
         if($first_day == 0) {
+            
             $first_day = 7;
         }
 
