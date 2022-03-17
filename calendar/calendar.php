@@ -17,6 +17,7 @@
     $this_year = date('Y');
     $today = date("d");
 
+    $choose_calendar = $_POST['choose_calendar'];
 ?>
 
 
@@ -41,9 +42,11 @@
 <p></p>
 
 <div class="left">
-    <div class="mounth_year"> <?= $this_mounth ?> <?= $this_year ?> 
-                    <i class="fas fa-angle-left before_week ml-4"></i>
-                    <i class="fas fa-angle-right after_week"></i></div>
+    <div class="mounth_year"> <?= $this_mounth ?> <?= $this_year ?> </div>
+    <div class="right_icons">
+        <i class="fa fa-angle-left before_select_calendar"></i>
+        <i class="fa fa-angle-right after_select_calendar"></i>
+    </div>
     <div class="left_calendar">
         <table class="select_calendar">
             <thead>
@@ -74,8 +77,30 @@
                 <span><?= $today ?></span>
             </div>
             <div class="control">
-                <i class="fas fa-angle-left before_week"></i>
-                <i class="fas fa-angle-right after_week"></i>
+                <?php
+                    if($choose_calendar == "week") {
+                ?>
+                    <i class="fa fa-angle-left before_week"></i>
+                    <i class="fa fa-angle-right after_week"></i>
+                <?php
+                    } else if($choose_calendar == "mounth") {
+                ?>
+                    <i class="fa fa-angle-left before_mounth"></i>
+                    <i class="fa fa-angle-right after_mounth"></i>
+                <?php
+                    } else if($choose_calendar == "year") {
+                ?>
+                    <i class="fa fa-angle-left before_year"></i>
+                    <i class="fa fa-angle-right after_year"></i>
+                <?php
+                    } else {
+                ?>
+                    <i class="fa fa-angle-left before_week"></i>
+                    <i class="fa fa-angle-right after_week"></i>
+                <?php
+                    }
+                ?>
+
             </div>
             <div class="data">
                 <input type="hidden" class="this_thursday_day" value="<?= $this_thursday_day ?>">
@@ -88,11 +113,39 @@
                 <input type="text" class="search" placeholder="Search">
                 <button><i class="fa fa-search"></i></button>
             </div>
-            <select class="calendar_type">
-                <option value="week">Week</option>
-                <option value="mounth">Mounth</option>
-                <option value="year">Year</option>
-            </select>
+            <form action="#" method="post">
+                <select class="calendar_type" onchange="this.form.submit()" name="choose_calendar">
+
+                    <?php
+                        if($choose_calendar == "week") {
+                    ?>
+                        <option value="week">Week</option>
+                        <option value="mounth">Mounth</option>
+                        <option value="year">Year</option>
+                    <?php
+                        } else if($choose_calendar == "mounth") {
+                    ?>
+                        <option value="mounth">Mounth</option>
+                        <option value="year">Year</option>
+                        <option value="week">Week</option>
+                    <?php
+                        } else if($choose_calendar == "year") {
+                    ?>
+                        <option value="year">Year</option>
+                        <option value="mounth">Mounth</option>
+                        <option value="week">Week</option>
+                        <?php
+                        } else {
+                    ?>
+                        <option value="week">Week</option>
+                        <option value="mounth">Mounth</option>
+                        <option value="year">Year</option>
+                    <?php
+                        }
+                    ?>
+
+                </select>
+            </form>
         </div>
     </div>
     
@@ -100,12 +153,21 @@
    
     <div class="right_calendar">
 
-        <?php 
-        //require "week_calendar/week_calendar.php" 
-        //require "year_calendar/year_calendar.php" 
-        require "mounth_calendar/mounth_calendar.php" 
-        
-        
+
+        <?php
+        if($choose_calendar == "week") {
+            require "week_calendar/week_calendar.php";
+        }
+//        else if($choose_calendar == "mounth") {
+//            require "mounth_calendar/mounth_calendar.php";
+//        }
+        else if($choose_calendar == "year") {
+            require "year_calendar/year_calendar.php";
+        }
+        else {
+            require "week_calendar/week_calendar.php";
+        }
+
         ?> 
      
 
