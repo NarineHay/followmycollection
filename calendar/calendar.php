@@ -153,21 +153,17 @@
    
     <div class="right_calendar">
 
-        <?php 
-        require "week_calendar/week_calendar.php" 
-        //require "year_calendar/year_calendar.php" 
-        //require "mounth_calendar/mounth_calendar.php" 
-        
-        
 
 
         <?php
         if($choose_calendar == "week") {
             require "week_calendar/week_calendar.php";
         }
-       else if($choose_calendar == "mounth") {
-           require "mounth_calendar/mounth_calendar.php";
-       }
+
+//        else if($choose_calendar == "mounth") {
+//            require "mounth_calendar/mounth_calendar.php";
+//        }
+
         else if($choose_calendar == "year") {
             require "year_calendar/year_calendar.php";
         }

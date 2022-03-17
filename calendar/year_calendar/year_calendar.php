@@ -37,13 +37,7 @@
 
     ?>
 
-
-
-
-
-   
     <div class="header_calendar">
-
     <table class="calendar">
         <tbody class="calendar_body">
             <tr class="empty">
