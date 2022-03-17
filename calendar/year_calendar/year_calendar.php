@@ -45,7 +45,6 @@
             </tr>
         </tbody>
     </table>
-
     <div class="ggg">
     <div class="arajin">
         
@@ -393,7 +392,6 @@
 <!--            </table>-->
 <!--        </div>-->
     </div>
-    
 
 </div>
     
@@ -401,14 +399,4 @@
 
 
 
-
-
-	<br>
-    <br>
-	
-
-
-<br>
-<br>
-<br>
 
