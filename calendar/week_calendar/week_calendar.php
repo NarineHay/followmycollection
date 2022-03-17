@@ -1,5 +1,5 @@
 <?php
-    $days = array("Mon", "Tue", "Wed", "Thu", "Fro", "Sat", "Sun");
+    $days = array("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun");
     $first_day = date('w', strtotime('first day of this month'));
 
     if($first_day == 0 ) {
@@ -59,8 +59,12 @@
         <tr class="empty">
             <td></td>
         </tr>
-        <tr>
+        <tr class="fel">
             <?= $trs ?>
         </tr>
     </tbody>
 </table>
+
+<br>
+<br>
+<br>

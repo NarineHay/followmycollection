@@ -23,7 +23,7 @@ $img = $navbarimg['image'];
 <link rel="stylesheet" type="text/css" href="css/profile-page.css">
 <section id="fix">
 <header class="navbar navbar-expand-lg navbar-light bg-light" id="head-er">
-<div class="container "> 
+<div class="container"> 
  <a class="navbar-brand" href="/test/collection-cards/">
     <div id="logo"> 
     <img src="logo-png.png" id="logo">
@@ -274,3 +274,4 @@ $img = $navbarimg['image'];
 </div>
 </div>
 </section>
+
