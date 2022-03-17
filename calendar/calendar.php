@@ -101,9 +101,9 @@
     <div class="right_calendar">
 
         <?php 
-        //require "week_calendar/week_calendar.php" 
+        require "week_calendar/week_calendar.php" 
         //require "year_calendar/year_calendar.php" 
-        require "mounth_calendar/mounth_calendar.php" 
+        //require "mounth_calendar/mounth_calendar.php" 
         
         
         ?> 

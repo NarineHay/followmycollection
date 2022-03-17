@@ -61,7 +61,7 @@
    
     
 }
-.ggg{
+.header_calendar{
     margin-left: 40px;
     margin-top: 25px;
     width: 890px;
@@ -159,7 +159,7 @@ th {
         height: 790px;
         border-radius: 10px 10px 10px 0px;
     }
-    .ggg {
+    .header_calendar {
         margin-left: 40px;
         margin-top: 25px;
         width: 890px;
