@@ -74,13 +74,9 @@
         <tr class="empty">
             <td></td>
         </tr>
-        <tr class="fel">
+        <tr>
             <?= $trs ?>
         </tr>
 
     </tbody>
 </table>
-
-<br>
-<br>
-<br>
