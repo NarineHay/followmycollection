@@ -35,7 +35,6 @@ $(".before_week").click(function () {
             $(".year").html(res.week_year)
             $(".mounth").attr("data-mounth", res.week_mounth_number)
             $(".this_thursday_day").val(res.this_thursday_day)
-            console.log(res.ppp)
         }
     )
 
