@@ -14,7 +14,9 @@
     display: flex;
     justify-content: space-between;
     align-content: space-between;
+
 }
+
 .box_inside{
     width: 170px;
     height: 150px;
@@ -23,6 +25,19 @@
         /* display: ; */
  
 }
+
+.add-f{
+    background-color: #fff;
+}
+.add{
+    background-color: #fff;
+
+}
+.bdd{
+    color: #fff;
+}
+
+
 
 .box_inside2{
    
@@ -46,7 +61,7 @@
    
     
 }
-.ggg{
+.header_calendar{
     margin-left: 40px;
     margin-top: 25px;
     width: 890px;
@@ -56,7 +71,11 @@
     justify-content: space-between;
 }
 
-
+.jjj-f {
+    width: 190px;
+    height: 80px;
+    align-items: center;
+}
 .arajin{
    
     width: 890px;
@@ -114,4 +133,299 @@ th {
 .ggg td:hover {
     background-color: #133960;
     color: white;
+}
+
+@media(min-width:2560px){
+    
+    .arajin{
+   
+        width: 1500px;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .erkrord{
+      
+        width: 1500px;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .erord{
+       
+        width: 1500px;
+        height: 200px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .right_calendar {
+        width: 100%;
+        height: 790px;
+        border-radius: 10px 10px 10px 0px;
+    }
+    .header_calendar {
+        margin-left: 40px;
+        margin-top: 25px;
+        width: 890px;
+        height: 760px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .jjj {
+        width: 320px;
+        height: 80px;
+        align-items: center;
+    }
+    th {
+        font-weight: unset;
+        color: #818181;
+        font-size: 24px;
+    }
+    tr {
+        font-size: 25px;
+        text-align: center;
+    }
+    .right {
+        height: 160%;
+        width: 80%;
+        border: 0.8px solid gray;
+        float: left;
+        border-radius: 0 15px 15px 0;
+        border-left: none;
+    }
+    .left {
+        width: 20%;
+        height: 160%;
+        border: 0.8px solid gray;
+        border-radius: 15px 0 0 15px;
+        float: left;
+    }
+    .sport_colors {
+        width: 95%;
+        height: 105px;
+    }
+    .year_month_names{
+        font-size: 100px;
+        font-weight: bold;
+    }
+   
+}
+
+@media(max-width:1275px){
+    .left {
+       
+     }
+     /* .right {
+        margin-left: -0px;
+        margin-top: 180px;
+        height: 64%;
+        width: 122%;
+        border: 1px solid gray;
+        float: left;
+        box-shadow: 0px 4px 0px rgb(0 0 0 / 25%);
+        border-radius: 0px 0px 15px 15px;
+    } */
+    .erord {
+       display: none;
+    }
+    .erkrord {
+        display: none;
+    }
+    .jjj {
+        display: none;
+    }
+    .name_mount{
+        display: none; 
+    }
+    .jjj-f {
+        top: -53px;
+        left: 0px;
+        left: -42px;
+        position: relative;
+        width: 440px;
+        height: 346px;
+        align-items: center;
+    }
+    tr {
+        font-weight: bold;
+        font-size: 26px;
+        font-style: bold;
+        text-align: center;
+    }
+    th {
+        font-weight: unset;
+        color: #818181;
+        font-size: 20px;
+    }
+    .add{
+        width: 100%;
+        height: 95px;
+        border: 0.8px solid gray;
+        border-radius: 15px 15px 15px 15px;
+        text-align: center;
+        padding-top: 20px;
+        margin-left: 0px;
+        margin-top: 100px;
+      
+    }
+    .add-f{
+        width: 100%;
+        height: 95px;
+        border: 0.8px solid gray;
+        border-radius: 15px 15px 0px 0px;
+        text-align: center;
+        padding-top: 20px;
+        margin-left: 0px;
+        margin-top: 56px;
+    }
+    .bdd{
+        color: darkblue;
+        font-size: 24px;
+        padding-top: 5px;
+        font-family: 'Secular One', sans-serif;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+    .today {
+        display: none;
+    }
+    .control {
+        position: relative;
+        top: 2px;
+        left: 106px;
+       
+    }
+    .data {
+        margin-right: 5px;
+        position: relative;
+        top: 2px;
+        left: -69px;
+        font-size: 18px;
+    }
+    .calendar_type {
+       display: none;
+    }
+    .search {
+        position: relative;
+        left: -49px;
+        top: 19px;
+        width: 100px;
+    }
+    .search_panel button {
+        position: relative;
+        top: 19px;
+        left: -49px;
+    }
+    @media(max-width:550px){
+        .releses {
+          display: none;
+        }
+        .left {
+            display: none;
+         }
+         .right {
+            margin-left: 0px;
+            margin-top: 180px;
+            height: 64%;
+            width: 122%;
+            border: 1px solid gray;
+            float: left;
+            box-shadow: 0px 4px 0px rgb(0 0 0 / 25%);
+            border-radius: 0px 0px 15px 15px;
+        }
+        
+        .erord {
+           display: none;
+        }
+        .erkrord {
+            display: none;
+        }
+        .jjj {
+            display: none;
+        }
+        .name_mount{
+            display: none; 
+        }
+        .jjj-f {
+            top: -46px;
+            left: 0px;
+            left: -29px;
+            position: relative;
+            width: 307px;
+            height: 346px;
+            align-items: center;
+        }
+        tr {
+            font-weight: bold;
+            font-size: 26px;
+            font-style: bold;
+            text-align: center;
+        }
+        th {
+            font-weight: unset;
+            color: #818181;
+            font-size: 20px;
+        }
+        .add{
+            width: 80%;
+            height: 95px;
+            border: 0.8px solid gray;
+            border-radius: 15px 15px 15px 15px;
+            text-align: center;
+            padding-top: 20px;
+            margin-left: 40px;
+            margin-top: 100px;
+          
+        }
+        .add-f{
+            width: 80%;
+            height: 95px;
+            border: 0.8px solid gray;
+            border-radius: 15px 15px 0px 0px;
+            text-align: center;
+            padding-top: 20px;
+            margin-left: 40px;
+            margin-top: 56px;
+        }
+        .bdd{
+            color: darkblue;
+            font-size: 24px;
+            padding-top: 5px;
+            font-family: 'Secular One', sans-serif;
+            letter-spacing: 2px;
+            font-weight: bold;
+        }
+        .today {
+            display: none;
+        }
+        .control {
+            position: relative;
+            top: 24px;
+            left: 39px;
+        }
+        .data {
+            margin-right: 5px;
+            position: relative;
+            top: 2px;
+            left: -69px;
+            font-size: 18px;
+        }
+        .calendar_type {
+           display: none;
+        }
+        .search {
+            position: relative;
+            left: -79px;
+            top: 51px;
+        }
+        .search_panel button {
+            position: relative;
+            top: 51px;
+            left: -79px;
+        }
+    }
 }

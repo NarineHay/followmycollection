@@ -39,7 +39,7 @@
         </div>
         <div class="d-flex innline" style="width: 100%;height: 230px;background: #6EA4AE;justify-content: space-around;align-items: center;">
             <div class="d-flex boxer">
-                    <?= $take_dates ?>
+<!--                    --><?//= $take_dates ?>
             </div>
     </div>
 </div>  
@@ -55,15 +55,24 @@
         <?= $take_types ?>
             
         </div>
-        <div class="d-flex innline" style="width: 100%;height: 230px;background: #6EA4AE;justify-content: space-around;align-items: center;">
-            <div class="d-flex boxer">
-            <?= $take_dates ?>
-            </div>
-    </div>
+        
 </div>  
 <div class="start">
          <div class="nachalo">
             <p class="p">NEW RELEASES CALENDAR</p>
          </div>
     </div>
+
+
+    <script>
+        $('.mayr div').click(function(){
+            if($(this).hasClass('active')){
+                $('.mayr div').removeClass("active");
+            }
+            else{
+                $('.mayr div').removeClass("active");
+                $(this).addClass("active");
+            }
+        });
+    </script>
 

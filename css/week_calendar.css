@@ -9,6 +9,7 @@
     height: 687px;
 }
 
+
 .left {
     width: 20%;
     height: 100%;
@@ -117,7 +118,7 @@
     padding-left: 30px;
 }
 
-.data_content div:not(.control) {
+.data, .today {
     margin: 0 10px;
     color: #133960;
     font-size: 20px;
@@ -253,3 +254,315 @@
     height: 40%;
     margin: 5px;
 }
+
+@media(max-width:550px){
+    .add-f {
+        display: none;
+    }
+    .add {
+        display: none;
+    }
+    .left{
+        width: 97%;
+        margin: 0 auto;
+    }
+    .right {
+      
+        box-shadow: 0px 4px 0px rgb(0 0 0 / 25%);
+        border-radius: 15px 15px 15px 15px;
+    }
+    .f_first_inside {
+        width: 14.3%;
+        height: 113px;
+        border: 0px solid gray;
+    }
+    .releses {
+        margin-left: 0px;
+        width: 0%;
+        margin: 0px auto;
+        height: 0px;
+        border-radius: 0px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+    }
+    .cube {
+        display: none;
+    }
+    .data {
+        margin-right: 5px;
+        position: relative;
+        top: -35px;
+        left: -148px;
+        font-size: 18px;
+    }
+    .today {
+        display: block;
+        position: relative;
+        left: -16px;
+        top: 27px;
+        display: flex;
+        flex-direction: row;
+    }
+    .control {
+        position: relative;
+        top: 25px;
+        left: -10px;
+    }
+    .search {
+        position: relative;
+        left: -29px;
+        top: 40px;
+        width: 76px;
+    }
+    .search_panel button {
+        position: relative;
+        top: 40px;
+        left: -29px;
+    }
+    
+}
+
+ @media(max-width:1275px){
+    .hide_div {
+        width: 100%;
+        height: 10px;
+    }
+    .select_calendar {
+       display: none;
+    }
+    
+    .select_calendar thead th {
+        display: none;
+    }
+    
+    .select_calendar td {
+        display: none;
+    }
+    
+    .select_calendar td:hover {
+        display: none;
+    }
+    .sport_content {
+        
+    }
+    
+    .sport_colors {
+        
+    }
+    
+    .sport_color {
+       
+    }
+    .mounth_year{
+        display: none;
+    }
+    
+    .left {
+       display: none;
+       
+        
+       
+    }
+    .right {
+        margin-left: 0px;
+        margin-top: 180px;
+        height: 100%;
+        width: 122%;
+        border: 1px solid gray;
+        float: left;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+        border-radius:  0px 0px 20px 20px;
+    }
+    
+    .right_header {
+        width: 100%;
+        height: 15%;
+    }
+    .data_content {
+        width: 66%;
+        height: 130%;
+        float: left;
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+    }
+    
+    .data{
+        margin-right: 0px;
+        position: relative;
+        top: -31px;
+        left: -181px;
+    }
+    .today{
+        margin-right: 0px;
+        position: relative;
+        top: 6px;
+        left: -18px;
+    }
+    .control{
+        position: relative;
+        top: 7px;
+        left: -17px;
+    }
+    .mounth{
+        font-family: 'Segoe UI', Roboto;
+        font-size: 18px;
+        line-height: 36px;
+        
+        
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        
+        color: #133960;
+    }
+    .search{
+        position: relative;
+        
+        left: -23px;
+        top: 25px;
+    }
+    .calendar_type{
+        position: relative;
+        left: -109px;
+        top: -14px;
+    }
+    .search_panel button{
+        position: relative;
+        top: 25px;
+        left: -23px;
+    }
+    .calendar_header{
+        width: 100px;
+    }
+    
+    .border{
+        border: none !important;
+        border-right:0.0 solid gray !important;
+       
+    }
+    .fel{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+    .calendar_body tr:not(.empty) {
+        height: 500px;
+    }
+    
+    .releses {
+        width: 125px;
+        margin: 5px auto;
+        height: 40px;
+        border-radius: 5px;
+    }
+}
+@media(min-width:2560px){
+    .mounth_year {
+        width: 95%;
+        margin: 0 auto;
+        font-weight: 600;
+        padding: 13px;
+        color: #818181;
+        font-size: 30px;
+    }
+    .select_calendar th, .select_calendar td {
+        font-size: 21px;
+        padding: 5px 0;
+    }
+    .left {
+        width: 20%;
+        height: 135%;
+        border: 0.8px solid gray;
+        border-radius: 15px 0 0 15px;
+        float: left;
+    }
+    .right {
+        height: 135%;
+        width: 80%;
+        border: 0.8px solid gray;
+        float: left;
+        border-radius: 0 15px 15px 0;
+        border-left: none;
+    }
+    .calendar_body tr:not(.empty) {
+        height: 740px;
+    }
+    .right_calendar {
+        width: 100%;
+        
+        height: 584px;
+        border-radius: 10px 10px 10px 0px;
+    }
+    .releses {
+        width: 202px;
+        margin: 5px auto;
+        height: 64px;
+        border-radius: 5px;
+    }
+    .sport_content {
+        width: 95%;
+        margin: 26px auto;
+    }
+    .sport_colors {
+        width: 95%;
+        height: 75px;
+    }
+    .sport_background {
+        width: 75%;
+        height: 60px;
+        margin-left: 80px;
+        float: left;
+        padding-left: 10px;
+        border-radius: 4px;
+        padding-top: 8px;
+        font-size: 25px;
+    }
+    .sport_color {
+        width: 50px;
+        height: 60px;
+        border-radius: 25%;
+        background: red;
+        margin-left: 5px;
+    }
+    .data, .today {
+        margin: 0 10px;
+        color: #133960;
+        font-size: 30px;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+    .search {
+        width: 330px;
+        height: 55px;
+        background: #FFFFFF;
+        border: 1px solid #818181;
+        box-sizing: border-box;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        outline: none;
+        padding-left: 20px;
+    }
+    .search_panel button {
+        background: #E9ECEF;
+        border: 1px solid #818181;
+        box-sizing: border-box;
+        border-radius: 0px 10px 10px 0px;
+        width: 55px;
+        height: 55px;
+        outline: none;
+        border-left: none;
+        cursor: pointer;
+    }
+    .calendar_type {
+        width: 100px;
+        height: 54px;
+        border: 1px solid #818181;
+        border-radius: 10px;
+        padding-left: 5px;
+        color: #818181;
+    }
+}
+
+
