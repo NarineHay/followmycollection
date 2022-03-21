@@ -3,7 +3,15 @@
         $sport_types_querry=mysqli_query($con,$sport_types);
         $take_types='';
         $color_type=2;
+        $count=0;
+        // $active_class='';
         while ($sport_types_row = mysqli_fetch_assoc($sport_types_querry)) {
+            $count++;
+            if($count==1){
+                $active_class="active";
+            }else{
+                $active_class="";
+            }
             $take_types.='
                 <div class="sport'.$color_type.'">'.$sport_types_row['sport_type'].'<div class="shadow"></div></div>
             ';
@@ -34,7 +42,7 @@
              </div>
 
                 <?= $take_types ?>
-                <div class="sport9">MY CHECKLISTS</div> 
+                <div class="sport9">My Checklists</div> 
         </div>
         <div class="board innline">
             <div class="d-flex boxer">
@@ -65,6 +73,9 @@
             <p class="p">NEW RELEASES CALENDAR</p>
          </div>
     </div>
+    
+
+    
 
   
 
