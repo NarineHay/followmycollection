@@ -1,15 +1,21 @@
 body{
     padding: 0 !important;
 }
+
+.mayr div.active {
+    clip-path: polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%);
+    padding-top: 56px; 
+ }
 .sport1{
+    transition: clip-path 1.5s;
     width: 130px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
-    clip-path: polygon(0 59%, 91% 59%, 72% 100%, 0 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)), #6EA4AE;
+    clip-path: polygon(0 60%, 91% 60%, 90% 100%, 0 100%);
     margin-right: -2px;
 }
 .sport2{
-    /*clip-path: polygon(19% 49%, 80% 48%, 100% 100%, 0% 100%);*/
-    clip-path: polygon(17% 59%, 84% 59%, 100% 100%, 0% 100%);
+    transition: clip-path 1.5s;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     margin-left: -35px;
     color: white;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
@@ -20,7 +26,8 @@ body{
     padding-top: 65px;
 }
 .sport3{
-    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    transition: clip-path 1.5s;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     width: 130px;
@@ -31,7 +38,8 @@ body{
     font-size: 17px;
 }
 .sport4{
-    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    transition: clip-path 1.5s;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.2)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white;
@@ -40,9 +48,11 @@ body{
     text-align: center; 
     padding-top: 65px; 
     font-size: 17px;
+
 }
 .sport5{
-    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    transition: clip-path 1.5s;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white; 
@@ -53,7 +63,8 @@ body{
     font-size: 17px;
 }
 .sport6{
-    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    transition: clip-path 1.5s;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white;
@@ -64,7 +75,8 @@ body{
     font-size: 17px;
 }
 .sport7{
-    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    transition: clip-path 1.5s;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white; 
@@ -75,7 +87,8 @@ body{
     font-size: 17px;
 }
 .sport8{
-    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    transition: clip-path 1.5s;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white;
@@ -86,7 +99,8 @@ body{
     font-size: 17px;
 }
 .sport9{
-    clip-path: polygon(0 59%, 84% 59%, 100% 100%, 15% 100%);
+    transition: clip-path 1.5s;
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white; 
@@ -102,7 +116,8 @@ body{
     height: 45px;
     text-align: center;
     font-size: 20px;
-    border-radius: 15%;
+    border-radius: 10px 10px 10px 10px;
+    padding-top: 5px;
 }
 .inliner{
     width: 100%;
@@ -169,9 +184,554 @@ body{
 .shadow {
     width: 100%;
     height: 121%;
-    background: #00000000;
+    background: #ffffff00;
     position: relative;
     top: -100%;
-    box-shadow: 4px -7px 20px rgb(0 0 0 / 25%);
+    box-shadow: 4px -20px 20px rgb(0 0 0 / 25%);
+
+}
+.sss {
+    color: gold;
+}
+
+.mayr{
+    display: flex;
+    
+}
+.board{
+    display: flex;
+    width: 100%;
+    height: 230px;
+    background: #6EA4AE;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+
+/* --------------media----------------- */
+
+
+@media(max-width:1280px){
+    .mayr div.active {
+      
+       clip-path: unset;
+       height: 300px;
+    }
+    .shadow {
+        display: none;
+    }
+    
+
+    .start{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        margin-top: 9%;
+    }
+    .mayr{
+        display: flex;
+        flex-direction: column;
+        margin-top: 97px;
+    }
+    .sport2{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 40%, 100% 40%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        background: linear-gradient(0deg, #6EA4AE, #6EA4AE), #6EA4AE;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport3{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #63949D, #63949D), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport4{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport5{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #426268, #426268), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport6{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #375257, #375257), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+        
+    }
+    .sport7{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #2C4246, #2C4246), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);       
+    }
+    .sport8{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #2C4246, #2C4246), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport9{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #213134, #213134), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .board{
+        display: none;
+        width: none;
+        height: none;
+        background: none;
+        justify-content: none;
+        align-items: none;
+    }
+    .father{
+        height: 50px;
+    }
+}
+@media(max-width:550px){
+    .mayr div.active {
+      height: 300px;
+      clip-path: unset;
+      padding-top: -1px;
+    }
+    .shadow {
+    display: none;
+    }
+    .nachalo{
+        display: flex;
+        width: 403px; 
+        height: 135px;
+        justify-content: space-around; 
+        padding-top: 25px; 
+        color: darkblue; 
+        font-size: 20px; 
+        margin-top: 8%; 
+        border-radius:12px 12px 12px 12px;
+        box-shadow: 0px 0px 10px #2a1e1e;
+        font-family:'Alfa Slab One', cursive;
+        font-family: 'Secular One', sans-serif; 
+        letter-spacing: 2px;
+        text-align: center;
+    }
+    .start{
+        display: flex;
+        width: 100%;
+        height: 100px;
+        justify-content: space-around;
+        margin-top: 9%;
+    }
+    .mayr{
+        display: flex;
+        flex-direction: column;
+        margin-top: 97px;
+    }
+    .sport2{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: -1px;
+        clip-path: polygon(0% 40%, 100% 40%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        background: linear-gradient(0deg, #6EA4AE, #6EA4AE), #6EA4AE;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport3{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #63949D, #63949D), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport4{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport5{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #426268, #426268), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport6{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #375257, #375257), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+        
+    }
+    .sport7{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #2C4246, #2C4246), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);       
+    }
+    .sport8{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #2C4246, #2C4246), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .sport9{
+        transition: height 1.5s;
+        font-family: bold;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        color: #FFFFFF;
+        padding-top: 58px;
+        clip-path: polygon(0% 50%, 100% 50%, 100% 100%, 0% 100%);
+        width: 100%;
+        height: 100px;
+        margin-left: 0px;
+        margin-top: -50px;
+        background: linear-gradient(0deg, #213134, #213134), #6EA4AE;
+        box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    }
+    .board{
+        display: none;
+        width: none;
+        height: none;
+        background: none;
+        justify-content: none;
+        align-items: none;
+    }
+    .father{
+        height: 50px;
+    }
+}
+@media(min-width:2560px){
+    .mayr div.active {
+        clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+        padding-top: 28px;
+        font-size: 32px;
+    }
+    .shadow {
+        display: none;
+        }
+    .sport1 {
+        width: 140px;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)), #6EA4AE;
+        clip-path: polygon(0 45%, 91% 45%, 72% 100%, 0 100%);
+        margin-right: -2px;
+    }
+    .sport2 {
+        transition: clip-path 1.5s;
+        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        margin-left: -67px;
+        color: white;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
+        width: 265px;
+        height: 100px;
+        padding-top: 50px;
+        font-size: 29px;
+}
+    .sport3 {
+        transition: clip-path 1.5s;
+        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
+        box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
+        width: 210px;
+        margin-left: -30px;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 29px;
+    }
+    .sport4 {
+        transition: clip-path 1.5s;
+        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
+        box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
+        width: 210px;
+        margin-left: -25px;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 27px;
+    }
+    .sport5 {
+        transition: clip-path 1.5s;
+        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        background: linear-gradient(0deg, #426268, #426268), #6EA4AE;
+        box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
+        width: 210px;
+        margin-left: -25px;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 27px;
+    }
+    .sport6 {
+        transition: clip-path 1.5s;
+        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        background: linear-gradient(0deg, #375257, #375257), #6EA4AE;
+        box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
+        width: 210px;
+        margin-left: -25px;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 27px;
+    }
+    .sport7 {
+        transition: clip-path 1.5s;
+        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        background: linear-gradient(0deg, #2C4246, #2C4246), #6EA4AE;
+        box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
+        width: 210px;
+        margin-left: -25px;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 27px;
+    }
+    .sport8 {
+        transition: clip-path 1.5s;
+        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        background: linear-gradient(0deg, #2C4246, #2C4246), #6EA4AE;
+        box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
+        width: 210px;
+        margin-left: -25px;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 27px;
+    }
+    .sport9 {
+        transition: clip-path 1.5s;
+        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        background: linear-gradient(0deg, #213134, #213134), #6EA4AE;
+        box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
+        width: 240px;
+        margin-left: -25px;
+        color: white;
+        text-align: center;
+        padding-top: 50px;
+        font-size: 27px;
+    }
+    .board{
+       
+        height: 340px;
+       
+    }
+    .box1 {
+        border: 1px solid rgb(255, 255, 255);
+        width: 250px;
+        height: 58px;
+        text-align: center;
+        font-size: 32px;
+        border-radius: 15%;
+    }
+    .start {
+        display: flex;
+        width: 100%;
+        height: 365px;
+        justify-content: space-around;
+        margin-top: 0%;
+    }
+   
+    
 }
 
