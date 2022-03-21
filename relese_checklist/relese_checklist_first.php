@@ -74,8 +74,17 @@
          </div>
     </div>
 
-<!-- gnjrnjkrd -->
-    
+    <script>
+    $('.mayr div').click(function(){ 
+        if($(this).hasClass('active')){       
+            $('.mayr div').removeClass("active"); 
+        }
+        else{
+            $('.mayr div').removeClass("active");         
+            $(this).addClass("active"); 
+        }
+    });
+    </script>
 
   
 
