@@ -27,6 +27,9 @@ for($i = 0; $i < 7; $i++) {
     if($week_start > $last_day_prew_mounth) {
         $week_start = 1;
     }
+
+    $week_start = str_pad($week_start,2,'0', STR_PAD_LEFT);
+
     $divs = "";
     $select_date = "SELECT DAY(collections.release_date) as dd1, collections.sport_type, sports_type.sport_logo, sports_type.background FROM collections, sports_type where collections.sport_type = sports_type.sport_logo AND release_date BETWEEN  '$from_date' AND '$to_date'";
     $date_query = mysqli_query($con, $select_date);
@@ -39,8 +42,6 @@ for($i = 0; $i < 7; $i++) {
                         </div>";
         }
     }
-
-    $week_start = str_pad($week_start,2,'0', STR_PAD_LEFT);
 
     $table1 .= "<th class='days' data-day='" . $week_start . "'>
                         <span>" . $week_start . "</span>
