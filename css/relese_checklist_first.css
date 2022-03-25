@@ -1,20 +1,127 @@
 body{
     padding: 0 !important;
 }
+.date_control{
+  display: none;
+    
+}
 
+.star_o{
+    font-size: 20px;
+}
 .mayr div.active {
     clip-path: polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%);
-    padding-top: 56px; 
- }
+    padding-top: 56px;
+    pointer-events: none;
+}
+.eee {
+    transition: margin-left 1.5s;
+    width: 800%;
+    height: 17vw;
+    display: flex;
+}
+
+.eee.slide{
+    margin-left: -81vw;
+    color: #fff;
+}
+.eee.slide2{
+    margin-left: -162vw;
+    color: #fff;
+}
+.eee.slide3{
+    margin-left: -243vw;
+    color: #fff;
+}
+.eee.slide4{
+    margin-left: -324vw;
+    color: #fff;
+}
+.eee.slide5{
+    margin-left: -405vw;
+    color: #fff;
+}
+.eee.slide6{
+    margin-left: -486vw;
+    color: #fff;
+}
+.eee.slide7{
+    margin-left: -567vw;
+    color: #fff;
+}
+.lock{
+    width: calc(100% / 8);
+    height: inherit;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)),#A4CDD3;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.lock1{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
+    width: calc(100% / 8);
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.lock2{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
+    width: calc(100% / 8);
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.lock3{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #6EA4AE;
+    width: calc(100% / 8);
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.lock4{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #6EA4AE;
+    width: calc(100% / 8);
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.lock5{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #6EA4AE;
+    width: calc(100% / 8);
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.lock6{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #6EA4AE;
+    width: calc(100% / 8);
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+.lock7{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #6EA4AE;
+    width: calc(100% / 8);
+    height: inherit;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
 .sport1{
-    transition: clip-path 1.5s;
+    
     width: 130px;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)), #6EA4AE;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)),#A4CDD3;
     clip-path: polygon(0 60%, 91% 60%, 90% 100%, 0 100%);
     margin-right: -2px;
 }
 .sport2{
-    transition: clip-path 1.5s;
+    transition: all 1.5s;
     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     margin-left: -35px;
     color: white;
@@ -23,14 +130,16 @@ body{
     width: 145px;
     height: 100px;
     text-align: center; 
+    font-size: 17px;
     padding-top: 65px;
 }
 .sport3{
-    transition: clip-path 1.5s;
+    transition: all 1.5s;
     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)), #6EA4AE;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     width: 130px;
+    height: 100px;
     margin-left: -25px;
     color: white; 
     text-align: center;
@@ -38,9 +147,9 @@ body{
     font-size: 17px;
 }
 .sport4{
-    transition: clip-path 1.5s;
+    transition: all 1.5s;
     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.2)), #6EA4AE;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white;
     width: 130px; 
@@ -51,11 +160,11 @@ body{
 
 }
 .sport5{
-    transition: clip-path 1.5s;
+    transition: all 1.5s;
     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #6EA4AE;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
-    color: white; 
+    color: white;
     width: 130px; 
     margin-left: -21px;
     text-align: center; 
@@ -63,9 +172,9 @@ body{
     font-size: 17px;
 }
 .sport6{
-    transition: clip-path 1.5s;
+    transition: all 1.5s;
     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #6EA4AE;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white;
     width: 130px;
@@ -75,9 +184,9 @@ body{
     font-size: 17px;
 }
 .sport7{
-    transition: clip-path 1.5s;
+    transition: all 1.5s;
     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #6EA4AE;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white; 
     width: 130px; 
@@ -87,9 +196,9 @@ body{
     font-size: 17px;
 }
 .sport8{
-    transition: clip-path 1.5s;
+    transition: all 1.5s;
     clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #6EA4AE;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white;
     width: 130px; 
@@ -99,9 +208,9 @@ body{
     font-size: 17px;
 }
 .sport9{
-    transition: clip-path 1.5s;
-    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #6EA4AE;
+    transition: all 1.5s;
+    clip-path: polygon(2% 60%, 100% 60%, 100% 100%, 15% 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white; 
     width: 170px; 
@@ -129,7 +238,7 @@ body{
 .start{
     display: flex;
     width: 100%;
-    height: 250px;
+    height: 160px;
     justify-content: space-around;
     margin-top: 0%;
 }
@@ -141,7 +250,7 @@ body{
     padding-top: 25px; 
     color: darkblue; 
     font-size: 20px; 
-    margin-top: 8%; 
+    margin-top: 3%; 
     border-radius:12px 12px 12px 12px;
     box-shadow: 0px 0px 10px #2a1e1e;
     font-family:'Alfa Slab One', cursive;
@@ -183,7 +292,6 @@ body{
 
 .shadow {
     width: 100%;
-    height: 121%;
     background: #ffffff00;
     position: relative;
     top: -100%;
@@ -214,20 +322,54 @@ body{
 
 
 @media(max-width:1280px){
+    .date_control{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    
+    .star_o{
+        font-size: 20px;
+    }
     .mayr div.active {
       
        clip-path: unset;
-       height: 300px;
+       height: 373px;
     }
     .shadow {
         display: none;
     }
+    .boxer > div{
+        display: none;
+    }
+     .lock{
+        width: unset;
+        height: unset;
+        background:unset;
+        justify-content: unset;
+        align-items: unset;
+        color: unset;
+    }
+    .lock1{
+        width: unset;
+        height: unset;
+        background:unset;
+        justify-content: unset;
+        align-items: unset;
+        color: unset;
+    }
+   .eee{
+       height: 0px;
+   }
     
 
     .start{
         display: flex;
         width: 100%;
-        height: 100px;
+        height: 1px;
         justify-content: space-around;
         margin-top: 9%;
     }
@@ -401,23 +543,88 @@ body{
     }
 }
 @media(max-width:550px){
+    .date_control{
+         margin-top: 10px;
+         display: flex;
+         flex-direction: column;
+         justify-content: space-between;
+         align-items: center;
+         
+     }
+     .star_o{
+        font-size: 16px;
+    }
     .mayr div.active {
-      height: 300px;
+      height: 373px;
       clip-path: unset;
       padding-top: -1px;
+     
+    }
+    .boxer > div{
+        display: none;
     }
     .shadow {
     display: none;
     }
+    .eee.slide{
+        margin-left: unset;
+        color: #fff;
+    }
+    .eee.slide2{
+        margin-left: unset;
+        color: #fff;
+    }
+    .eee.slide3{
+        margin-left: unset;
+        color: #fff;
+    }
+    .eee.slide4{
+        margin-left: unset;
+        color: #fff;
+    }
+    .eee.slide5{
+        margin-left: unset;
+        color: #fff;
+    }
+    .eee.slide6{
+        margin-left: unset;
+        color: #fff;
+    }
+    .eee.slide7{
+        margin-left: unset;
+        color: #fff;
+    }
+    .lock{
+        width: unset;
+        height: unset;
+        background:unset;
+        justify-content: unset;
+        align-items: unset;
+        color: unset;
+    }
+    .lock1{
+        width: unset;
+        height: unset;
+        background:unset;
+        justify-content: unset;
+        align-items: unset;
+        color: unset;
+    }
+    .eee {
+        transition: margin-left 1.5s;
+        width: 800%;
+        height: 0vw;
+        display: flex;
+    }
     .nachalo{
         display: flex;
         width: 403px; 
-        height: 135px;
+        height: 85px;
         justify-content: space-around; 
         padding-top: 25px; 
         color: darkblue; 
         font-size: 20px; 
-        margin-top: 8%; 
+        margin-top: 0%; 
         border-radius:12px 12px 12px 12px;
         box-shadow: 0px 0px 10px #2a1e1e;
         font-family:'Alfa Slab One', cursive;
@@ -428,7 +635,7 @@ body{
     .start{
         display: flex;
         width: 100%;
-        height: 100px;
+        height: 1px;
         justify-content: space-around;
         margin-top: 9%;
     }
@@ -598,10 +805,118 @@ body{
         align-items: none;
     }
     .father{
-        height: 50px;
+        height: 1px;
     }
 }
 @media(min-width:2560px){
+    .box1{
+        border: 1px solid rgb(255, 255, 255);
+        width: 290px;
+        height: 75px;
+        text-align: center;
+        font-size: 36px;
+        border-radius: 10px 10px 10px 10px;
+        padding-top: 5px;
+    }
+    .star_o{
+        font-size: 36px;
+    }
+    .eee.slide{
+        margin-left: -81vw;
+        color: #fff;
+    }
+    .eee.slide2{
+        margin-left: -162vw;
+        color: #fff;
+    }
+    .eee.slide3{
+        margin-left: -243vw;
+        color: #fff;
+    }
+    .eee.slide4{
+        margin-left: -324vw;
+        color: #fff;
+    }
+    .eee.slide5{
+        margin-left: -405vw;
+        color: #fff;
+    }
+    .eee.slide6{
+        margin-left: -486vw;
+        color: #fff;
+    }
+    .eee.slide7{
+        margin-left: -567vw;
+        color: #fff;
+    }
+    .eee{
+        width: 800%;
+        height: 17vw;
+    }
+    .lock{
+        width: calc(100% / 8);
+        height: inherit;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)),#A4CDD3;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+    }
+    .lock1{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
+        width: calc(100% / 8);
+        height: inherit;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+    }
+    .lock2{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
+        width: calc(100% / 8);
+        height: inherit;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+    }
+    .lock3{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #6EA4AE;
+        width: calc(100% / 8);
+        height: inherit;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+    }
+    .lock4{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #6EA4AE;
+        width: calc(100% / 8);
+        height: inherit;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+    }
+    .lock5{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #6EA4AE;
+        width: calc(100% / 8);
+        height: inherit;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+    }
+    .lock6{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #6EA4AE;
+        width: calc(100% / 8);
+        height: inherit;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+    }
+    .lock7{
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #6EA4AE;
+        width: calc(100% / 8);
+        height: inherit;
+        justify-content: space-around;
+        align-items: center;
+        color: #fff;
+    }
     .mayr div.active {
         clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
         padding-top: 28px;
@@ -716,14 +1031,7 @@ body{
         height: 340px;
        
     }
-    .box1 {
-        border: 1px solid rgb(255, 255, 255);
-        width: 250px;
-        height: 58px;
-        text-align: center;
-        font-size: 32px;
-        border-radius: 15%;
-    }
+    
     .start {
         display: flex;
         width: 100%;

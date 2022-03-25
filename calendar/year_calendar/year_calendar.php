@@ -1,6 +1,7 @@
 
     <?php
         $days = array("M", "T", "W", "T", "F", "S", "S");
+        $ths='';
         $mounths = array(
             1 => "January",
             2 => "February",
@@ -32,7 +33,7 @@
             $first_day = 7;
         }
 
-        echo $mounth . " / " . $year . " => " . $first_day . "<br>";
+        // echo $mounth . " / " . $year . " => " . $first_day . "<br>";
     }
 
     ?>
@@ -79,7 +80,7 @@
 <!--                </tbody>-->
 <!--            </table>-->
 <!--        </div>-->
-        <?= $p ?>
+        
 <!--        <div>-->
 <!--            <table class="jjj">-->
 <!--            <div class="name_mount"><h6 calss="year_month_names"> FEBRUARY</h6><h5 class="year_cal_cover"> > </h5></div>-->
