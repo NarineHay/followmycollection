@@ -1,190 +1,72 @@
- <?php
-    $days = array("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun");
-    $first_day = date('w', strtotime('first day of this month'));
 
-    if($first_day == 0 ) {
-        $first_day = 7;
-    }
+<?php
+$mounth_number = date('n');
+$mounth = date('F');
+$year = date('Y');
+$first_day = date('w', strtotime('first day of this month'));
 
-    $last_day_prew_mounth = date('d', strtotime('last day of previous month'));
+if($first_day == 0 ) {
+    $first_day = 7;
+}
 
-    $year = date('Y');$mounth_number = date('n');
+$last_day_prew_mounth = date('d', strtotime('last day of previous month'));
 
-    $week_start = date('d', strtotime("monday this week"));
+$q = 1;
+$f = 1;
+$p='';
+$num_of_days = cal_days_in_month(CAL_GREGORIAN, $mounth_number, $year);
+$k=($first_day*1 + $num_of_days*1 - 1) / 7;
+for ($i = 0; $i < $k; $i++) {
+    $p .= '<tr class="f_first">';
+    for ($j = 0; $j < 7; $j++){
+        if($i==0){
+            if($j >= $first_day-1) {
 
-    $table1 = "";
-    $trs = "";
-    $class = "";
-
-    for($i = 0; $i < 7; $i++) {
-
-        if($week_start > $last_day_prew_mounth) {
-            $week_start = 1;
-            
+                $dates = str_pad($q,2,'0', STR_PAD_LEFT);
+                $p .= "<td class='f_first_inside'><div class='cube'>".$dates."</div></td>";
+                $q++;
+            }
+            else {
+                $p .= "<td class='passive'><div class='cube'>" . $last_day_prew_mounth . "</div></td>";
+                $last_day_prew_mounth --;
+            }
         }
-
-        $week_start = str_pad($week_start,2,'0', STR_PAD_LEFT);
-
-        $table1 .= "<th class='days' data-day='" . $week_start . "'>
-                    <span>" . $week_start . "</span>
-                    <span>" . $days[$i] . "</span>
-                </th>";
-
-        
-        if($i < 6) {
-            $class = "border";
-        }else {
-            $class = "";
+        else{
+            if($q<=$num_of_days) {
+                $dates = str_pad($q,2,'0', STR_PAD_LEFT);
+                $p .= "<td class='f_first_inside'><div class='cube'>".$dates."</div></td>";
+            }else {
+                $dates1 = str_pad($f,2,'0', STR_PAD_LEFT);
+                $p .= "<td class='passive f_first_inside'><div class='cube'>" . $dates1 . "</div></td>";
+                $f++;
+            }
+            $q++;
         }
-        
-        $trs .= "<td class='" . $class . "'>
-                       <div style='background: red' class='releses'>
-                            <img src=''>
-                        </div>
-            </td>";
-        $week_start ++;
     }
-    
-    
+    $p .="</tr>";
+}
 
-?> 
+?>
 
 
 <table class="calendar">
-    
 
     <tbody class="calendar_body">
-        <tr class="empty">
-        <?= $table1 ?>
-           
+        <thead class="empty">
+            <th>MONDAY</th>
+            <th>TUESDAY</th>
+            <th>WEDNESDAY</th>
+            <th>THURSDAY</th>
+            <th>FRIDAY</th>
+            <th>SATURDAY</th>
+            <th>SUNDAY</th>
+        </thead>
+        <tr>
+            <?= $p ?>
         </tr>
-       
-
-        
     </tbody>
    
 </table>
-
-
-<div class="first_maunth">
-    <div class="f_first">
-            <div class="f_first_inside">
-                <div class="cube">31</div>
-                <?= $trs ?>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">1</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">2</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">3</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">4</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">5</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">6</div>
-            </div>
-    </div>
-    <div class="f_first">
-            <div class="f_first_inside">
-                <div class="cube">7</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">8</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">9</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">10</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">11</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">12</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">13</div>
-            </div>
-    </div>
-    <div class="f_first">
-            <div class="f_first_inside">
-                <div class="cube">14</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">15</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">16</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">17</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">18</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">19</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">20</div>
-            </div>
-    </div>
-    <div class="f_first">
-            <div class="f_first_inside">
-                <div class="cube">21</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">22</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">23</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">24</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">25</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">26</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">27</div>
-            </div>
-    </div>
-    <div class="f_first">
-            <div class="f_first_inside">
-                <div class="cube">28</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">1</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">2</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">3</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">4</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">5</div>
-            </div>
-            <div class="f_first_inside">
-                <div class="cube">6</div>
-            </div>
-    </div>
-</div>
-
 
 <br>
 <br>
