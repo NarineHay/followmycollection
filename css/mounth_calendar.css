@@ -5,23 +5,21 @@
 .f_first{
     width: 100%;
     height: 112px;
-    display: flex;
-    flex-direction: row;
 }
 .f_first_inside{
-    
     width: 14.3%;
     height: 113px;
     border: 1px solid gray;
 }
 .cube{
-    background-color: gray;
+    background-color: #E9ECEF;
     width: 25px;
     height: 25px;
     text-align: center;
-    margin-left: 3px;
-    margin-top: 3px;
-    
+
+}
+.passive {
+    background: #cfd1d3 ;
 }
 .calendar_header{
     width: 100px;
@@ -31,10 +29,11 @@
 }
 th {
     font-weight: unset;
-    color: #818181;
-    font-size: 18px;
+    color: #000;
+    font-size: 13px;
     font-family: emoji;
-    
+    text-align: center;
+    padding: 1px;
 }
 .calendar_body tr:not(.empty) {
     height: 0px;
@@ -48,14 +47,19 @@ th {
    
 }
 .fel{
-    display: flex;
-    flex-direction: column;
+    /*display: flex;*/
+    /*flex-direction: column;*/
 }
+.fel td {
+    height: 540px;
+    width: calc(100% / 7);
+}
+
 .releses{
-    /* border-radius: 15px 15px 15px 15px;
-    height: 10px;
-    width: 10px;
-    margin-left: 10px; */
+    border-radius: 8px;
+    height: 40px;
+    width: 85%;
+    margin: 7px 0 7px 10px;
 }
 @media(max-width:550px){
     .add-f {

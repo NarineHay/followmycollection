@@ -45,6 +45,7 @@
     
             
                 <?= $take_types ?>
+
                 
                 <div class="sport9">My Checklists</div> 
         </div>
@@ -100,6 +101,13 @@
                 </div>
                 
                 
+
+                <div class="sport9">My Checklists</div>
+        </div>
+        <div class="d-flex innline" style="width: 100%;height: 230px;background: #6EA4AE;justify-content: space-around;align-items: center;">
+            <div class="d-flex boxer">
+                    <?= $take_dates ?>
+
             </div>
             
         </div>
@@ -111,10 +119,24 @@
     </div>
     <div class="container-fluid d-flex flex-column p-0 start2">
         <div class="mayr d-flex">
+            <div class="sport1">
+                <div class="shadow"></div>
+            </div>
+
 
         <div class="sport1"></div>
         <?= $take_types ?>
        
+
+
+            <?= $take_types ?>
+            <div class="sport9">My Checklists</div>
+        </div>
+        <div class="d-flex innline" style="width: 100%;height: 230px;background: #6EA4AE;justify-content: space-around;align-items: center;">
+            <div class="d-flex boxer">
+                <?= $take_dates ?>
+            </div>
+
         </div>
         <div class="bigger_block_slider">
         <div class="eee">
