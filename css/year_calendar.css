@@ -214,6 +214,115 @@ th {
     }
    
 }
+@media(max-width:550px){
+    .releses {
+      display: none;
+    }
+    .left {
+        display: none;
+     }
+     .right {
+        /* margin-left: -50px;
+        margin-top: 180px; */
+        height: 64%;
+        width: 122%;
+        border: 1px solid gray;
+        float: left;
+        box-shadow: 0px 4px 0px rgb(0 0 0 / 25%);
+        border-radius: 0px 0px 15px 15px;
+        margin: 180px auto;
+    }
+    
+    .erord {
+       display: none;
+    }
+    .erkrord {
+        display: none;
+    }
+    .jjj {
+        display: none;
+    }
+    .name_mount{
+        display: none; 
+    }
+    .jjj-f {
+        top: -46px;
+        left: 0px;
+        left: -29px;
+        position: relative;
+        width: 307px;
+        height: 346px;
+        align-items: center;
+    }
+    tr {
+        font-weight: bold;
+        font-size: 26px;
+        font-style: bold;
+        text-align: center;
+    }
+    th {
+        font-weight: unset;
+        color: #818181;
+        font-size: 20px;
+    }
+    .add{
+        width: 80%;
+        height: 95px;
+        border: 0.8px solid gray;
+        border-radius: 15px 15px 15px 15px;
+        text-align: center;
+        padding-top: 20px;
+        margin-left: 40px;
+        margin-top: 100px;
+     
+    }
+    .add-f{
+        width: 80%;
+        height: 95px;
+        border: 0.8px solid gray;
+        border-radius: 15px 15px 0px 0px;
+        text-align: center;
+        padding-top: 20px;
+        margin-left: 40px;
+        margin-top: 56px;
+    }
+    .bdd{
+        color: darkblue;
+        font-size: 24px;
+        padding-top: 5px;
+        font-family: 'Secular One', sans-serif;
+        letter-spacing: 2px;
+        font-weight: bold;
+    }
+    .today {
+        display: none;
+    }
+    .control {
+        position: relative;
+        top: 24px;
+        left: 39px;
+    }
+    .data {
+        margin-right: 5px;
+        position: relative;
+        top: 2px;
+        left: -69px;
+        font-size: 18px;
+    }
+    .calendar_type {
+       display: none;
+    }
+    .search {
+        position: relative;
+        left: -79px;
+        top: 51px;
+    }
+    .search_panel button {
+        position: relative;
+        top: 51px;
+        left: -79px;
+    }
+}
 
 @media(max-width:1275px){
     .left {
@@ -262,7 +371,7 @@ th {
         font-size: 20px;
     }
     .add{
-        width: 100%;
+        width: 80%;
         height: 95px;
         border: 0.8px solid gray;
         border-radius: 15px 15px 15px 15px;
@@ -273,7 +382,7 @@ th {
       
     }
     .add-f{
-        width: 100%;
+        width: 80%;
         height: 95px;
         border: 0.8px solid gray;
         border-radius: 15px 15px 0px 0px;
@@ -320,112 +429,5 @@ th {
         top: 19px;
         left: -49px;
     }
-    @media(max-width:550px){
-        .releses {
-          display: none;
-        }
-        .left {
-            display: none;
-         }
-         .right {
-            margin-left: 0px;
-            margin-top: 180px;
-            height: 64%;
-            width: 122%;
-            border: 1px solid gray;
-            float: left;
-            box-shadow: 0px 4px 0px rgb(0 0 0 / 25%);
-            border-radius: 0px 0px 15px 15px;
-        }
-        
-        .erord {
-           display: none;
-        }
-        .erkrord {
-            display: none;
-        }
-        .jjj {
-            display: none;
-        }
-        .name_mount{
-            display: none; 
-        }
-        .jjj-f {
-            top: -46px;
-            left: 0px;
-            left: -29px;
-            position: relative;
-            width: 307px;
-            height: 346px;
-            align-items: center;
-        }
-        tr {
-            font-weight: bold;
-            font-size: 26px;
-            font-style: bold;
-            text-align: center;
-        }
-        th {
-            font-weight: unset;
-            color: #818181;
-            font-size: 20px;
-        }
-        .add{
-            width: 80%;
-            height: 95px;
-            border: 0.8px solid gray;
-            border-radius: 15px 15px 15px 15px;
-            text-align: center;
-            padding-top: 20px;
-            margin-left: 40px;
-            margin-top: 100px;
-          
-        }
-        .add-f{
-            width: 80%;
-            height: 95px;
-            border: 0.8px solid gray;
-            border-radius: 15px 15px 0px 0px;
-            text-align: center;
-            padding-top: 20px;
-            margin-left: 40px;
-            margin-top: 56px;
-        }
-        .bdd{
-            color: darkblue;
-            font-size: 24px;
-            padding-top: 5px;
-            font-family: 'Secular One', sans-serif;
-            letter-spacing: 2px;
-            font-weight: bold;
-        }
-        .today {
-            display: none;
-        }
-        .control {
-            position: relative;
-            top: 24px;
-            left: 39px;
-        }
-        .data {
-            margin-right: 5px;
-            position: relative;
-            top: 2px;
-            left: -69px;
-            font-size: 18px;
-        }
-        .calendar_type {
-           display: none;
-        }
-        .search {
-            position: relative;
-            left: -79px;
-            top: 51px;
-        }
-        .search_panel button {
-            position: relative;
-            top: 51px;
-            left: -79px;
-        }
-    }
+    
 }

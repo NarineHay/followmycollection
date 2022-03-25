@@ -1,4 +1,6 @@
 
+
+
 <?php
 $mounth_number = date('n');
 $mounth = date('F');
@@ -49,9 +51,15 @@ for ($i = 0; $i < $k; $i++) {
 ?>
 
 
+
 <table class="calendar">
 
     <tbody class="calendar_body">
+
+        <tr class="empty">
+       
+           
+
         <thead class="empty">
             <th>MONDAY</th>
             <th>TUESDAY</th>
@@ -63,10 +71,12 @@ for ($i = 0; $i < $k; $i++) {
         </thead>
         <tr>
             <?= $p ?>
+
         </tr>
     </tbody>
    
 </table>
+
 
 <br>
 <br>

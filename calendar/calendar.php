@@ -1,41 +1,41 @@
 <?php
-$select_colors = "SELECT * FROM sports_type";
-$colors_result = mysqli_query($con, $select_colors);
-$colors_content = "";
-$mounth_number = date('n');
+    $select_colors = "SELECT * FROM sports_type";
+    $colors_result = mysqli_query($con, $select_colors);
+    $colors_content = "";
+    $mounth_number = date('n');
 
-while($tox = mysqli_fetch_assoc($colors_result)) {
-    $colors_content .= '<div class="sport_colors">
+    while($tox = mysqli_fetch_assoc($colors_result)) {
+        $colors_content .= '<div class="sport_colors">
                                 <div class="sport_background" style="background: ' . $tox["background"] . '; color: ' . $tox["color"] . '">' . $tox['sport_type'] . '</div>
                                   
                                 <div class="sport_color" style="background: ' . $tox["color"] . '"></div>
                             </div>';
-}
-$this_thursday = date('F', strtotime("thursday this week"));
-$this_thursday_day = date('d', strtotime("thursday this week"));
-$this_mounth = date('F');
-$this_year = date('Y');
-$today = date("d");
+    }
+    $this_thursday = date('F', strtotime("thursday this week"));
+    $this_thursday_day = date('d', strtotime("thursday this week"));
+    $this_mounth = date('F');
+    $this_year = date('Y');
+    $today = date("d");
 
-$choose_calendar = $_POST['choose_calendar'];
+    $choose_calendar = $_POST['choose_calendar'];
 ?>
 
 
 <div class="father">
 
-    <div class="all_mounths">
+<div class="all_mounths">
+  
+</div>
 
-    </div>
-
-    <div class="add">
+<div class="add">
         <p class="bdd">JANUARY 2022</p>
         <p></p>
-    </div>
+</div>
 
-    <div class="add-f">
+<div class="add-f">
         <p class="bdd">JANUARY 2022</p>
         <p></p>
-    </div>
+</div>
 
 </div>
 
@@ -50,18 +50,18 @@ $choose_calendar = $_POST['choose_calendar'];
     <div class="left_calendar">
         <table class="select_calendar">
             <thead>
-            <tr>
-                <th>M</th>
-                <th>T</th>
-                <th>W</th>
-                <th>T</th>
-                <th>F</th>
-                <th>S</th>
-                <th>S</th>
-            </tr>
+                <tr>
+                    <th>M</th>
+                    <th>T</th>
+                    <th>W</th>
+                    <th>T</th>
+                    <th>F</th>
+                    <th>S</th>
+                    <th>S</th>
+                </tr>
             </thead>
             <tbody>
-            <?php require "select_calendar.php" ?>
+                <?php require "select_calendar.php" ?>
             </tbody>
         </table>
     </div>
@@ -78,27 +78,27 @@ $choose_calendar = $_POST['choose_calendar'];
             </div>
             <div class="control">
                 <?php
-                if($choose_calendar == "week") {
-                    ?>
+                    if($choose_calendar == "week") {
+                ?>
                     <i class="fa fa-angle-left before_week"></i>
                     <i class="fa fa-angle-right after_week"></i>
-                    <?php
-                } else if($choose_calendar == "mounth") {
-                    ?>
+                <?php
+                    } else if($choose_calendar == "mounth") {
+                ?>
                     <i class="fa fa-angle-left before_mounth"></i>
                     <i class="fa fa-angle-right after_mounth"></i>
-                    <?php
-                } else if($choose_calendar == "year") {
-                    ?>
+                <?php
+                    } else if($choose_calendar == "year") {
+                ?>
                     <i class="fa fa-angle-left before_year"></i>
                     <i class="fa fa-angle-right after_year"></i>
-                    <?php
-                } else {
-                    ?>
+                <?php
+                    } else {
+                ?>
                     <i class="fa fa-angle-left before_week"></i>
                     <i class="fa fa-angle-right after_week"></i>
-                    <?php
-                }
+                <?php
+                    }
                 ?>
 
             </div>
@@ -117,40 +117,40 @@ $choose_calendar = $_POST['choose_calendar'];
                 <select class="calendar_type" onchange="this.form.submit()" name="choose_calendar">
 
                     <?php
-                    if($choose_calendar == "week") {
-                        ?>
+                        if($choose_calendar == "week") {
+                    ?>
                         <option value="week">Week</option>
                         <option value="mounth">Mounth</option>
                         <option value="year">Year</option>
-                        <?php
-                    } else if($choose_calendar == "mounth") {
-                        ?>
+                    <?php
+                        } else if($choose_calendar == "mounth") {
+                    ?>
                         <option value="mounth">Mounth</option>
                         <option value="year">Year</option>
                         <option value="week">Week</option>
-                        <?php
-                    } else if($choose_calendar == "year") {
-                        ?>
+                    <?php
+                        } else if($choose_calendar == "year") {
+                    ?>
                         <option value="year">Year</option>
                         <option value="mounth">Mounth</option>
                         <option value="week">Week</option>
                         <?php
-                    } else {
-                        ?>
+                        } else {
+                    ?>
                         <option value="week">Week</option>
                         <option value="mounth">Mounth</option>
                         <option value="year">Year</option>
-                        <?php
-                    }
+                    <?php
+                        }
                     ?>
 
                 </select>
             </form>
         </div>
     </div>
-
-
-
+    
+    
+   
     <div class="right_calendar">
 
 
@@ -160,9 +160,11 @@ $choose_calendar = $_POST['choose_calendar'];
             require "week_calendar/week_calendar.php";
         }
 
+
         else if($choose_calendar == "mounth") {
             require "mounth_calendar/mounth_calendar.php";
         }
+
 
         else if($choose_calendar == "year") {
             require "year_calendar/year_calendar.php";
@@ -172,8 +174,8 @@ $choose_calendar = $_POST['choose_calendar'];
         }
 
 
-        ?>
-
+        ?> 
+     
 
     </div>
 
