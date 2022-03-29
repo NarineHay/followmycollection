@@ -17,59 +17,63 @@
     $this_year = date('Y');
     $today = date("d");
 
-    $choose_calendar = $_POST['choose_calendar'];
-?>
+    if(!empty($_POST['choose_calendar'])) {
+        $choose_calendar = $_POST['choose_calendar'];
+    }else {
+        $choose_calendar = "week";
+    }
+
+    ?>
 
 
-<div class="father">
+<!--<div class="father">-->
+<!---->
+<!--    <div class="all_mounths">-->
+<!---->
+<!--    </div>-->
 
-<div class="all_mounths">
-  
-</div>
+<!--<div class="add">-->
+<!--        <p class="bdd">JANUARY 2022</p>-->
+<!--        <p></p>-->
+<!--</div>-->
+<!---->
+<!--<div class="add-f">-->
+<!--        <p class="bdd">JANUARY 2022</p>-->
+<!--        <p></p>-->
+<!--</div>-->
 
-<div class="add">
-        <p class="bdd">JANUARY 2022</p>
-        <p></p>
-</div>
+<!--</div>-->
 
-<div class="add-f">
-        <p class="bdd">JANUARY 2022</p>
-        <p></p>
-</div>
-
-</div>
-
-<p></p>
-
-<div class="left">
-    <div class="mounth_year"> <?= $this_mounth ?> <?= $this_year ?> </div>
-    <div class="right_icons">
-        <i class="fa fa-angle-left before_select_calendar"></i>
-        <i class="fa fa-angle-right after_select_calendar"></i>
+<!--<p></p>-->
+    <div class="left">
+        <div class="mounth_year"> <?= $this_mounth ?> <?= $this_year ?> </div>
+        <div class="right_icons">
+            <i class="fa fa-angle-left before_select_calendar"></i>
+            <i class="fa fa-angle-right after_select_calendar"></i>
+        </div>
+        <div class="left_calendar">
+            <table class="select_calendar">
+                <thead>
+                    <tr>
+                        <th>M</th>
+                        <th>T</th>
+                        <th>W</th>
+                        <th>T</th>
+                        <th>F</th>
+                        <th>S</th>
+                        <th>S</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php require "select_calendar.php" ?>
+                </tbody>
+            </table>
+        </div>
+        <div class="sport_content">
+            <?= $colors_content ?>
+        </div>
     </div>
-    <div class="left_calendar">
-        <table class="select_calendar">
-            <thead>
-                <tr>
-                    <th>M</th>
-                    <th>T</th>
-                    <th>W</th>
-                    <th>T</th>
-                    <th>F</th>
-                    <th>S</th>
-                    <th>S</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php require "select_calendar.php" ?>
-            </tbody>
-        </table>
-    </div>
-    <div class="sport_content">
-        <?= $colors_content ?>
-    </div>
-</div>
-<div class="right">
+    <div class="right">
     <div class="right_header">
         <div class="data_content">
             <div class="today">
@@ -169,6 +173,8 @@
         else if($choose_calendar == "year") {
             require "year_calendar/year_calendar.php";
         }
+
+
         else {
             require "week_calendar/week_calendar.php";
         }
@@ -181,6 +187,7 @@
 
 
     <script src="js/week_calendar.js"></script>
-
+    <script src="js/mounth_calendar.js"></script>
+    <script src="js/year_calendar.js"></script>
 
 </div>

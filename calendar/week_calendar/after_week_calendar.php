@@ -63,7 +63,7 @@ for($i = 0; $i < 7; $i++) {
 
 
         if($k1 == $last_day_of_week) {
-            $divs .= "<div style='background: " . $date_row['background'] . "' class='releses'>
+            $divs .= "<div style='background: " . $date_row['background'] . "' class='week_releses'>
                             <img src='../admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
                         </div>";
         }
