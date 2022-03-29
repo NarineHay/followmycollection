@@ -33,7 +33,7 @@
             $first_day = 7;
         }
 
-        // echo $mounth . " / " . $year . " => " . $first_day . "<br>";
+        echo $mounth . " / " . $year . " => " . $first_day . "<br>";
     }
 
     ?>

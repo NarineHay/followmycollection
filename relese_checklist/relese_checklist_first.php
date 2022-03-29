@@ -1,21 +1,23 @@
-    <?php
+<?php
         $sport_types= 'select * from sports_type';
         $sport_types_querry=mysqli_query($con,$sport_types);
         $take_types='';
         $color_type=2;
         $count=0;
         // $active_class='';
-       
-        
         $dates= 'select * from dates';
         $dates_querry=mysqli_query($con,$dates);
         $take_dates='';
-        
         while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
+            if($dates_row['status'] != 1){
             $take_dates.='
-                <div class="box1">'.$dates_row['data'].'<i class="star_o i-click fa fa-star-o"></i></div>
+                <div class="box1">'.$dates_row['data'].'<i class="star_o i-click fa fa-star" data-checked="false" id='.$dates_row['id'].'></i></div>
             ';
-            
+            }else{
+                $take_dates.='
+                <div class="box1">'.$dates_row['data'].'<i class="star_o i-click fa fa-star" data-checked="true" style="color:gold" id='.$dates_row['id'].'></i></div>
+            '; 
+            }
         }
         while ($sport_types_row = mysqli_fetch_assoc($sport_types_querry)) {
             $count++;
@@ -29,9 +31,7 @@
             ';
             $color_type++;
         }
-        
     ?>
-
 <div class="start">
          <div class="nachalo">
             <p class="p">CHECKLISTS</p>
@@ -39,79 +39,56 @@
     </div>
     <div class="container-fluid d-flex flex-column p-0 start2">
         <div class="mayr d-flex">
-             <div class="sport1"> 
+             <div class="sport1">
                  <div class="shadow"></div>
              </div>
-    
-            
                 <?= $take_types ?>
-
-                
-                <div class="sport9">My Checklists</div> 
+                <div class="sport9">My Checklists</div>
         </div>
         <div class="bigger_block_slider">
             <div class="eee">
                 <div class="d-flex innline lock">
                     <div class="d-flex boxer ">
-                        
-
                     </div>
                 </div>
                 <div class="d-flex innline lock1" >
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock2" >
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock3" >
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock4">
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock5" >
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock6">
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock7" >
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
-                
-                
-
-                <div class="sport9">My Checklists</div>
-        </div>
-        <div class="d-flex innline" style="width: 100%;height: 230px;background: #6EA4AE;justify-content: space-around;align-items: center;">
-            <div class="d-flex boxer">
-                    <?= $take_dates ?>
-
             </div>
-            
         </div>
-</div>  
+</div>
 <div class="start">
          <div class="nachalo">
             <p class="p">RELEASES</p>
@@ -119,89 +96,58 @@
     </div>
     <div class="container-fluid d-flex flex-column p-0 start2">
         <div class="mayr d-flex">
-            <div class="sport1">
-                <div class="shadow"></div>
-            </div>
-
-
         <div class="sport1"></div>
         <?= $take_types ?>
-       
-
-
-            <?= $take_types ?>
-            <div class="sport9">My Checklists</div>
-        </div>
-        <div class="d-flex innline" style="width: 100%;height: 230px;background: #6EA4AE;justify-content: space-around;align-items: center;">
-            <div class="d-flex boxer">
-                <?= $take_dates ?>
-            </div>
-
         </div>
         <div class="bigger_block_slider">
         <div class="eee">
                 <div class="d-flex innline lock">
                     <div class="d-flex boxer ">
-                       
-
                     </div>
                 </div>
                 <div class="d-flex innline lock1">
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-                      
-
                     </div>
                 </div>
                 <div class="d-flex innline lock2">
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock3">
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock4">
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock5">
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock6" >
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
                 <div class="d-flex innline lock7">
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
-
                     </div>
                 </div>
-                
-                
             </div>
             </div>
-</div>  
+</div>
 <div class="start">
          <div class="nachalo">
             <p class="p">NEW RELEASES CALENDAR</p>
          </div>
     </div>
-
-
-
     <script>
         $('.mayr div').click(function(){
             if($(this).hasClass('active')){
@@ -212,7 +158,6 @@
                 $(this).addClass("active");
             }
         });
-
     function slide( params) {
         let a = $('.eee')
             switch (params) {
@@ -244,27 +189,36 @@
                     a.removeClass();
                     a.addClass("eee slide7");
                 break;
-
   default:
     console.log("Sorry, we are out of ");
 }
-
-
         }
-        
-
         $( ".i-click" ).click(function() {
-            $(this ).css('color', 'gold');
+            var checked
+            if($(this).attr('data-checked') == 'false'){
+                checked = false
+                $(this).css('color', 'gold');
+                $(this).attr('data-checked',true)
+            }else{
+                checked = true
+                $(this).css('color', 'white');
+                $(this).attr('data-checked',false)
+            }
+            let id = $(this).attr('id')
+           
+            $.ajax({
+                method:"POST",
+                url: "rate_test.php",
+                data:{'id':id,'checked':checked},
+                success:function(r){
+                    console.log(r)
+                }
+            });
         });
-        
     </script>
     <style>
         .bigger_block_slider{
             width: 81vw;
             overflow:hidden;
-          
         }
-        
-        
     </style>
-

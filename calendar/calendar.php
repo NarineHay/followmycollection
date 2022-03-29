@@ -16,8 +16,12 @@
     $this_mounth = date('F');
     $this_year = date('Y');
     $today = date("d");
-
-    $choose_calendar = $_POST['choose_calendar'];
+    if(!empty($_POST['choose_calendar'])){
+         $choose_calendar = $_POST['choose_calendar'];
+    }else{
+        $choose_calendar ='week';
+    }
+   
 ?>
 
 
@@ -69,6 +73,7 @@
         <?= $colors_content ?>
     </div>
 </div>
+
 <div class="right">
     <div class="right_header">
         <div class="data_content">
@@ -181,6 +186,7 @@
 
 
     <script src="js/week_calendar.js"></script>
+    <script src="js/mounth_calendar.js"></script>
 
 
 </div>
