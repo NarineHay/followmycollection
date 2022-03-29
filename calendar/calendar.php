@@ -17,35 +17,35 @@
     $this_year = date('Y');
     $today = date("d");
 
-    if(!empty($_POST['choose_calendar'])) {
-        $choose_calendar = $_POST['choose_calendar'];
-    }else {
-        $choose_calendar = "week";
+    if(!empty($_POST['choose_calendar'])){
+         $choose_calendar = $_POST['choose_calendar'];
+    }else{
+        $choose_calendar ='week';
     }
+   
+?>
 
-    ?>
 
 
-<!--<div class="father">-->
-<!---->
-<!--    <div class="all_mounths">-->
-<!---->
-<!--    </div>-->
 
-<!--<div class="add">-->
-<!--        <p class="bdd">JANUARY 2022</p>-->
-<!--        <p></p>-->
-<!--</div>-->
-<!---->
-<!--<div class="add-f">-->
-<!--        <p class="bdd">JANUARY 2022</p>-->
-<!--        <p></p>-->
-<!--</div>-->
 
-<!--</div>-->
 
-<!--<p></p>-->
-    <div class="left">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="left">
         <div class="mounth_year"> <?= $this_mounth ?> <?= $this_year ?> </div>
         <div class="right_icons">
             <i class="fa fa-angle-left before_select_calendar"></i>
@@ -73,7 +73,7 @@
             <?= $colors_content ?>
         </div>
     </div>
-    <div class="right">
+<div class="right">
     <div class="right_header">
         <div class="data_content">
             <div class="today">
@@ -189,5 +189,6 @@
     <script src="js/week_calendar.js"></script>
     <script src="js/mounth_calendar.js"></script>
     <script src="js/year_calendar.js"></script>
+
 
 </div>

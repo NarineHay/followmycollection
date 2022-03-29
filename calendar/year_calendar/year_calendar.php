@@ -42,6 +42,7 @@
             $first_day = 7;
         }
 
+
         if($first_day > 2 ) {
             $last_day_prew_mounth -= $first_day - 2;
         }
@@ -95,6 +96,7 @@
         if($y == 4 || $y == 8 || $y == 12) {
             $p .= "</div>";
         }
+
     }
 
     ?>

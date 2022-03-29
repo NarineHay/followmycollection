@@ -64,12 +64,14 @@ th {
 .right_calendar {
     width: 100%;
 }
+
 .mounth_releses{
     border-radius: 8px;
     height: 40px;
     width: 85%;
     margin: 7px 0 7px 10px;
 }
+
 .mounth_releses img { 
     width: 15%;
     height: 15%;
