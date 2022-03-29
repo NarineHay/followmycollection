@@ -1,5 +1,3 @@
-
-
 $(".before_mounth").click(function() {
     let mounth = $(".mounth").attr("data-mounth")
     let year = $(".year").html()

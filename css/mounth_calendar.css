@@ -70,7 +70,7 @@ th {
     width: 85%;
     margin: 7px 0 7px 10px;
 }
-.mounth_releses img { 
+.mounth_releses img {
     width: 15%;
     height: 15%;
 }
@@ -211,7 +211,7 @@ th {
     .calendar_body tr:not(.empty) {
         display: flex;
         flex-direction: column;
-        width: 343%;
+        width: 800%;
         height: 100%;
     }
     .f_first_inside {
