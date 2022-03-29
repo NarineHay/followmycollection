@@ -1,13 +1,9 @@
 <?php
 $days = array("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun");
-$first_day = date('w', strtotime('first day of this month'));
 
-if($first_day == 0 ) {
-    $first_day = 7;
-}
 $k1 = "";
 
-$last_day_prew_mounth = date('d', strtotime('last day of previous month'));
+$last_day_prew_mounth = date('d', strtotime('last day of this month'));
 
 $year = date('Y');
 $mounth_number = date('n');
@@ -37,7 +33,7 @@ for($i = 0; $i < 7; $i++) {
     while($date_row = mysqli_fetch_assoc($date_query)) {
         $k1 = str_pad($date_row['dd1'],2,'0', STR_PAD_LEFT);
         if($k1 == $week_start) {
-            $divs .= "<div style='background: " . $date_row['background'] . "' class='releses'>
+            $divs .= "<div style='background: " . $date_row['background'] . "' class='week_releses'>
                             <img src='../admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
                         </div>";
         }
@@ -81,7 +77,3 @@ for($i = 0; $i < 7; $i++) {
 
     </tbody>
 </table>
-
-<br>
-<br>
-<br>

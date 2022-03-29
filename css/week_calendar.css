@@ -9,6 +9,12 @@
     height: 687px;
 }
 
+.relese_width {
+    width: 80%;
+    margin: 0 auto;
+    height: auto;
+}
+
 
 .left {
     width: 20%;

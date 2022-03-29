@@ -14,10 +14,10 @@
 
     <link rel="stylesheet" type="text/css" href="css/week_calendar.css?1">
 
-    <link rel="stylesheet" type="text/css" href="css/year_calendar.css?1">
-    <link rel="stylesheet" type="text/css" href="css/mounth_calendar.css?4">
-    <link rel="stylesheet" type="text/css" href="css/relese_checklist_first.css?4">
-    
+    <link rel="stylesheet" type="text/css" href="css/year_calendar.css?1">=
+    <link rel="stylesheet" type="text/css" href="css/mounth_calendar.css?3">
+    <link rel="stylesheet" type="text/css" href="css/relese_checklist_first.css?3">
+
     <script src="js/relese_checklist_first.js?2" defer></script>
 
 
@@ -29,11 +29,15 @@
 
 
 <section class="section1 my-5">
-    <div class="calendar_width">
+    <div class="relese_width">
         <?php require "relese_checklist/relese_checklist_first.php"?>
+    </div>
+    <div class="calendar_width">
         <?php require "calendar/calendar.php"?>
         
     </div>
 </section>
+
+<?php //require "footer.php"?>
 
 </body>
