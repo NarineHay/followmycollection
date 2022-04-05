@@ -53,7 +53,7 @@ $q = 1;
 $f = 1;
 $p='';
 $num_of_days = cal_days_in_month(CAL_GREGORIAN, $mounth, $year);
-$k=($first_day*1 + $num_of_days*1 - 1) / 7;
+// $k=($first_day*1 + $num_of_days*1 - 1) / 7;
 
 $mounth_name = $mounths[$mounth];
 
@@ -61,7 +61,7 @@ $from_date = date("Y/m/d", strtotime("$mounth_name $year"));
 $to_date = date("Y/m/d", strtotime("+1 MONTH - 1 DAY", strtotime($from_date)));
 
 
-for ($i = 0; $i < $k; $i++) {
+for ($i = 0; $i < 6; $i++) {
     $p .= '<tr>';
     for ($j = 0; $j < 7; $j++){
         $h5 = '';
@@ -78,7 +78,7 @@ for ($i = 0; $i < $k; $i++) {
             if($k1 == $q && $c < 3) {
                 $c++;
                 $divs .= "<div style='background: " . $date_row['background'] . "' class='mounth_releses'>
-                            <img src='../admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
+                            <img src='admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
                         </div>";
             }
         }
@@ -88,7 +88,7 @@ for ($i = 0; $i < $k; $i++) {
                 $p .= "<td class='f_first_inside'  valign='top'>
                             <div class='box_cube'>
                                 <div class='cube'>
-                                    <div>".$q."</div>"
+                                    <div> <div class='number_day'>".$q."</div></div>"
                                         . $h5 .
                                 "</div>
                             </div>"
@@ -97,7 +97,7 @@ for ($i = 0; $i < $k; $i++) {
                 $q++;
             }
             else {
-                $p .= "<td class='passive_sec f_first_inside'  valign='top'><div class='cube'>" . $last_day_prew_mounth . "</div>
+                $p .= "<td class='passive_sec f_first_inside'  valign='top'><div class='cube'> <div class='number_day'>" . $last_day_prew_mounth . "</div></div>
                 </td>";
                 $last_day_prew_mounth++;
             }
@@ -107,14 +107,14 @@ for ($i = 0; $i < $k; $i++) {
                 $p .= "<td class='f_first_inside'  valign='top'>
                             <div class='box_cube'>
                                 <div class='cube'>
-                                    <div>".$q."</div>"
+                                    <div><div class='number_day'>".$q."</div></div>"
                                     . $h5 .
                                 "</div>
                             </div>"
                             . $divs .
                         "</td>";
             }else {
-                $p .= "<td class='passive_sec f_first_inside'  valign='top'><div class='cube'>" . $f . "</div>
+                $p .= "<td class='passive_sec f_first_inside'  valign='top'><div class='cube'><div class='number_day'>" . $f . "</div></div>
                 </td>";
                 $f++;
             }
