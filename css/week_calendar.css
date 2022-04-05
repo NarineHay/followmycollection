@@ -248,14 +248,14 @@
     vertical-align: top;
 }
 
-.releses {
+.week_releses {
     margin: 5px 10px;
     height: 40px;
     border-radius: 5px;
     display: flex;
 }
 
-.releses img {
+.week_releses img {
     width: 15%;
     height: 40%;
     margin: 5px;

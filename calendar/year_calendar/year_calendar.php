@@ -1,20 +1,20 @@
 <?php
     $days = array("M", "T", "W", "T", "F", "S", "S");
-        $ths='';
-        $mounths = array(
-            1 => "January",
-            2 => "February",
-            3 => "March",
-            4 => "April",
-            5 => "May",
-            6 => "June",
-            7 => "Juny",
-            8 => "August",
-            9 => "September",
-            10 => "October",
-            11 => "November",
-            12 => "December"
-        );
+    $ths='';
+    $mounths = array(
+        1 => "January",
+        2 => "February",
+        3 => "March",
+        4 => "April",
+        5 => "May",
+        6 => "June",
+        7 => "Juny",
+        8 => "August",
+        9 => "September",
+        10 => "October",
+        11 => "November",
+        12 => "December"
+    );
 
     for($k = 0; $k < 7; $k++) {
         $ths .= "<th class='mounths_array'>" . $days[$k] . "</th>";
@@ -113,9 +113,8 @@
         <div class="ggg">
         
             <?= $p ?>
-
         
-    </div>
+        </div>
 
 <script>
 // $(document).ready(function(){
@@ -134,3 +133,4 @@
 // });  
    
 </script> 
+
