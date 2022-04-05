@@ -44,11 +44,11 @@ th {
     height: 0px;
 }
 .left{
-    height: 100%;
+    height: 119%;
 }
 .right{
     width: 80%;
-    height: 100%;
+    height: 119%;
     overflow: hidden;
     margin-bottom: 20px;
 }
@@ -63,18 +63,20 @@ th {
 
 .right_calendar {
     width: 100%;
+    height: inherit;
 }
 
-.mounth_releses{
+.mounth_releses {
     border-radius: 8px;
-    height: 40px;
+    height: 21px;
     width: 85%;
     margin: 7px 0 7px 10px;
+    display: flex;
 }
 
-.mounth_releses img { 
-    width: 15%;
-    height: 15%;
+.mounth_releses img {
+    width: 20%;
+    height: auto;
 }
 .relese{
     border-radius: 8px;
@@ -88,9 +90,18 @@ th {
     width: 100%;
     height: 100%;
 }
-
+/* .ggg{
+    margin-left: 40px;
+    height: 66%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+} */
 
 @media(max-width:1275px){
+    .number_day{
+        font-size: 13px;
+    }
     .search_panel {
         display: flex;
         margin-right: 11px;
@@ -167,11 +178,11 @@ th {
         height: 0px;
     }
     .left{
-        height: 100%;
+        height: 124%;
     }
     .right{
         width: 100%;
-        height: 100%;
+        height: 124%;
         overflow: hidden;
         margin-bottom: 20px;
         border-radius: 15px 15px 15px 15px;
@@ -210,20 +221,32 @@ th {
 
 }
 @media(max-width:600px){
+    .f_first_inside {
+        width: calc(230% /1);
+        height: 160px;
+        border: 1px solid gray;
+    }
+    .passive_sec {
+        background: #cfd1d3;
+        width: calc(230% / 1);
+        height: 113px;
+    }
     .calendar_body tr:not(.empty) {
         display: flex;
         flex-direction: column;
         width: 343%;
         height: 100%;
     }
-    .f_first_inside {
-        width: calc(100% /1);
-        height: 113px;
-        border: 1px solid gray;
+    .mounth_releses {
+        border-radius: 8px;
+        height: 33px;
+        width: 30%;
+        margin: 7px 0 7px 10px;
+        display: flex;
     }
     .right{
        width: 100%;
-        overflow-y: scroll;
+       overflow-y: scroll;
        
     }
     .data {

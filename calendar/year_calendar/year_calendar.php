@@ -17,7 +17,7 @@
     );
 
     for($k = 0; $k < 7; $k++) {
-        $ths .= "<th>" . $days[$k] . "</th>";
+        $ths .= "<th class='mounths_array'>" . $days[$k] . "</th>";
     }
     $year = date('Y');
     $prev_year = $year-1;
@@ -49,41 +49,41 @@
 
         $q = 1;
         $f = 1;
-
+        
         if($y == 1 || $y == 5 || $y == 9) {
             $p .= "<div class='arajin'>";
         }
-
-        $p .= '<div class="lll">
+        $p .= '<div class="nachalo_year">
+                <div class="lll" style="width: 90%;">
                     <table class="jjj"> 
                         <div class="name_mount">
-                            <h6 calss="year_month_names">' . $mounth . '</h6>
+                            <h5 calss="year_month_names">' . $mounth . '</h5>
                                 <h5 class="year_cal_cover" >></h5>
                         </div>
                         <thead class="tr">' . $ths . '</thead>';
         $num_of_days = cal_days_in_month(CAL_GREGORIAN, $y, $year);
-        $k=($first_day*1 + $num_of_days*1 - 1) / 7;
-        for ($i = 0; $i < $k; $i++) {
+        // $k=($first_day*1 + $num_of_days*1 - 1) / 7;
+        for ($i = 0; $i < 6; $i++) {
             $p .= '<tbody><tr>';
             for ($j = 0; $j < 7; $j++){
                 if($i==0){
                     if($j >= $first_day-1) {
                         $dates = str_pad($q,2,'0', STR_PAD_LEFT);
-                        $p .= "<td>" . $dates . "</td>";
+                        $p .= "<td class='number_td_pas'>" . $dates . "</td>";
                         $q++;
                     }
                     else {
-                        $p .= "<td>" . $last_day_prew_mounth . "</td>";
+                        $p .= "<td class='number_td'>" . $last_day_prew_mounth . "</td>";
                         $last_day_prew_mounth ++;
                     }
                 }
                 else{
                     if($q<=$num_of_days) {
                         $dates = str_pad($q,2,'0', STR_PAD_LEFT);
-                        $p .= "<td>" . $dates . "</td>";
+                        $p .= "<td class='number_td_pas'>" . $dates . "</td>";
                     }else {
                         $dates1 = str_pad($f,2,'0', STR_PAD_LEFT);
-                        $p .= "<td>" . $dates1 . "</td>";
+                        $p .= "<td class='number_td'>" . $dates1 . "</td>";
                         $f++;
                     }
                     $q++;
@@ -91,7 +91,7 @@
             }
             $p .="</tr></tbody>";
         }
-        $p .= '</table></div>';
+        $p .= '</table></div></div>';
 
         if($y == 4 || $y == 8 || $y == 12) {
             $p .= "</div>";
@@ -109,7 +109,28 @@
             </tr>
         </tbody>
     </table>
+   
+        <div class="ggg">
+        
+            <?= $p ?>
+        
+        </div>
 
-    <div class="ggg">
-        <?= $p ?>
-    </div>
+<script>
+// $(document).ready(function(){
+    $(".nachalo_year").click(function(){
+        $(".jjj").css({"height" :"400px"})
+        
+        $(".jjj").css({"display" :"block"})
+        $(".ggg").css({"height" :"150%"})
+        $(".jjj").hide();
+        $('.nachalo_year').css({'height':'75px'})
+        $(this).css({"height" :"400px"})
+       
+        $(this).find(".jjj").show(400);
+        
+    });
+// });  
+   
+</script> 
+
