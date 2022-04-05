@@ -1,4 +1,4 @@
-$(".before_mounth").click(function() {
+$(".before_select_calendar").click(function() {
     let mounth = $(".mounth").attr("data-mounth")
     let year = $(".year").html()
 
@@ -17,7 +17,7 @@ $(".before_mounth").click(function() {
 })
 
 
-$(".after_mounth").click(function() {
+$(".after_select_calendar").click(function() {
     let mounth = $(".mounth").attr("data-mounth")
     let year = $(".year").html()
     $.ajax({
@@ -32,8 +32,4 @@ $(".after_mounth").click(function() {
             $(".calendar_body").html(result.table)
         }
     })
-})
-
-$(".select_day").click(function () {
-    let week_start = $(this).parents(".f_first").children().first().find('.number_day').text()
 })
