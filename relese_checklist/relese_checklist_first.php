@@ -11,11 +11,11 @@
         while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
             if($dates_row['status'] != 1){
             $take_dates.='
-                <div class="box1">'.$dates_row['data'].'<i class="star_o i-click fa fa-star" data-checked="false" id='.$dates_row['id'].'></i></div>
+                <div class="box1" data-checked="false"><p class="i-click">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" id='.$dates_row['id'].'></i></div>
             ';
             }else{
                 $take_dates.='
-                <div class="box1">'.$dates_row['data'].'<i class="star_o i-click fa fa-star" data-checked="true" style="color:gold" id='.$dates_row['id'].'></i></div>
+                <div class="box1" data-checked="true"><p class="i-click">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star"  style="color:gold" id='.$dates_row['id'].'></i></div>
             '; 
             }
         }
@@ -193,7 +193,7 @@
     console.log("Sorry, we are out of ");
 }
         }
-        $( ".i-click" ).click(function() {
+        $( ".box1" ).click(function() {
             var checked
             if($(this).attr('data-checked') == 'false'){
                 checked = false
