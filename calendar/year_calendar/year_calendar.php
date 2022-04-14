@@ -54,7 +54,7 @@
             $p .= "<div class='arajin'>";
         }
         $p .= '<div class="nachalo_year">
-                <div class="lll" style="width: 90%;">
+                <div class="lll">
                     <table class="jjj"> 
                         <div class="name_mount">
                             <h5 calss="year_month_names">' . $mounth . '</h5>

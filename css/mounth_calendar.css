@@ -57,7 +57,7 @@ th {
     /*flex-direction: column;*/
 }
 .fel td {
-    height: 540px;
+    height: 655px;
     width: calc(100% / 7);
 }
 
@@ -260,8 +260,11 @@ th {
     }
     .control {
         position: relative;
-        top: 22px;
-        left: 26px;
+        top: 40px;
+        left: 5px;
+        display: flex;
+        justify-content: space-between;
+        width: 63px;
     }
     .calendar_type {
         position: relative;

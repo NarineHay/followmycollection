@@ -11,11 +11,11 @@
         while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
             if($dates_row['status'] != 1){
             $take_dates.='
-                <div class="box1" data-checked="false"><p class="i-click">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" id='.$dates_row['id'].'></i></div>
+                <div class="box1" data-id='.$dates_row['id'].' data-checked="false"><p class="">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" style="color:" id='.$dates_row['id'].'></i></div>
             ';
             }else{
                 $take_dates.='
-                <div class="box1" data-checked="true"><p class="i-click">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star"  style="color:gold" id='.$dates_row['id'].'></i></div>
+                <div class="box1" data-id='.$dates_row['id'].' data-checked="true"><p class="">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star"  style="color:gold" id='.$dates_row['id'].'></i></div>
             '; 
             }
         }
@@ -94,7 +94,7 @@
             <p class="p">RELEASES</p>
          </div>
     </div>
-    <div class="container-fluid d-flex flex-column p-0 start2">
+    <div class="container-fluid d-flex flex-column p-0 start2" >
         <div class="mayr d-flex">
         <div class="sport1"></div>
         <?= $take_types ?>
@@ -149,15 +149,44 @@
          </div>
     </div>
     <script>
-        $('.mayr div').click(function(){
-            if($(this).hasClass('active')){
-                $('.mayr div').removeClass("active");
+        var kids=''
+        $('.mayr>div').click(function(event){
+            
+            //  kids = $( event.target ).children().children();
+            // // console.log(event.target.tagName)
+            // if($(this).hasClass('active')){
+            //     $('.mayr>div').removeClass("active");
+            // }
+            // else{
+            //     $('.mayr>div').removeClass("active");
+            //     $(this).addClass("active");
+            // }
+            if($(window).width() <= '1275'){
+                 $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
             }
-            else{
-                $('.mayr div').removeClass("active");
-                $(this).addClass("active");
+            if($(window).width() > '1275') {
+                $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "pointer-events": 'none'})
+
             }
         });
+        // ------------------------------------------------------------------------
+       
+        let clicks = document.getElementsByClassName('click_me')
+        for(let i = 0; i < clicks.length; i++) {
+            clicks[i].addEventListener('click', f1)
+        }
+        function f1() {
+            for(let q =0; q < clicks.length;q++) {
+                clicks[q].addEventListener('click', f1)
+            }
+            console.log('sprots');
+        }
+        $(".mayr.date_control").click(function () {
+            console.log('box');
+        })
+        // ------------------------------------------------------------------------
+        
+
     function slide( params) {
         let a = $('.eee')
             switch (params) {
@@ -193,23 +222,32 @@
     console.log("Sorry, we are out of ");
 }
         }
-        $( ".box1" ).click(function() {
+        $('body').on('click', ".box1", function() {
+            // console.log(111)
             var checked
             if($(this).attr('data-checked') == 'false'){
-                checked = false
+                checked = true
+                // console.log($(this).attr('data-checked')+'---if');
+
                 $(this).css('color', 'gold');
                 $(this).attr('data-checked',true)
+                // console.log($(this).attr('data-checked')+'---if');
             }else{
-                checked = true
+                checked = false
+                // console.log($(this).attr('data-checked')+'-----else');
                 $(this).css('color', 'white');
                 $(this).attr('data-checked',false)
+                console.log(8468);
+               
+                // console.log($(this).attr('data-checked')+'-----else');
+
             }
-            let id = $(this).attr('id')
-           
+            let id = $(this).attr('data-id')
+           console.log(id)
             $.ajax({
                 method:"POST",
                 url: "rate_test.php",
-                data:{'id':id,'checked':checked},
+                data:{id, checked},
                 success:function(r){
                     console.log(r)
                 }

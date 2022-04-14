@@ -8,6 +8,8 @@ body{
 
 .star_o{
     font-size: 20px;
+    margin-top: 6px;
+   
 }
 .mayr div.active {
     clip-path: polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%);
@@ -227,6 +229,8 @@ body{
     font-size: 20px;
     border-radius: 10px 10px 10px 10px;
     padding-top: 5px;
+    display: flex;
+    justify-content: space-around;
 }
 .inliner{
     width: 100%;
@@ -240,7 +244,7 @@ body{
     width: 100%;
     height: 160px;
     justify-content: space-around;
-    margin-top: 0%;
+    margin-top: 3%;
 }
 .nachalo{
     display: flex;
@@ -322,6 +326,24 @@ body{
 
 
 @media(max-width:1280px){
+    .lll{
+        width: 57%;
+    }
+    .nachalo{
+        display: flex;
+        width: 403px; 
+        height: 75px;
+        justify-content: space-around; 
+        padding-top: 25px; 
+        color: darkblue; 
+        font-size: 20px; 
+        margin-top: 3%; 
+        border-radius:12px 12px 12px 12px;
+        box-shadow: 0px 0px 10px #2a1e1e;
+        font-family:'Alfa Slab One', cursive;
+        font-family: 'Secular One', sans-serif; 
+        letter-spacing: 2px;
+    }
     .date_control{
         margin-top: 10px;
         display: flex;
@@ -334,11 +356,11 @@ body{
     .star_o{
         font-size: 20px;
     }
-    .mayr div.active {
+    /* .mayr div.active {
       
        clip-path: unset;
        height: 373px;
-    }
+    } */
     .shadow {
         display: none;
     }
@@ -365,13 +387,16 @@ body{
        height: 0px;
    }
     
-
+   .start2{
+    margin-bottom: -72px;
+   }
     .start{
         display: flex;
         width: 100%;
         height: 140px;
         justify-content: space-around;
-        margin-top: 9%;
+        margin-top: 18%;
+        margin-bottom: -80px;
     }
     .mayr{
         display: flex;
@@ -543,6 +568,12 @@ body{
     }
 }
 @media(max-width:550px){
+    .lll{
+        width: 90%;
+    }
+    .start2 {
+        margin-bottom: 85px;
+    }
     .date_control{
          margin-top: 10px;
          display: flex;
@@ -554,12 +585,12 @@ body{
      .star_o{
         font-size: 16px;
     }
-    .mayr div.active {
+    /* .mayr div.active {
       height: 373px;
       clip-path: unset;
       padding-top: -1px;
      
-    }
+    } */
     .boxer > div{
         display: none;
     }
@@ -635,7 +666,7 @@ body{
     .start{
         display: flex;
         width: 100%;
-        height: 1px;
+        height: 90px;
         justify-content: space-around;
         margin-top: 9%;
     }

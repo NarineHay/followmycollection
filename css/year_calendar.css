@@ -500,7 +500,9 @@ th {
         position: relative;
         top: 2px;
         left: 106px;
-       
+        display: flex;
+        justify-content: space-between;
+        width: 73px;
     }
     .data {
         margin-right: 5px;

@@ -14,7 +14,9 @@
     margin: 0 auto;
     height: auto;
 }
-
+.fel{
+   
+}
 
 .left {
     width: 20%;
@@ -413,15 +415,8 @@
         left: -17px;
     }
     .mounth{
-        font-family: 'Segoe UI', Roboto;
-        font-size: 18px;
-        line-height: 36px;
-        
-        
-        letter-spacing: 0.05em;
-        text-transform: uppercase;
-        
-        color: #133960;
+      
+        display: none;
     }
     .search{
         position: relative;

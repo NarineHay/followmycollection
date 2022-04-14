@@ -12,7 +12,7 @@ else{
 
 <section id="fix">
 <header class="navbar navbar-expand-lg navbar-light bg-light" id="head-er">
-<div class="container ">
+<div class="container" style="padding-right: -1px">
   <a class="navbar-brand" href="/test/collection-cards/">
     <div id="logo"> 
     <img src="logo-png.png" id="logo">
