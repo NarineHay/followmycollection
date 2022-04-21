@@ -64,7 +64,7 @@ for($i = 0; $i < 7; $i++) {
 
         if($k1 == $last_day_of_week) {
             $divs .= "<div style='background: " . $date_row['background'] . "' class='week_releses'>
-                            <img src='../admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
+                            <img src='admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
                         </div>";
         }
     }
@@ -72,8 +72,10 @@ for($i = 0; $i < 7; $i++) {
 
 
     $table1 .= "<th class='days' data-day='" . $last_day_of_week . "'>
+                   
                     <span>" . $last_day_of_week . "</span>
                     <span>" . $days[$i] . "</span>
+                    
                 </th>";
 
     if($i < 6) {
@@ -82,9 +84,13 @@ for($i = 0; $i < 7; $i++) {
         $class = "";
     }
 
-    $trs .= "<td class='" . $class . "'>
+    $trs .= "<div class='" . $class . "'>
+                    <p class='week_days'>
+                    <span>" . $last_day_of_week . "</span>
+                    <span>" . $days[$i] . "</span>
+                    </p>
                        " . $divs . "
-            </td>";
+            </div>";
     $last_day_of_week ++;
 
 }

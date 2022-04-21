@@ -1,4 +1,4 @@
-     <!-- ------------------section store rating--------------- -->
+ <!-- ------------------section store rating--------------- -->
  <?php
  $sql = "SELECT * FROM store_rating";
  $res=mysqli_query($con, $sql);

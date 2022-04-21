@@ -54,14 +54,23 @@ for($y = 1; $y < 13; $y++) {
         $p .= "<div class='arajin'>";
     }
 
-    $p .= '<div class="nachalo_year">
-                <div class="lll" style="width: 90%;">
-                    <table class="jjj"> 
-                        <div class="name_mount">
-                            <h6 calss="year_month_names">' . $mounth . '</h6>
-                            <h5 class="year_cal_cover">></h5>
-                        </div>
-                        <thead class="tr">' . $ths . '</thead>';
+    $p .= '<div class="nachalo_year"  onclick="nachalo()">
+    <div class="lll" >
+<table class="jjj"> 
+<div class="kkkkk1">
+    <form action="#cal" method="post"> 
+        <div class="name_mount1">
+            <button type="submit" class="year_month_names h5" style="outline: none">' . $mounth . '</button>
+            <button type="submit" class="year_cal_cover h5" style="outline: none">></button>
+            <input type="hidden" value="mounth" name="choose_calendar">
+        </div>
+    </form>
+</div>
+<div class="name_mount">
+    <h5 class="year_month_names">' . $mounth . '</h5>
+        <h5 class="year_cal_cover" >></h5>
+</div>
+<thead class="tr">' . $ths . '</thead>';
     $num_of_days = cal_days_in_month(CAL_GREGORIAN, $y, $year);
     // $k=($first_day*1 + $num_of_days*1 - 1) / 7;
     for ($i = 0; $i < 6; $i++) {
@@ -70,21 +79,21 @@ for($y = 1; $y < 13; $y++) {
             if($i==0){
                 if($j >= $first_day-1) {
                     $dates = str_pad($q,2,'0', STR_PAD_LEFT);
-                    $p .= "<td number_td_pas>" . $dates . "</td>";
+                    $p .= "<td class='number_td_pas'>" . $dates . "</td>";
                     $q++;
                 }
                 else {
-                    $p .= "<td number_td>" . $last_day_prew_mounth . "</td>";
+                    $p .= "<td class='number_td'>" . $last_day_prew_mounth . "</td>";
                     $last_day_prew_mounth ++;
                 }
             }
             else{
                 if($q<=$num_of_days) {
                     $dates = str_pad($q,2,'0', STR_PAD_LEFT);
-                    $p .= "<td number_td_pas>" . $dates . "</td>";
+                    $p .= "<td class='number_td_pas'>" . $dates . "</td>";
                 }else {
                     $dates1 = str_pad($f,2,'0', STR_PAD_LEFT);
-                    $p .= "<td number_td>" . $dates1 . "</td>";
+                    $p .= "<td class='number_td'>" . $dates1 . "</td>";
                     $f++;
                 }
                 $q++;

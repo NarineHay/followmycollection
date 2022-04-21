@@ -12,7 +12,7 @@ else{
 
 <section id="fix">
 <header class="navbar navbar-expand-lg navbar-light bg-light" id="head-er">
-<div class="container" style="padding-right: -1px">
+<div class="container">
   <a class="navbar-brand" href="/test/collection-cards/">
     <div id="logo"> 
     <img src="logo-png.png" id="logo">
@@ -66,31 +66,33 @@ else{
         <a class="nav-link" href="#">Collections</a>
       </li> -->
       <li class="nav-item dropdown" >
-          <a class="nav-link" href="select_releases_checklists.php">Releases</a>
+        <a class="nav-link" id="nav-products" href="select_releases_checklists.php" id="navbarDropdownMenuLink" aria-haspopup="true" aria-expanded="false">
+          Releases
+        </a>
 
         <!-- -------- -->
-<!--        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
 
-<!--                   <li class="dropdown">-->
-<!--                       <a class="dropdown-item main-a" href="">Checklists</a>-->
-<!--                       <ul class="dropdown-menu">-->
-<!--                        --><?php
-//                        $sql="SELECT * FROM sports_type";
-//                        $res=mysqli_query($con, $sql);
-//                        while($row=mysqli_fetch_assoc($res)){
-//                          echo '<li class="dropdown">
-//                               <a class="dropdown-item s_type" href="#">'.$row['sport_type'].'</a>
-//                               <ul class="dropdown-menu">
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1900-1949</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1950-1979</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1980-1999</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">2000-2009</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">2010-2018</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="" name="checklist">2019-2020</a></li>
-//                               </ul>
-//                           </li>';
-//                        }
-//                        ?>
+                   <li class="dropdown">
+                       <a class="dropdown-item main-a" href="">Checklists</a>
+                       <ul class="dropdown-menu">
+                        <?php
+                        $sql="SELECT * FROM sports_type";
+                        $res=mysqli_query($con, $sql);
+                        while($row=mysqli_fetch_assoc($res)){
+                          echo '<li class="dropdown">
+                               <a class="dropdown-item s_type" href="#">'.$row['sport_type'].'</a>
+                               <ul class="dropdown-menu">
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1900-1949</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1950-1979</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">1980-1999</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">2000-2009</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="checklist">2010-2018</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="" name="checklist">2019-2020</a></li>
+                               </ul>
+                           </li>';
+                        }
+                        ?>
                         <!--    <li class="dropdown">
                                <a class="dropdown-item" href="#">Baseball</a>
                                <ul class="dropdown-menu">
@@ -171,31 +173,31 @@ else{
                                    <li><a class="dropdown-item" href="#">Personal</a></li>
                                </ul>
                            </li> -->
-<!--                       </ul>-->
-<!--                   </li>-->
+                       </ul>
+                   </li>
                    <!-- -----------------------SETS----------------------- -->
 
-<!--                   <li class="dropdown">-->
-<!--                       <a class="dropdown-item" href="#">Sets</a>-->
-<!--                       <a class="dropdown-item main-a" href="#">Releases</a>-->
-<!--                       <ul class="dropdown-menu">-->
-<!--                         --><?php
-//                        $sql="SELECT * FROM sports_type";
-//                        $res=mysqli_query($con, $sql);
-//                        while($row=mysqli_fetch_assoc($res)){
-//                          echo '<li class="dropdown">
-//                               <a class="dropdown-item s_type" href="#">'.$row['sport_type'].'</a>
-//                               <ul class="dropdown-menu">
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1900-1949</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1950-1979</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1980-1999</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2000-2009</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2010-2018</a></li>
-//                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2019-2020</a></li>
-//                               </ul>
-//                           </li>';
-//                        }
-//                        ?>
+                   <li class="dropdown">
+                       <!-- <a class="dropdown-item" href="#">Sets</a>-->
+                       <a class="dropdown-item main-a" href="#">Releases</a>
+                       <ul class="dropdown-menu">
+                         <?php
+                        $sql="SELECT * FROM sports_type";
+                        $res=mysqli_query($con, $sql);
+                        while($row=mysqli_fetch_assoc($res)){
+                          echo '<li class="dropdown">
+                               <a class="dropdown-item s_type" href="#">'.$row['sport_type'].'</a>
+                               <ul class="dropdown-menu">
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1900-1949</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1950-1979</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">1980-1999</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2000-2009</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2010-2018</a></li>
+                                   <li><a class="dropdown-item nav_dr_item" href="#" name="set">2019-2020</a></li>
+                               </ul>
+                           </li>';
+                        }
+                        ?>
                            <!-- <li class="dropdown">
                                <a class="dropdown-item" href="#">Baseball</a>
                                <ul class="dropdown-menu">
@@ -276,16 +278,16 @@ else{
                                    <li><a class="dropdown-item" href="#">Personal</a></li>
                                </ul>
                            </li> -->
-<!--                       </ul>-->
-<!--                   </li>-->
+                       </ul>
+                   </li>
                    <!-- ----------------New releases calendar--------------------- -->
-<!--                   <li class="">-->
-<!--                       <a class="dropdown-item main-a" href="#">New releases<p>calendar</p> </a>-->
-<!--                   </li>-->
-<!--               </ul>-->
+                   <li class="">
+                       <a class="dropdown-item main-a" href="#">New releases<p>calendar</p> </a>
+                   </li>
+               </ul>
         <!-- -------------------- -->
 
-<!--      </li>-->
+      </li>
       <!-- ----------------------------- -->
 
       <!-- ---------------------------------- -->
@@ -298,14 +300,9 @@ else{
       <li class="nav-item">
         <a class="nav-link disabled" href="#">Store</a>
       </li> -->
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" id="nav-products" href="news.php" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Statistics
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <li class='dropdown-item main-a'><a href="total-statistics.php">Total Statistics</a></li>
-            </ul>
-        </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Statistics</a>
+      </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" id="nav-products" href="news.php" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           News

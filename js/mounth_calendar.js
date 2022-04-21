@@ -1,3 +1,4 @@
+
 $(".before_mounth").click(function() {
     let mounth = $(".mounth").attr("data-mounth")
     let year = $(".year").html()
@@ -36,4 +37,6 @@ $(".after_mounth").click(function() {
 
 $(".select_day").click(function () {
     let week_start = $(this).parents(".f_first").children().first().find('.number_day').text()
+
+
 })

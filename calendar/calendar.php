@@ -65,7 +65,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php require "select_calendar/select_calendar.php" ?>
+                    <?php require "select_calendar.php" ?>
                 </tbody>
             </table>
         </div>
@@ -189,7 +189,6 @@
     <script src="js/week_calendar.js"></script>
     <script src="js/mounth_calendar.js"></script>
     <script src="js/year_calendar.js"></script>
-    <script src="js/select_calendar.js"></script>
 
 
 </div>

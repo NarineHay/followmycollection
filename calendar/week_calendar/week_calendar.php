@@ -34,14 +34,17 @@ for($i = 0; $i < 7; $i++) {
         $k1 = str_pad($date_row['dd1'],2,'0', STR_PAD_LEFT);
         if($k1 == $week_start) {
             $divs .= "<div style='background: " . $date_row['background'] . "' class='week_releses'>
-                            <img src='../admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
+                            <img src='admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
                         </div>";
         }
     }
 
-    $table1 .= "<th class='days' data-day='" . $week_start . "'>
-                        <span>" . $week_start . "</span>
-                        <span>" . $days[$i] . "</span>
+    $table1 .= "<th class='days' data-day='" . $week_start . "'> 
+          
+                                    <span>" . $week_start . "</span>
+                                    <span>" . $days[$i] . "</span>
+                                   
+                        
                     </th>";
 
 
@@ -51,9 +54,13 @@ for($i = 0; $i < 7; $i++) {
         $class = "";
     }
 
-    $trs .= "<td class='" . $class . "'>
-                       " . $divs . "
-            </td>";
+    $trs .= "<div class='" . $class . "'>
+               <p class='week_days'>
+               <span>" . $week_start . "</span>
+               <span>" . $days[$i] . "</span>
+               </p>
+                     " . $divs . "
+            </div>";
     $week_start ++;
 }
 
@@ -71,9 +78,12 @@ for($i = 0; $i < 7; $i++) {
     <tr class="empty">
         <td></td>
     </tr>
-    <tr class="fel">
-        <?= $trs ?>
-    </tr>
+
 
     </tbody>
 </table>
+<div class="fel">
+    <?= $trs ?>
+</div>
+
+

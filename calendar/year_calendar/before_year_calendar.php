@@ -55,14 +55,23 @@ for($y = 1; $y < 13; $y++) {
         $p .= "<div class='arajin'>";
     }
 
-    $p .= '<div class="nachalo_year">
-                <div class="lll style="width: 90%;">
-                    <table class="jjj"> 
-                        <div class="name_mount">
-                            <h5 calss="year_month_names">' . $mounth . '</h5>
-                            <h5 class="year_cal_cover">></h5>
-                        </div>
-                        <thead class="tr">' . $ths . '</thead>';
+    $p .= '<div class="nachalo_year" onclick="nachalo()">
+    <div class="lll" >
+<table class="jjj"> 
+<div class="kkkkk1">
+    <form action="#cal" method="post"> 
+        <div class="name_mount1">
+            <button type="submit" class="year_month_names h5" style="outline: none">' . $mounth . '</button>
+            <button type="submit" class="year_cal_cover h5" style="outline: none">></button>
+            <input type="hidden" value="mounth" name="choose_calendar">
+        </div>
+    </form>
+</div>
+<div class="name_mount">
+    <h5 class="year_month_names">' . $mounth . '</h5>
+        <h5 class="year_cal_cover" >></h5>
+</div>
+<thead class="tr">' . $ths . '</thead>';
     $num_of_days = cal_days_in_month(CAL_GREGORIAN, $y, $year);
     // $k=($first_day*1 + $num_of_days*1 - 1) / 7;
     for ($i = 0; $i < 6; $i++) {

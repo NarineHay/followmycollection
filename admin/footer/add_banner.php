@@ -17,9 +17,7 @@
     }
 
     if($query) {
-        echo "<p class='green'> banners have been added </p>";
-    }else {
-        echo "<p class='red'> banners have not been added </p>";
+        echo "<p>bbbb6urthgnv </p>";
     }
 
 ?>

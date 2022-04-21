@@ -16,7 +16,7 @@ include "header.php";
 <!-- link fontawsome for like and dislike buttons -->
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
 
-<link rel="stylesheet" type="text/css" href="css/news.css?2">
+<link rel="stylesheet" type="text/css" href="css/news.css">
 
 <link rel="stylesheet" type="text/css" href="css/publications.css">
 <link rel="stylesheet" href="css/pagination.css">
@@ -97,7 +97,7 @@ include "header.php";
            
              <div class="container section">
                 <div class="d-flex">
-                    <div class="flex-item-right pt-4 mx-auto" style="flex:20%;">
+                    <div class="flex-item-right p-2" style="flex:20%;">
                         <p style="letter-spacing: 1px">Apply filters</p>
                         <input type="text" class="form-control sel_inps" placeholder="Type name">
                         <input type="text" class=" form-control sel_inps search_country" placeholder="Type country">
@@ -151,11 +151,11 @@ include "header.php";
                 <button id="btn1" class="w-50 filter">Filter</button>
                 <div class="filtration_status"></div>
             </div>
-            <div class="flex-item-left p-2" style="flex:80%;">
+            <div class="flex-item-left text-center p-2" style="flex:80%;">
             <div class = "user_text">
                 <h3>USERS</h3>
             </div>
-            <div class="info p-1 d-flex flex-wrap">
+            <div class="info p-1 d-flex direction-column flex-wrap">
                 <?= $content ?>
             </div>
         </div>

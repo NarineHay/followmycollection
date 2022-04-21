@@ -1,6 +1,6 @@
 <!-- ======= NEW RELEASES ======= -->
     <section id="testimonials" class="top-collections releases">
-<h2 class="text-center text-uppercase"><a href="releases.php">UPCOMING & NEW RELEASES</a></h2>
+<h2 class="text-center text-uppercase"><a href="releases.php">new releases</a></h2>
 
       <div class="container">
        

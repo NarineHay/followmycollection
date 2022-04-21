@@ -8,7 +8,7 @@ $row=mysqli_fetch_assoc($res);
  $content = "";
 
  while($tox = mysqli_fetch_assoc($banner_query)) {
-     $content .= '<div class="footer_banner"><a href="' . $tox["link"] . '"><img src="/admin/Footer_banner/'.$tox["image"].'" alt=""></a></div>';
+     $content .= '<div class="footer_banner"><a href="' . $tox["link"] . '"><img src="./admin/Footer_banner/'.$tox["image"].'" alt=""></a></div>';
  }
 
 ?>

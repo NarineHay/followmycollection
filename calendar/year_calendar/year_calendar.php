@@ -53,14 +53,24 @@
         if($y == 1 || $y == 5 || $y == 9) {
             $p .= "<div class='arajin'>";
         }
-        $p .= '<div class="nachalo_year">
-                <div class="lll">
-                    <table class="jjj"> 
-                        <div class="name_mount">
-                            <h5 calss="year_month_names">' . $mounth . '</h5>
-                                <h5 class="year_cal_cover" >></h5>
+        $p .= '<div class="nachalo_year" onclick="nachalo()" id="nachalo_year">
+                    <div class="lll" >
+            <table class="jjj" id="jjj"> 
+                <div class="kkkkk1">
+                    <form action="#cal" method="post"> 
+                        <div class="name_mount1">
+                            <button type="submit" class="year_month_names h5" style="outline: none">' . $mounth . '</button>
+                            <button type="submit" class="year_cal_cover h5" style="outline: none">></button>
+                            <input type="hidden" value="mounth" name="choose_calendar">
+                          
                         </div>
-                        <thead class="tr">' . $ths . '</thead>';
+                    </form>
+                </div>
+                <div class="name_mount">
+                    <h5 class="year_month_names">' . $mounth . '</h5>
+                        <h5 class="year_cal_cover">></h5>
+                </div>
+                <thead class="tr">' . $ths . '</thead>';
         $num_of_days = cal_days_in_month(CAL_GREGORIAN, $y, $year);
         // $k=($first_day*1 + $num_of_days*1 - 1) / 7;
         for ($i = 0; $i < 6; $i++) {
@@ -116,9 +126,11 @@
         
         </div>
 
-<script>
+ <script>
 // $(document).ready(function(){
+    $('body').click(function(){
     $(".nachalo_year").click(function(){
+        if($(window).width() <= '1275'){
         $(".jjj").css({"height" :"400px"})
         
         $(".jjj").css({"display" :"block"})
@@ -128,9 +140,12 @@
         $(this).css({"height" :"400px"})
        
         $(this).find(".jjj").show(400);
-        
+        }
+    });
     });
 // });  
    
-</script> 
+</script>  
+
+<script src="js/year_calendar.js"></script>
 
