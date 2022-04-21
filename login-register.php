@@ -124,8 +124,7 @@ $msg = '';
 			 		</div>
 			 		<div class="divpad">
 			 			<form action=''>
-			 				<br>
-				 			<p class="parag-log">Let's get you in board</p>
+				 			<p class="parag-log mt-4">Let's get you in board</p>
 				 			<div class="input-group dvlog">
 								<div class="input-group-prepend">
 									<span class="input-group-text"><i class="fa fa-user inp7" aria-hidden="true"></i></span>
@@ -173,8 +172,9 @@ $msg = '';
                                 </div>
                                 <input type="date" name="date" class="form-control place_inp" id="bday" style="color: #6ea4ae">
                             </div>
+                            <br>
 						</form>
-						<button class="btn log-in mt-2" name="register" id="register">REGISTER</button>
+						<button class="btn log-in" name="register" id="register">REGISTER</button>
 						<p></p>
 						<div id="ard"></div>
 			 		</div>

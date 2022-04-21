@@ -86,7 +86,7 @@ $img = $navbarimg['image'];
       </li> -->
       <!-- sssssssssssssssssssssssssssssssssssssssss -->
       <li class="nav-item dropdown" >
-          <a class="nav-link" href="/select_releases_checklists.php">Releases</a>
+          <a class="nav-link" href="/test/collection-cards/select_releases_checklists.php">Releases</a>
         
         <!-- -------- -->
 <!--        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">-->

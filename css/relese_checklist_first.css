@@ -8,46 +8,47 @@ body{
 
 .star_o{
     font-size: 20px;
+    margin-top: 6px;
+   
 }
 .mayr div.active {
     clip-path: polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%);
     padding-top: 56px;
     pointer-events: none;
 }
-.eee {
-    transition: margin-left 1.5s;
-    width: 800%;
-    height: 17vw;
-    display: flex;
-}
-
-.eee.slide{
-    margin-left: -81vw;
-    color: #fff;
-}
-.eee.slide2{
-    margin-left: -162vw;
-    color: #fff;
-}
-.eee.slide3{
-    margin-left: -243vw;
-    color: #fff;
-}
-.eee.slide4{
-    margin-left: -324vw;
-    color: #fff;
-}
-.eee.slide5{
-    margin-left: -405vw;
-    color: #fff;
-}
-.eee.slide6{
-    margin-left: -486vw;
-    color: #fff;
-}
-.eee.slide7{
-    margin-left: -567vw;
-    color: #fff;
+.eee, .eee1 { 
+    transition: margin-left 1.5s; 
+    width: 800%; 
+    height: 17vw; 
+    display: flex; 
+} 
+.eee.slide, .eee1.slide{ 
+    margin-left: -81vw; 
+    color: #fff; 
+} 
+.eee.slide2, .eee1.slide2{ 
+    margin-left: -162vw; 
+    color: #fff; 
+} 
+.eee.slide3, .eee1.slide3{ 
+    margin-left: -243vw; 
+    color: #fff; 
+} 
+.eee.slide4, .eee1.slide4{ 
+    margin-left: -324vw; 
+    color: #fff; 
+} 
+.eee.slide5, .eee1.slide5{ 
+    margin-left: -405vw; 
+    color: #fff; 
+} 
+.eee.slide6, .eee1.slide6{ 
+    margin-left: -486vw; 
+    color: #fff; 
+} 
+.eee.slide7, .eee1.slide7{ 
+    margin-left: -567vw; 
+    color: #fff; 
 }
 .lock{
     width: calc(100% / 8);
@@ -113,16 +114,28 @@ body{
     align-items: center;
     color: #fff;
 }
+/* .sport10{
+    transition: all 1.5s;
+    clip-path: polygon(2% 60%, 85% 60%, 100% 100%, 15% 100%);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), #08ab21b3;
+    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
+    color: white; 
+    width: 300px; 
+    margin-left: -26px;
+    text-align: center; 
+    padding-top: 65px; 
+    font-size: 17px;
+} */
 .sport1{
     
-    width: 130px;
+    /* width: 145px; */
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)),#A4CDD3;
     clip-path: polygon(0 60%, 91% 60%, 90% 100%, 0 100%);
     margin-right: -2px;
 }
 .sport2{
     transition: all 1.5s;
-    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
+    clip-path: polygon(15% 60%, 100% 60%, 100% 100%, 0 100%);
     margin-left: -35px;
     color: white;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
@@ -197,7 +210,7 @@ body{
 }
 .sport8{
     transition: all 1.5s;
-    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
+    clip-path: polygon(0 60%, 85% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white;
@@ -209,7 +222,7 @@ body{
 }
 .sport9{
     transition: all 1.5s;
-    clip-path: polygon(2% 60%, 100% 60%, 100% 100%, 15% 100%);
+    clip-path: polygon(2% 60%, 85% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white; 
@@ -227,6 +240,8 @@ body{
     font-size: 20px;
     border-radius: 10px 10px 10px 10px;
     padding-top: 5px;
+    display: flex;
+    justify-content: space-around;
 }
 .inliner{
     width: 100%;
@@ -240,7 +255,7 @@ body{
     width: 100%;
     height: 160px;
     justify-content: space-around;
-    margin-top: 0%;
+    margin-top: 3%;
 }
 .nachalo{
     display: flex;
@@ -303,7 +318,7 @@ body{
 }
 
 .mayr{
-    display: flex;
+  margin: 0 auto;
     
 }
 .board{
@@ -318,10 +333,29 @@ body{
 
 
 
+
 /* --------------media----------------- */
 
 
 @media(max-width:1280px){
+    .lll{
+        width: 57%;
+    }
+    .nachalo{
+        display: flex;
+        width: 403px; 
+        height: 75px;
+        justify-content: space-around; 
+        padding-top: 25px; 
+        color: darkblue; 
+        font-size: 20px; 
+        margin-top: 3%; 
+        border-radius:12px 12px 12px 12px;
+        box-shadow: 0px 0px 10px #2a1e1e;
+        font-family:'Alfa Slab One', cursive;
+        font-family: 'Secular One', sans-serif; 
+        letter-spacing: 2px;
+    }
     .date_control{
         margin-top: 10px;
         display: flex;
@@ -334,11 +368,11 @@ body{
     .star_o{
         font-size: 20px;
     }
-    .mayr div.active {
+    /* .mayr div.active {
       
        clip-path: unset;
        height: 373px;
-    }
+    } */
     .shadow {
         display: none;
     }
@@ -361,22 +395,26 @@ body{
         align-items: unset;
         color: unset;
     }
-   .eee{
+   .eee, .eee1{
        height: 0px;
    }
     
-
+   .start2{
+    margin-bottom: -72px;
+   }
     .start{
         display: flex;
         width: 100%;
         height: 140px;
         justify-content: space-around;
-        margin-top: 9%;
+        margin-top: 18%;
+        margin-bottom: -80px;
     }
     .mayr{
         display: flex;
         flex-direction: column;
         margin-top: 97px;
+        width: 100%;
     }
     .sport2{
         transition: height 1.5s;
@@ -543,6 +581,12 @@ body{
     }
 }
 @media(max-width:550px){
+    .lll{
+        width: 90%;
+    }
+    .start2 {
+        margin-bottom: 85px;
+    }
     .date_control{
          margin-top: 10px;
          display: flex;
@@ -554,12 +598,12 @@ body{
      .star_o{
         font-size: 16px;
     }
-    .mayr div.active {
+    /* .mayr div.active {
       height: 373px;
       clip-path: unset;
       padding-top: -1px;
      
-    }
+    } */
     .boxer > div{
         display: none;
     }
@@ -635,7 +679,7 @@ body{
     .start{
         display: flex;
         width: 100%;
-        height: 1px;
+        height: 90px;
         justify-content: space-around;
         margin-top: 9%;
     }
@@ -643,6 +687,7 @@ body{
         display: flex;
         flex-direction: column;
         margin-top: 97px;
+        width: 100%;
     }
     .sport2{
         transition: height 1.5s;

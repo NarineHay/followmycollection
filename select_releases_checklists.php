@@ -13,12 +13,11 @@
 ?>
 
     <link rel="stylesheet" type="text/css" href="css/week_calendar.css?1">
-
     <link rel="stylesheet" type="text/css" href="css/year_calendar.css?3">
     <link rel="stylesheet" type="text/css" href="css/mounth_calendar.css?4">
-    <link rel="stylesheet" type="text/css" href="css/relese_checklist_first.css?3">
+    <link rel="stylesheet" type="text/css" href="css/relese_checklist_first.css">
 
-    <script src="js/relese_checklist_first.js?2" defer></script>
+    <script src="js/relese_checklist_first.js" defer></script>
 
 
 

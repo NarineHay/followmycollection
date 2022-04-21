@@ -165,13 +165,6 @@
                                         <span class="sidebar-normal">Users</span>
                                     </a>
                                 </li>
-                                </li>
-                                <li class="nav-item ">
-                                    <a class="nav-link"  href="../dates_form/dates.php">
-                                        <span class="sidebar-mini">D</span>
-                                        <span class="sidebar-normal">Dates</span>
-                                    </a>
-                                </li>
                                   
                             </ul>
                         </div>

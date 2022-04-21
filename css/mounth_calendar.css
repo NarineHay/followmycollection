@@ -52,14 +52,14 @@ th {
     overflow: hidden;
     margin-bottom: 20px;
 }
-.fel{
-    /*display: flex;*/
-    /*flex-direction: column;*/
-}
-.fel td {
-    height: 540px;
-    width: calc(100% / 7);
-}
+/*.fel{*/
+/*    display: flex;*/
+/*    flex-direction: row;*/
+/*}*/
+/*.fel div {*/
+/*    height: 540px;*/
+/*    width: calc(100% / 7);*/
+/*}*/
 
 .right_calendar {
     width: 100%;
@@ -75,7 +75,7 @@ th {
 }
 
 .mounth_releses img {
-    width: 20%;
+    width: 22px;
     height: auto;
 }
 .relese{
@@ -99,12 +99,16 @@ th {
 } */
 
 @media(max-width:1275px){
+    .mounth_releses img {
+        width: 33px;
+        height: auto;
+    }
     .number_day{
         font-size: 13px;
     }
     .search_panel {
         display: flex;
-        margin-right: 11px;
+        margin-right: 5px
     }
     .search {
         position: relative;
@@ -240,8 +244,8 @@ th {
     }
     .mounth_releses {
         border-radius: 8px;
-        height: 33px;
-        width: 85%;
+        height: 40px;
+        width: 43%;
         margin: 7px 0 7px 10px;
         display: flex;
     }
@@ -260,23 +264,31 @@ th {
     }
     .control {
         position: relative;
-        top: 22px;
+        top: 48px;
         left: 26px;
+        display: flex;
+        justify-content: space-around;
+        width: 62px;
+
     }
     .calendar_type {
-        position: relative;
-        left: -161px;
-        top: 3px;
+        /*position: relative;*/
+        /*left: -161px;*/
+        /*top: 3px;*/
     }
     .search {
-        position: relative;
-        left: -71px;
-        top: 37px;
-        width: 100px;
+        /*position: relative;*/
+        /*left: -71px;*/
+        /*top: 37px;*/
+        /*width: 100px;*/
     }
     .search_panel button {
-        position: relative;
-        top: 37px;
-        left: -71px;
+        /*position: relative;*/
+        /*top: 37px;*/
+        /*left: -71px;*/
+    }
+    .mounth_releses img {
+        width: 38px;
+        height: unset;
     }
 }
