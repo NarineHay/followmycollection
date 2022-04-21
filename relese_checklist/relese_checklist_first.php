@@ -174,6 +174,15 @@
             //     $('.mayr>div').removeClass("active");
             //     $(this).addClass("active");
             // }
+
+            let mychild = document.querySelector('.mayr')
+            console.log(mychild)
+            for(let i = 0; i < mychild.children.length; i++) {
+                mychild.children[i].style = {}
+            }
+            
+            
+
             if($(window).width() <= '1275'){
                  $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
             }
