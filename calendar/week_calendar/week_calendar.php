@@ -34,7 +34,7 @@ for($i = 0; $i < 7; $i++) {
         $k1 = str_pad($date_row['dd1'],2,'0', STR_PAD_LEFT);
         if($k1 == $week_start) {
             $divs .= "<div style='background: " . $date_row['background'] . "' class='week_releses'>
-                            <img src='admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
+                            <img src='../admin/sport_icons/" . $date_row['sport_logo'] . ".png' >
                         </div>";
         }
     }
@@ -85,5 +85,3 @@ for($i = 0; $i < 7; $i++) {
 <div class="fel">
     <?= $trs ?>
 </div>
-
-

@@ -2,7 +2,18 @@
     $select_colors = "SELECT * FROM sports_type";
     $colors_result = mysqli_query($con, $select_colors);
     $colors_content = "";
-    $mounth_number = date('n');
+
+    if(isset($_POST['mounth'])) {
+        $this_thursday = $_POST['mounth'];
+        $this_year = $_POST['year'];
+        $mounth_number = $_POST['mounth_number'];
+    }else {
+        $this_thursday = date('F', strtotime("thursday this week"));
+        $this_year = date('Y');
+        $mounth_number = 1;
+    }
+
+
 
     while($tox = mysqli_fetch_assoc($colors_result)) {
         $colors_content .= '<div class="sport_colors">
@@ -11,10 +22,9 @@
                                 <div class="sport_color" style="background: ' . $tox["color"] . '"></div>
                             </div>';
     }
-    $this_thursday = date('F', strtotime("thursday this week"));
+
     $this_thursday_day = date('d', strtotime("thursday this week"));
-    $this_mounth = date('F');
-    $this_year = date('Y');
+
     $today = date("d");
 
     if(!empty($_POST['choose_calendar'])){
@@ -24,25 +34,6 @@
     }
    
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <div class="left">
@@ -65,7 +56,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php require "select_calendar.php" ?>
+                    <?php require "select_calendar/select_calendar.php" ?>
                 </tbody>
             </table>
         </div>
@@ -117,7 +108,7 @@
                 <input type="text" class="search" placeholder="Search">
                 <button><i class="fa fa-search"></i></button>
             </div>
-            <form action="#" method="post">
+            <form action="#cal" method="post">
                 <select class="calendar_type" onchange="this.form.submit()" name="choose_calendar">
 
                     <?php
@@ -189,6 +180,7 @@
     <script src="js/week_calendar.js"></script>
     <script src="js/mounth_calendar.js"></script>
     <script src="js/year_calendar.js"></script>
+    <script src="js/select_calendar.js"></script>
 
 
 </div>

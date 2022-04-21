@@ -1,15 +1,26 @@
 <?php
-$mounth_number = date('n');
+
 if(isset($_POST['mounth'])) {
     $mounth = $_POST['mounth'];
     $year = $_POST['year'];
+    $mounth_number = $_POST['mounth_number'];
+    $last_mounth_number = $mounth_number - 1;
+
+    if($last_mounth_number == 0) {
+        $last_mounth_number = 12;
+    }
+
+    $last_day_prew_mounth = cal_days_in_month(CAL_GREGORIAN, $last_mounth_number, $year);
+    $first_day = date('w', strtotime("$mounth $year"));
 }else {
     $mounth = date('F');
     $year = date('Y');
     $first_day = date('w', strtotime('first day of this month'));
     $last_day_prew_mounth = date('d', strtotime('last day of previous month'));
-
+    $mounth_number = 1;
+    $last_mounth_number = $mounth_number;
 }
+
 
 $k1 = "";
 
@@ -17,7 +28,9 @@ if($first_day == 0 ) {
     $first_day = 7;
 }
 
-$last_day_prew_mounth = date('d', strtotime('last day of previous month'));
+if($first_day > 2 ) {
+    $last_day_prew_mounth -= $first_day - 2;
+}
 
 $q = 1;
 $f = 1;
@@ -73,13 +86,13 @@ for ($i = 0; $i < 6; $i++) {
                 $q++;
             }
             else {
-                $p .= "<td class='passive_sec f_first_inside'  valign='top'><div class='cube'> <div class='number_day'>" . $last_day_prew_mounth . "</div></div></td>";
-                $last_day_prew_mounth --;
+                $p .= "<td class='passive_sec'  valign='top'><div class='cube'> <div class='number_day'>" . $last_day_prew_mounth . "</div></div></td>";
+                $last_day_prew_mounth ++;
             }
         }
         else{
             if($q<=$num_of_days) {
-                $p .= "<td class='f_first_inside'  valign='top'>
+                $p .= "<td class='f_first_inside' valign='top'>
                             <div class='box_cube'>
                                 <div class='cube'>
                                     <div class='number_day'>".$dates."</div>"

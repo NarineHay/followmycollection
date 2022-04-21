@@ -31,7 +31,7 @@
                 <div class="sport'.$color_type.'" onClick="slide('. "'" .$sport_types_row['sport_type']. "'"  .')">'.$sport_types_row['sport_type'].'<div class="date_control">'.$take_dates.'</div>'.'<div class="shadow"></div></div>
             ';
             $take_types1.='
-                <div class="sport'.$color_type.'" onClick="slide1('. "'" .$sport_types_row['sport_type']. "'"  .')">'.$sport_types_row['sport_type'].'<div class="date_control">'.$take_dates.'</div>'.'<div class="shadow"></div></div>
+            <div class="sport'.$color_type.'" onClick="slide1('. "'" .$sport_types_row['sport_type']. "'"  .')">'.$sport_types_row['sport_type'].'<div class="date_control">'.$take_dates.'</div>'.'<div class="shadow"></div></div>
             ';
 
             $color_type++;
@@ -53,7 +53,6 @@
                         if (!empty($user_id)) {
                     ?>
                             <div class="sport9">My Checklists</div>
-                            <div class="sport10"></div>
                     <?php
                         }
                     ?>
@@ -163,7 +162,7 @@
          </div>
     </div>
     <script>
-       
+        var kids=''
         $('.mayr>div').click(function(event){
             
             //  kids = $( event.target ).children().children();
@@ -175,19 +174,11 @@
             //     $('.mayr>div').removeClass("active");
             //     $(this).addClass("active");
             // }
-            let mychild = document.querySelector('.mayr')
-            console.log(mychild)
-            for(let i = 0; i < mychild.children.length; i++) {
-                mychild.children[i].style = {}
-            }
-            
             if($(window).width() <= '1275'){
-                $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
-                console.log('slakfjalskdfj')
+                 $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
             }
             if($(window).width() > '1275') {
                 $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "pointer-events": 'none'})
-                console.log('slakfjalskdfj')
 
             }
         });
