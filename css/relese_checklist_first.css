@@ -114,28 +114,16 @@ body{
     align-items: center;
     color: #fff;
 }
-/* .sport10{
-    transition: all 1.5s;
-    clip-path: polygon(2% 60%, 85% 60%, 100% 100%, 15% 100%);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), #08ab21b3;
-    box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
-    color: white; 
-    width: 300px; 
-    margin-left: -26px;
-    text-align: center; 
-    padding-top: 65px; 
-    font-size: 17px;
-} */
 .sport1{
     
-    /* width: 145px; */
+    width: 130px;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)),#A4CDD3;
     clip-path: polygon(0 60%, 91% 60%, 90% 100%, 0 100%);
     margin-right: -2px;
 }
 .sport2{
     transition: all 1.5s;
-    clip-path: polygon(15% 60%, 100% 60%, 100% 100%, 0 100%);
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     margin-left: -35px;
     color: white;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
@@ -210,7 +198,7 @@ body{
 }
 .sport8{
     transition: all 1.5s;
-    clip-path: polygon(0 60%, 85% 60%, 100% 100%, 15% 100%);
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white;
@@ -222,7 +210,7 @@ body{
 }
 .sport9{
     transition: all 1.5s;
-    clip-path: polygon(2% 60%, 85% 60%, 100% 100%, 15% 100%);
+    clip-path: polygon(2% 60%, 100% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white; 
@@ -318,7 +306,7 @@ body{
 }
 
 .mayr{
-  margin: 0 auto;
+    display: flex;
     
 }
 .board{
@@ -414,7 +402,6 @@ body{
         display: flex;
         flex-direction: column;
         margin-top: 97px;
-        width: 100%;
     }
     .sport2{
         transition: height 1.5s;
@@ -687,7 +674,6 @@ body{
         display: flex;
         flex-direction: column;
         margin-top: 97px;
-        width: 100%;
     }
     .sport2{
         transition: height 1.5s;
