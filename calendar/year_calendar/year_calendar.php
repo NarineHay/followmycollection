@@ -65,7 +65,7 @@
             $p .= "<div class='arajin'>";
         }
         $p .= '<div class="nachalo_year">
-                <div class="lll" style="width: 90%;">
+                <div class="lll">
                     <table class="jjj"> 
                         <div class="kkkkk1">
                             <form action="#cal" method="post"> 

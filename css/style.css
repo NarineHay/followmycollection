@@ -176,9 +176,46 @@ padding: 8px 2%;
     display: none !important;
 }
 
+.navbar-nav a {
+    color:rgb(19,57,96) !important;
+    font-weight: 600;
+    font-family: Bootshaus-Regular, Serif !important;
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
 /* --------------------------------- */
 /* -------------------------media max-width 1000px---------------------------- */
-
+@media(min-width:2560px){
+    .navbar-nav a {
+        color:rgb(19,57,96) !important;
+        font-weight: 600;
+        font-family: Bootshaus-Regular, Serif !important;
+        font-size: 17px;
+        width: 175px;
+        font-size: 30px;
+    }
+    #nav{
+        background: rgb(110,164,174);
+        height: 65px;
+    }
+    .register {
+        color: white;
+        font-size: 25px;
+    } 
+    #header-right > div {
+        padding: 0 5px;
+        cursor: pointer;
+        font-size: 25px;
+    }
+    #head-er{
+        height: 105px;  
+    }
+    #logo {
+        width: 170px;
+        height: 70px;
+    }
+}
 @media (max-width: 1000px){
     #fix{
         position: unset;

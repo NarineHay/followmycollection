@@ -12,7 +12,9 @@
            while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
 
                $take_dates.='
-                <div class="box1"><p class="">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id="'.$dates_row['id'].'"></i></div>
+
+                <div class="box1"><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].'"></i></div>
+
             ';
 
            }
@@ -143,7 +145,7 @@
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
                     </div>
-                </div>
+                    </div>
                 <div class="d-flex innline lock16" >
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
@@ -350,19 +352,12 @@
                         console.log(r)
                     }
                 });
-
-            }
-
-
-
-
+            } 
         });
-       
-
-    </script>
-    <style>
-        .bigger_block_slider{
-            width: 81vw;
-            overflow:hidden;
-        }
-    </style>
+</script>
+<style>
+    .bigger_block_slider{
+        width: 81vw;
+        overflow:hidden;
+    }
+</style>

@@ -28,9 +28,8 @@ if(!empty($_POST['sport_id'])) {
     echo $take_dates;
 }
 ?>
-
 <script>
-    $(".single_page").click(function() {
-        location.href = "single_chechklist.php"
-    })
+ $(".single_page").click(function() {
+    location.href = "single_chechklist.php"
+})
 </script>

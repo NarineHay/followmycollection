@@ -5,7 +5,10 @@ body{
   display: none;
     
 }
-
+.single_page{
+    cursor: pointer;
+   
+}
 .star_o{
     font-size: 20px;
     margin-top: 6px;
@@ -116,14 +119,15 @@ body{
 }
 .sport1{
     
-    width: 130px;
+   
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)),#A4CDD3;
     clip-path: polygon(0 60%, 91% 60%, 90% 100%, 0 100%);
     margin-right: -2px;
 }
 .sport2{
+    padding-left: 2%;
     transition: all 1.5s;
-    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
+    clip-path: polygon(26% 60%, 100% 60%, 100% 100%, 15% 100%);
     margin-left: -35px;
     color: white;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
@@ -198,7 +202,7 @@ body{
 }
 .sport8{
     transition: all 1.5s;
-    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 15% 100%);
+    clip-path: polygon(0% 60%, 86% 60%, 100% 100%, 15% 100%);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #6EA4AE;
     box-shadow: 4px 0px 10px rgba(0, 0, 0, 0.25);
     color: white;
@@ -307,6 +311,12 @@ body{
 
 .mayr{
     display: flex;
+    margin: 0 auto;
+    
+}
+.mayr1{
+    display: flex;
+    margin: 0 auto;
     
 }
 .board{
@@ -399,6 +409,13 @@ body{
         margin-bottom: -80px;
     }
     .mayr{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 97px;
+    }
+    .mayr1{
+        width: 100%;
         display: flex;
         flex-direction: column;
         margin-top: 97px;
@@ -674,8 +691,16 @@ body{
         display: flex;
         flex-direction: column;
         margin-top: 97px;
+        width: 100%;
+    }
+    .mayr1{
+        display: flex;
+        flex-direction: column;
+        margin-top: 97px;
+        width: 100%;
     }
     .sport2{
+       
         transition: height 1.5s;
         font-family: bold;
         font-style: normal;
@@ -852,31 +877,31 @@ body{
     .star_o{
         font-size: 36px;
     }
-    .eee.slide{
+    .eee.slide .eee1.slide{
         margin-left: -81vw;
         color: #fff;
     }
-    .eee.slide2{
+    .eee.slide2 .eee1.slide2{
         margin-left: -162vw;
         color: #fff;
     }
-    .eee.slide3{
+    .eee.slide3 .eee1.slide3{
         margin-left: -243vw;
         color: #fff;
     }
-    .eee.slide4{
+    .eee.slide4 .eee1.slide4{
         margin-left: -324vw;
         color: #fff;
     }
-    .eee.slide5{
+    .eee.slide5 .eee1.slide5{
         margin-left: -405vw;
         color: #fff;
     }
-    .eee.slide6{
+    .eee.slide6 .eee1.slide6{
         margin-left: -486vw;
         color: #fff;
     }
-    .eee.slide7{
+    .eee.slide7 .eee1.slide7{
         margin-left: -567vw;
         color: #fff;
     }
@@ -957,24 +982,24 @@ body{
         display: none;
         }
     .sport1 {
-        width: 140px;
+       
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.2)), #6EA4AE;
         clip-path: polygon(0 45%, 91% 45%, 72% 100%, 0 100%);
         margin-right: -2px;
     }
     .sport2 {
-        transition: clip-path 1.5s;
-        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        transition: all 1.5s;
+        clip-path: polygon(20% 45%, 100% 45%, 101% 100%, 11% 100%);
         margin-left: -67px;
         color: white;
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
-        width: 265px;
+        width: 220px;
         height: 100px;
         padding-top: 50px;
         font-size: 29px;
 }
     .sport3 {
-        transition: clip-path 1.5s;
+        transition: all 1.5s;
         clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
         box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
@@ -986,7 +1011,7 @@ body{
         font-size: 29px;
     }
     .sport4 {
-        transition: clip-path 1.5s;
+        transition: all 1.5s;
         clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
         background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
         box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
@@ -998,7 +1023,7 @@ body{
         font-size: 27px;
     }
     .sport5 {
-        transition: clip-path 1.5s;
+        transition: all 1.5s;
         clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
         background: linear-gradient(0deg, #426268, #426268), #6EA4AE;
         box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
@@ -1010,7 +1035,7 @@ body{
         font-size: 27px;
     }
     .sport6 {
-        transition: clip-path 1.5s;
+        transition: all 1.5s;
         clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
         background: linear-gradient(0deg, #375257, #375257), #6EA4AE;
         box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
@@ -1022,7 +1047,7 @@ body{
         font-size: 27px;
     }
     .sport7 {
-        transition: clip-path 1.5s;
+        transition: all 1.5s;
         clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
         background: linear-gradient(0deg, #2C4246, #2C4246), #6EA4AE;
         box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
@@ -1034,8 +1059,8 @@ body{
         font-size: 27px;
     }
     .sport8 {
-        transition: clip-path 1.5s;
-        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
+        transition: all 1.5s;
+        clip-path: polygon(0% 45%, 88% 45%, 101% 100%, 11% 100%);
         background: linear-gradient(0deg, #2C4246, #2C4246), #6EA4AE;
         box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
         width: 210px;
@@ -1045,18 +1070,7 @@ body{
         padding-top: 50px;
         font-size: 27px;
     }
-    .sport9 {
-        transition: clip-path 1.5s;
-        clip-path: polygon(0% 45%, 100% 45%, 101% 100%, 11% 100%);
-        background: linear-gradient(0deg, #213134, #213134), #6EA4AE;
-        box-shadow: 4px 0px 10px rgb(0 0 0 / 25%);
-        width: 240px;
-        margin-left: -25px;
-        color: white;
-        text-align: center;
-        padding-top: 50px;
-        font-size: 27px;
-    }
+    
     .board{
        
         height: 340px;
@@ -1070,7 +1084,18 @@ body{
         justify-content: space-around;
         margin-top: 0%;
     }
-   
+    .right{
+        height: 200%;
+    }
+    .left{
+        height: 200%;
+    }
+    .nachalo {
+        margin-top: 100px;
+        width: 600px;
+        height: 115px;
+        font-size: 38px;
+    }
     
 }
 
