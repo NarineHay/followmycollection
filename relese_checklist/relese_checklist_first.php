@@ -12,7 +12,9 @@
            while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
 
                $take_dates.='
+
                 <div class="box1"><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].'"></i></div>
+
             ';
 
            }
@@ -50,6 +52,7 @@
                     <?php
                         if (!empty($user_id)) {
                     ?>
+                            <input type="hidden" value="<?= $user_id ?>" class="user_id">
                             <div class="sport9">My Checklists</div>
                     <?php
                         }
@@ -325,29 +328,32 @@
         }
         $('body').on('click', ".i-click", function() {
 
-            if($(this).css('color') == "rgb(255, 255, 255)") {
-                $(this).css('color', "gold")
-                let date_id = $(this).attr('data-id')
-                let sport_id =  $(this).parents('.start2').find(".sport_type_id").val()
-                let favorite_type = $(this).parents('.bigger_block_slider').find("input.favorite_type").val()
+            let date_id = $(this).attr('data-id')
+            let sport_id =  $(this).parents('.start2').find(".sport_type_id").val()
+            let favorite_type = $(this).parents('.bigger_block_slider').find("input.favorite_type").val()
+            let user_id = $(".user_id").val()
+            let action = ''
+            alert(user_id)
+            if(user_id != "undefined") {
+                if($(this).css('color') == "rgb(255, 255, 255)") {
+                    $(this).css('color', "gold")
+                    action = 'add'
+
+                }else {
+                    $(this).css('color', "white")
+                    action = 'delete'
+                }
+
                 $.ajax({
                     method:"POST",
                     url: "rate_test.php",
-                    data:{date_id, sport_id, favorite_type},
+                    data:{date_id, sport_id, favorite_type, action, user_id},
                     success:function(r){
                         console.log(r)
                     }
                 });
-            } else {
-                $(this).css('color', "white")
-            }
-
-
+            } 
         });
-       
-        $(".single_page").click(function() {
-            location.href = "single_chechklist.php"
-        })
 </script>
 <style>
     .bigger_block_slider{
