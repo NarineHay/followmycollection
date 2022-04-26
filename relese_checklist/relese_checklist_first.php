@@ -12,11 +12,11 @@
         while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
             if($dates_row['status'] != 1){
             $take_dates.='
-                <div class="box1" data-id='.$dates_row['id'].' data-checked="false"><p class="">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" style="color:" id='.$dates_row['id'].'></i></div>
+                <div class="box1"><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" style="color:"  data-id='.$dates_row['id'].' data-checked="false"></i></div>
             ';
             }else{
                 $take_dates.='
-                <div class="box1" data-id='.$dates_row['id'].' data-checked="true"><p class="">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star"  style="color:gold" id='.$dates_row['id'].'></i></div>
+                <div class="box1 "><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" style="color:gold" data-id='.$dates_row['id'].' data-checked="true"></i></div>
             '; 
             }
         }
@@ -107,7 +107,7 @@
          </div>
     </div>
     <div class="container-fluid d-flex flex-column p-0 start2" >
-        <div class="mayr d-flex">
+        <div class="mayr1 d-flex">
         <div class="sport1"></div>
         <?= $take_types1 ?>
         </div>
@@ -154,43 +154,50 @@
                 </div>
             </div>
             </div>
-</div>
-<a name="cal"></a>
-<div class="start">
-         <div class="nachalo">
-            <p class="p">NEW RELEASES CALENDAR</p>
-         </div>
-    </div>
+            </div>
+            <a name="cal"></a>
+            <div class="start">
+                     <div class="nachalo">
+                        <p class="p">NEW RELEASES CALENDAR</p>
+                     </div>
+            </div>
     <script>
-        var kids=''
         $('.mayr>div').click(function(event){
-            
-            //  kids = $( event.target ).children().children();
-            // // console.log(event.target.tagName)
-            // if($(this).hasClass('active')){
-            //     $('.mayr>div').removeClass("active");
-            // }
-            // else{
-            //     $('.mayr>div').removeClass("active");
-            //     $(this).addClass("active");
-            // }
-
+ 
             let mychild = document.querySelector('.mayr')
             console.log(mychild)
             for(let i = 0; i < mychild.children.length; i++) {
                 mychild.children[i].style = {}
             }
             
-            
-
             if($(window).width() <= '1275'){
                  $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
             }
             if($(window).width() > '1275') {
-                $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "pointer-events": 'none'})
-
+                $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "padding-left": '0%', "pointer-events": 'none'})
+            }
+            if($(window).width() >= '2560') {
+                    $(this).css({"clip-path": 'polygon(20% 0%, 77% 0%, 100% 100%, 0% 100%)', "padding-top": '32px', "padding-left": '0%', "pointer-events": 'none'})
             }
         });
+        $('.mayr1>div').click(function(event){
+
+                let mychild = document.querySelector('.mayr1')
+                console.log(mychild)
+                for(let i = 0; i < mychild.children.length; i++) {
+                    mychild.children[i].style = {}
+                }
+
+                if($(window).width() <= '1275'){
+                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
+                }
+                if($(window).width() > '1275') {
+                    $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "padding-left": '0%', "pointer-events": 'none'})
+                }
+                if($(window).width() >= '2560') {
+                    $(this).css({"clip-path": 'polygon(20% 0%, 77% 0%, 100% 100%, 0% 100%)', "padding-top": '32px', "padding-left": '0%', "pointer-events": 'none'})
+                }
+});
         // ------------------------------------------------------------------------
        
         let clicks = document.getElementsByClassName('click_me')
@@ -279,7 +286,7 @@
         console.log("Sorry, we are out of ");
     }
         }
-        $('body').on('click', ".box1", function() {
+        $('body').on('click', ".star_o", function() {
             // console.log(111)
             var checked
             if($(this).attr('data-checked') == 'false'){
@@ -311,6 +318,9 @@
             });
         });
        
+$(".single_page").click(function() {
+    location.href = "single_chechklist.php"
+})
 
     </script>
     <style>

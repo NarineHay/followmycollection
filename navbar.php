@@ -60,7 +60,7 @@ else{
   <div class="collapse navbar-collapse multi-collapse" id="navbarSupportedContent2">
     <ul class="navbar-nav nav-pills nav-fill" id="nav-ul">
       <li class="nav-item active">
-        <a class="nav-link" href="/test/collection-cards/">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link nav_bigger" href="/test/collection-cards/">Home <span class="sr-only">(current)</span></a>
       </li>
       <!-- <li class="nav-item">
         <a class="nav-link" href="#">Collections</a>
