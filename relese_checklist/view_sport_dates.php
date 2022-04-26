@@ -21,10 +21,16 @@ if(!empty($_POST['sport_id'])) {
         }
 
         $take_dates.='
-                <div class="box1"><p class="">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].' style="color:' . $color . '"></i></div>
+                <div class="box1"><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].' style="color:' . $color . '"></i></div>
             ';
 
     }
 
     echo $take_dates;
 }
+?>
+<script>
+ $(".single_page").click(function() {
+    location.href = "single_chechklist.php"
+})
+</script>
