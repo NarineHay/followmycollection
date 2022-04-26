@@ -44,6 +44,7 @@ for($y = 1; $y < 13; $y++) {
         $first_day = 7;
     }
 
+
     if($first_day > 2 ) {
         $last_day_prew_mounth -= $first_day - 2;
     }
@@ -54,19 +55,21 @@ for($y = 1; $y < 13; $y++) {
     if($y == 1 || $y == 5 || $y == 9) {
         $p .= "<div class='arajin'>";
     }
-
     $p .= '<div class="nachalo_year">
                 <div class="lll" style="width: 90%;">
                     <table class="jjj"> 
-                        <form action="#cal" method="post"> 
-                            <div class="name_mount1">
-                                <button type="submit" class="year_month_names h5" style="outline: none">' . $mounth . '</button>
-                                <button type="submit" class="year_cal_cover h5" style="outline: none">></button>
-                                <input type="hidden" value="mounth" name="choose_calendar">
-                                <input type="hidden" value="' . $mounth . '" name="mounth">
-                                <input type="hidden" value="1221" name="year">
-                            </div>
-                        </form>
+                        <div class="kkkkk1">
+                            <form action="#cal" method="post"> 
+                                <div class="name_mount1">
+                                    <button type="submit" class="year_month_names h5" style="outline: none">' . $mounth . '</button>
+                                    <button type="submit" class="year_cal_cover h5" style="outline: none">></button>
+                                    <input type="hidden" value="mounth" name="choose_calendar">
+                                    <input type="hidden" value="' . $mounth . '" name="mounth">
+                                    <input type="hidden" value="' . $year . '" name="year">
+                                    <input type="hidden" value="' . $y . '" name="mounth_number">
+                                </div>
+                            </form>
+                        </div>
                         <div class="name_mount">
                             <h5 class="year_month_names">' . $mounth . '</h5>
                                 <h5 class="year_cal_cover" >></h5>
@@ -107,6 +110,7 @@ for($y = 1; $y < 13; $y++) {
     if($y == 4 || $y == 8 || $y == 12) {
         $p .= "</div>";
     }
+
 }
 
 $array['year'] = $year;

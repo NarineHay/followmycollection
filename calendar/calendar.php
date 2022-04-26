@@ -3,6 +3,7 @@
     $colors_result = mysqli_query($con, $select_colors);
     $colors_content = "";
 
+
     if(isset($_POST['mounth'])) {
         $this_thursday = $_POST['mounth'];
         $this_year = $_POST['year'];
@@ -10,7 +11,7 @@
     }else {
         $this_thursday = date('F', strtotime("thursday this week"));
         $this_year = date('Y');
-        $mounth_number = 1;
+        $mounth_number = date('n');
     }
 
     $this_mounth=date('F');
@@ -104,10 +105,21 @@
             </div>
         </div>
         <div class="search_content">
-            <div class="search_panel">
-                <input type="text" class="search" placeholder="Search">
-                <button><i class="fa fa-search"></i></button>
-            </div>
+
+                <?php
+                    if($choose_calendar == "year") {
+                ?>
+                    <form action="#cal" method="post">
+                        <div class="search_panel">
+                            <input type="text" class="search" placeholder="Search" name="search_prov">
+                            <input type="hidden" name="choose_calendar" value="year">
+                            <button type="submit"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                <?php
+                    }
+                ?>
+
             <form action="#cal" method="post">
                 <select class="calendar_type" onchange="this.form.submit()" name="choose_calendar">
 

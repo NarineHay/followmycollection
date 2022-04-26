@@ -1,4 +1,9 @@
 <?php
+
+    if(isset($_POST['search_prov'])) {
+        $search_prov = $_POST['search_prov'];
+    }
+
     $days = array("M", "T", "W", "T", "F", "S", "S");
     $ths='';
     $mounths = array(
@@ -22,6 +27,12 @@
     $year = date('Y');
     $prev_year = $year-1;
     $p = "";
+
+    $first_mounth =  date('m', strtotime('first month of this year'));
+
+    $from_date = date("Y/m/d", strtotime("$first_mounth $year"));
+
+    echo $first_mounth . " <br /> " . $from_date;
 
     for($y = 1; $y < 13; $y++) {
         $mounth = $mounths[$y];
