@@ -5,7 +5,6 @@
         $take_types1='';
         $color_type=2;
         $count=0;
-
            $dates= "SELECT * FROM dates";
            $dates_querry=mysqli_query($con,$dates);
            $take_dates='';
@@ -161,21 +160,21 @@
                 </div>
             </div>
             </div>
-</div>
-<a name="cal"></a>
-<div class="start">
-         <div class="nachalo">
-            <p class="p">NEW RELEASES CALENDAR</p>
-         </div>
-    </div>
+            </div>
+            <a name="cal"></a>
+            <div class="start">
+                     <div class="nachalo">
+                        <p class="p">NEW RELEASES CALENDAR</p>
+                     </div>
+            </div>
     <script>
         $('.mayr>div').click(function(event){
-
             let mychild = document.querySelector('.mayr')
             for(let i = 0; i < mychild.children.length; i++) {
                 mychild.children[i].style = {}
             }
             
+
             let sport_type_id = $(this).attr("data-id")
             $(this).parents('.start2').find('.sport_type_id').val(sport_type_id)
 
@@ -192,24 +191,26 @@
 
         $('.mayr1>div').click(function(event){
 
-            let mychild = document.querySelector('.mayr1')
-            for(let i = 0; i < mychild.children.length; i++) {
-                mychild.children[i].style = {}
-            }
+                let mychild = document.querySelector('.mayr1')
+                console.log(mychild)
+                for(let i = 0; i < mychild.children.length; i++) {
+                    mychild.children[i].style = {}
+                }
+                let sport_type_id = $(this).attr("data-id")
+                $(this).parents('.start2').find('.sport_type_id').val(sport_type_id)
 
-            let sport_type_id = $(this).attr("data-id")
-            $(this).parents('.start2').find('.sport_type_id').val(sport_type_id)
-
-            if($(this).attr('class') != "sport1") {
                 if($(window).width() <= '1275'){
-                    $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
+                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
                 }
                 if($(window).width() > '1275') {
-                    $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "pointer-events": 'none'})
-
+                    $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "padding-left": '0%', "pointer-events": 'none'})
                 }
-            }
-        });
+                if($(window).width() >= '2560') {
+                    $(this).css({"clip-path": 'polygon(20% 0%, 77% 0%, 100% 100%, 0% 100%)', "padding-top": '32px', "padding-left": '0%', "pointer-events": 'none'})
+                }
+});
+        // ------------------------------------------------------------------------
+
        
         let clicks = document.getElementsByClassName('click_me')
         for(let i = 0; i < clicks.length; i++) {
@@ -313,10 +314,7 @@
                 break;
         default:
         console.log("Sorry, we are out of ");
-
-
-}
-
+            }
             let sport_id = $(event.target).attr("data-id")
 
             let type = 'checklist';
@@ -351,6 +349,9 @@
 
         });
        
+$(".single_page").click(function() {
+    location.href = "single_chechklist.php"
+})
 
     </script>
     <style>

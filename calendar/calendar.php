@@ -14,7 +14,7 @@
         $mounth_number = date('n');
     }
 
-
+    $this_mounth=date('F');
 
     while($tox = mysqli_fetch_assoc($colors_result)) {
         $colors_content .= '<div class="sport_colors">
