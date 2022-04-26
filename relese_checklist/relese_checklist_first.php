@@ -5,19 +5,14 @@
         $take_types1='';
         $color_type=2;
         $count=0;
+
            $dates= "SELECT * FROM dates";
            $dates_querry=mysqli_query($con,$dates);
            $take_dates='';
            while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
 
-               if($dates_row["status"] == 1) {
-                   $color = "gold";
-               }else {
-                   $color = "white";
-               }
-
                $take_dates.='
-                <div class="box1"><p class="">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].' style="color:' . $color . '"></i></div>
+                <div class="box1"><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].'"></i></div>
             ';
 
            }
@@ -147,7 +142,7 @@
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
                     </div>
-                </div>
+                    </div>
                 <div class="d-flex innline lock16" >
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
@@ -160,21 +155,21 @@
                 </div>
             </div>
             </div>
-            </div>
-            <a name="cal"></a>
-            <div class="start">
-                     <div class="nachalo">
-                        <p class="p">NEW RELEASES CALENDAR</p>
-                     </div>
-            </div>
+</div>
+<a name="cal"></a>
+<div class="start">
+         <div class="nachalo">
+            <p class="p">NEW RELEASES CALENDAR</p>
+         </div>
+    </div>
     <script>
         $('.mayr>div').click(function(event){
+
             let mychild = document.querySelector('.mayr')
             for(let i = 0; i < mychild.children.length; i++) {
                 mychild.children[i].style = {}
             }
             
-
             let sport_type_id = $(this).attr("data-id")
             $(this).parents('.start2').find('.sport_type_id').val(sport_type_id)
 
@@ -191,26 +186,24 @@
 
         $('.mayr1>div').click(function(event){
 
-                let mychild = document.querySelector('.mayr1')
-                console.log(mychild)
-                for(let i = 0; i < mychild.children.length; i++) {
-                    mychild.children[i].style = {}
-                }
-                let sport_type_id = $(this).attr("data-id")
-                $(this).parents('.start2').find('.sport_type_id').val(sport_type_id)
+            let mychild = document.querySelector('.mayr1')
+            for(let i = 0; i < mychild.children.length; i++) {
+                mychild.children[i].style = {}
+            }
 
+            let sport_type_id = $(this).attr("data-id")
+            $(this).parents('.start2').find('.sport_type_id').val(sport_type_id)
+
+            if($(this).attr('class') != "sport1") {
                 if($(window).width() <= '1275'){
-                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
+                    $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
                 }
                 if($(window).width() > '1275') {
-                    $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "padding-left": '0%', "pointer-events": 'none'})
-                }
-                if($(window).width() >= '2560') {
-                    $(this).css({"clip-path": 'polygon(20% 0%, 77% 0%, 100% 100%, 0% 100%)', "padding-top": '32px', "padding-left": '0%', "pointer-events": 'none'})
-                }
-});
-        // ------------------------------------------------------------------------
+                    $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "pointer-events": 'none'})
 
+                }
+            }
+        });
        
         let clicks = document.getElementsByClassName('click_me')
         for(let i = 0; i < clicks.length; i++) {
@@ -269,7 +262,7 @@
         }
 
         let sport_id = $(event.target).attr("data-id")
-        let type = 'release';
+        let type = 'checklist';
         $.post(
             'relese_checklist/view_sport_dates.php',
             {sport_id, type},
@@ -314,10 +307,13 @@
                 break;
         default:
         console.log("Sorry, we are out of ");
-            }
+
+
+}
+
             let sport_id = $(event.target).attr("data-id")
 
-            let type = 'checklist';
+            let type = 'release';
             $.post(
                 'relese_checklist/view_sport_dates.php',
                 {sport_id, type},
@@ -342,21 +338,20 @@
                         console.log(r)
                     }
                 });
-            }else {
+            } else {
                 $(this).css('color', "white")
             }
 
 
         });
        
-$(".single_page").click(function() {
-    location.href = "single_chechklist.php"
-})
-
-    </script>
-    <style>
-        .bigger_block_slider{
-            width: 81vw;
-            overflow:hidden;
-        }
-    </style>
+        $(".single_page").click(function() {
+            location.href = "single_chechklist.php"
+        })
+</script>
+<style>
+    .bigger_block_slider{
+        width: 81vw;
+        overflow:hidden;
+    }
+</style>

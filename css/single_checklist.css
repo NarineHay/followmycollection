@@ -128,14 +128,14 @@ img{
 }
 .colname{
     height: 70px;
-    width: 30%;
+    width: 30.5%;
     text-align: center;
     display: flex;
     justify-content: start;
 }
 .picturestar{
     height: 70px;
-    width: 10%;
+    width: 5%;
     align-items: center;
     display: flex;
     justify-content: start;
