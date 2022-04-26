@@ -2,6 +2,7 @@
 
 if(isset($_POST['mounth'])) {
     $mounth = $_POST['mounth'];
+    echo $mounth;
     $year = $_POST['year'];
     $mounth_number = $_POST['mounth_number'];
     $last_mounth_number = $mounth_number - 1;

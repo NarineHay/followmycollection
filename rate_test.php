@@ -1,17 +1,13 @@
 <?php
 require "config/con1.php";
-$message_res="";
 
-if(!empty($_POST['id'])){
-    $id=$_POST['id'];
-    $checked = $_POST['checked'];
-    if($checked == 'true')
-    {
-        $sql="UPDATE dates SET `status` = 1 WHERE id=".$id;
-    }else{
-        $sql="UPDATE dates SET `status` = 0 WHERE id=".$id;
-    }
+if(!empty($_POST['date_id'])){
+    $date_id=$_POST['date_id'];
+    $sport_id=$_POST['sport_id'];
+    $favorite_type=$_POST['favorite_type'];
+    $sql="INSERT INTO `favorite_dates`(`sport_id`, `date_id`, `type`) VALUES ( $sport_id, $date_id, '$favorite_type')";
     $result=mysqli_query($con, $sql);
 
-    return $checked;
+    echo $sql;
+
 }

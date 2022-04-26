@@ -66,7 +66,7 @@ if(isset($_POST['btn-add-releases'])){
                               $description.=$name.'^';
                         }
                         $description=substr($description,0, strlen($description)-1);
-                        $end_id="SELECT id FROM collections GROUP BY id DESC LIMIT 1";
+                        $end_id="SELECT id FROM collections order BY id DESC LIMIT 1";
                         $res=mysqli_query($con, $end_id);
                         $row=mysqli_fetch_assoc($res);
      

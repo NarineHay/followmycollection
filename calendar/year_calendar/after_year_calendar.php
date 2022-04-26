@@ -43,6 +43,7 @@ for($y = 1; $y < 13; $y++) {
         $first_day = 7;
     }
 
+
     if($first_day > 2 ) {
         $last_day_prew_mounth -= $first_day - 2;
     }
@@ -53,7 +54,6 @@ for($y = 1; $y < 13; $y++) {
     if($y == 1 || $y == 5 || $y == 9) {
         $p .= "<div class='arajin'>";
     }
-
     $p .= '<div class="nachalo_year">
                 <div class="lll" style="width: 90%;">
                     <table class="jjj"> 
@@ -65,6 +65,7 @@ for($y = 1; $y < 13; $y++) {
                                     <input type="hidden" value="mounth" name="choose_calendar">
                                     <input type="hidden" value="' . $mounth . '" name="mounth">
                                     <input type="hidden" value="' . $year . '" name="year">
+                                    <input type="hidden" value="' . $y . '" name="mounth_number">
                                 </div>
                             </form>
                         </div>
@@ -74,28 +75,28 @@ for($y = 1; $y < 13; $y++) {
                         </div>
                         <thead class="tr">' . $ths . '</thead>';
     $num_of_days = cal_days_in_month(CAL_GREGORIAN, $y, $year);
-    $k=($first_day*1 + $num_of_days*1 - 1) / 7;
-    for ($i = 0; $i < $k; $i++) {
+    // $k=($first_day*1 + $num_of_days*1 - 1) / 7;
+    for ($i = 0; $i < 6; $i++) {
         $p .= '<tbody><tr>';
         for ($j = 0; $j < 7; $j++){
             if($i==0){
                 if($j >= $first_day-1) {
                     $dates = str_pad($q,2,'0', STR_PAD_LEFT);
-                    $p .= "<td>" . $dates . "</td>";
+                    $p .= "<td class='number_td_pas'>" . $dates . "</td>";
                     $q++;
                 }
                 else {
-                    $p .= "<td>" . $last_day_prew_mounth . "</td>";
+                    $p .= "<td class='number_td'>" . $last_day_prew_mounth . "</td>";
                     $last_day_prew_mounth ++;
                 }
             }
             else{
                 if($q<=$num_of_days) {
                     $dates = str_pad($q,2,'0', STR_PAD_LEFT);
-                    $p .= "<td>" . $dates . "</td>";
+                    $p .= "<td class='number_td_pas'>" . $dates . "</td>";
                 }else {
                     $dates1 = str_pad($f,2,'0', STR_PAD_LEFT);
-                    $p .= "<td>" . $dates1 . "</td>";
+                    $p .= "<td class='number_td'>" . $dates1 . "</td>";
                     $f++;
                 }
                 $q++;
@@ -103,11 +104,12 @@ for($y = 1; $y < 13; $y++) {
         }
         $p .="</tr></tbody>";
     }
-    $p .= '</table></div>';
+    $p .= '</table></div></div>';
 
     if($y == 4 || $y == 8 || $y == 12) {
         $p .= "</div>";
     }
+
 }
 
 $array['year'] = $year;

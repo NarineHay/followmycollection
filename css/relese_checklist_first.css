@@ -58,7 +58,7 @@ body{
     align-items: center;
     color: #fff;
 }
-.lock1{
+.lock1, .lock11{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), #6EA4AE;
     width: calc(100% / 8);
     height: inherit;
@@ -66,7 +66,7 @@ body{
     align-items: center;
     color: #fff;
 }
-.lock2{
+.lock2,.lock12{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), #6EA4AE;
     width: calc(100% / 8);
     height: inherit;
@@ -74,7 +74,7 @@ body{
     align-items: center;
     color: #fff;
 }
-.lock3{
+.lock3,.lock13{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), #6EA4AE;
     width: calc(100% / 8);
     height: inherit;
@@ -82,7 +82,7 @@ body{
     align-items: center;
     color: #fff;
 }
-.lock4{
+.lock4,.lock14{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), #6EA4AE;
     width: calc(100% / 8);
     height: inherit;
@@ -90,7 +90,7 @@ body{
     align-items: center;
     color: #fff;
 }
-.lock5{
+.lock5,.lock15{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), #6EA4AE;
     width: calc(100% / 8);
     height: inherit;
@@ -98,7 +98,7 @@ body{
     align-items: center;
     color: #fff;
 }
-.lock6{
+.lock6,.lock16{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), #6EA4AE;
     width: calc(100% / 8);
     height: inherit;
@@ -106,7 +106,7 @@ body{
     align-items: center;
     color: #fff;
 }
-.lock7{
+.lock7,.lock17{
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), #6EA4AE;
     width: calc(100% / 8);
     height: inherit;
