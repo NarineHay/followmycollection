@@ -1,4 +1,4 @@
-.first_maunth{
+    .first_maunth{
     width: 100%;
     height: 561px;
 }
@@ -40,6 +40,7 @@ th {
     font-family: emoji;
     text-align: center;
     padding: 1px;
+    cursor: default;
 }
 .calendar_body tr:not(.empty) {
     height: 0px;

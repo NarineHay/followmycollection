@@ -209,8 +209,8 @@
 }
 
 .this_day {
-    background: #133960;
-    color: #fff;
+    background: #133960 !important;
+    color: #fff !important;
 }
 
 .right_calendar {

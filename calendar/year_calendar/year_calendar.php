@@ -2,7 +2,9 @@
 
     if(isset($_POST['search_prov'])) {
         $search_prov = $_POST['search_prov'];
+        $search_prov = strtolower($search_prov);
     }
+
 
     $days = array("M", "T", "W", "T", "F", "S", "S");
     $ths='';
@@ -28,11 +30,18 @@
     $prev_year = $year-1;
     $p = "";
 
-    $first_mounth =  date('m', strtotime('first month of this year'));
+    $from_date = date("Y/m/d", strtotime("01/01/$year"));
 
-    $from_date = date("Y/m/d", strtotime("$first_mounth $year"));
+    $to_date = date("Y/m/d", strtotime("12/31/$year"));
 
-    echo $first_mounth . " <br /> " . $from_date;
+    $prod_days = [];
+    $select_prod = "SELECT release_date FROM collections WHERE producer = '$search_prov' AND release_date BETWEEN '$from_date' AND '$to_date'";
+    $prod_query = mysqli_query($con, $select_prod);
+
+    while($prod_row = mysqli_fetch_assoc($prod_query)) {
+        array_push($prod_days, $prod_row['release_date']);
+    }
+
 
     for($y = 1; $y < 13; $y++) {
         $mounth = $mounths[$y];
@@ -89,21 +98,34 @@
         for ($i = 0; $i < 6; $i++) {
             $p .= '<tbody><tr>';
             for ($j = 0; $j < 7; $j++){
+
+                $color = "";
+
+                $y = str_pad($y,2,'0', STR_PAD_LEFT);
+                $dates = str_pad($q,2,'0', STR_PAD_LEFT);
+
+                $search_dates = date("Y-m-d", strtotime("$year-$y-$dates"));
+
+                for($s = 0; $s < count($prod_days); $s++) {
+                    if($prod_days[$s] == $search_dates) {
+                        $color = "this_day";
+                    }
+                }
+
                 if($i==0){
                     if($j >= $first_day-1) {
-                        $dates = str_pad($q,2,'0', STR_PAD_LEFT);
-                        $p .= "<td class='number_td_pas'>" . $dates . "</td>";
+
+                        $p .= "<td class='number_td_pas " . $color . "'>" . $dates . "</td>";
                         $q++;
                     }
                     else {
-                        $p .= "<td class='number_td'>" . $last_day_prew_mounth . "</td>";
+                        $p .= "<td class='number_td' >" . $last_day_prew_mounth . "</td>";
                         $last_day_prew_mounth ++;
                     }
                 }
                 else{
                     if($q<=$num_of_days) {
-                        $dates = str_pad($q,2,'0', STR_PAD_LEFT);
-                        $p .= "<td class='number_td_pas'>" . $dates . "</td>";
+                        $p .= "<td class='number_td_pas " . $color . "'>" . $dates . "</td>";
                     }else {
                         $dates1 = str_pad($f,2,'0', STR_PAD_LEFT);
                         $p .= "<td class='number_td'>" . $dates1 . "</td>";
