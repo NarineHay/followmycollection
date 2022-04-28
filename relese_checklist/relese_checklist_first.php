@@ -14,7 +14,6 @@
                $take_dates.='
 
                 <div class="box1"><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].'"></i></div>
-
             ';
 
            }
@@ -145,7 +144,7 @@
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
                     </div>
-                    </div>
+                </div>
                 <div class="d-flex innline lock16" >
                     <div class="d-flex boxer ">
                         <?= $take_dates ?>
@@ -164,8 +163,9 @@
          <div class="nachalo">
             <p class="p">NEW RELEASES CALENDAR</p>
          </div>
-    </div>
-    <script>
+</div>
+
+<script>
         $('.mayr>div').click(function(event){
 
             let mychild = document.querySelector('.mayr')
@@ -333,7 +333,6 @@
             let favorite_type = $(this).parents('.bigger_block_slider').find("input.favorite_type").val()
             let user_id = $(".user_id").val()
             let action = ''
-            alert(user_id)
             if(user_id != "undefined") {
                 if($(this).css('color') == "rgb(255, 255, 255)") {
                     $(this).css('color', "gold")
@@ -352,10 +351,14 @@
                         console.log(r)
                     }
                 });
-            } 
+
+            }
+
         });
+   
 </script>
 <style>
+
     .bigger_block_slider{
         width: 81vw;
         overflow:hidden;
