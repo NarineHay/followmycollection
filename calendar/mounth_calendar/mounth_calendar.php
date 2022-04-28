@@ -22,6 +22,9 @@ if(isset($_POST['mounth'])) {
     $last_mounth_number = $mounth_number;
 }
 
+$select_date = "SELECT DAY(collections.release_date) as dd1, collections.sport_type, sports_type.sport_logo, sports_type.background FROM collections, sports_type where collections.sport_type = sports_type.sport_logo AND release_date BETWEEN  '$from_date' AND '$to_date'";
+$date_query = mysqli_query($con, $select_date);
+$count_p = mysqli_num_rows($date_query);
 
 $k1 = "";
 
@@ -52,9 +55,7 @@ for ($i = 0; $i < 6; $i++) {
         $c = 0;
         $dates = str_pad($q,2,'0', STR_PAD_LEFT);
         $divs = '';
-        $select_date = "SELECT DAY(collections.release_date) as dd1, collections.sport_type, sports_type.sport_logo, sports_type.background FROM collections, sports_type where collections.sport_type = sports_type.sport_logo AND release_date BETWEEN  '$from_date' AND '$to_date'";
-        $date_query = mysqli_query($con, $select_date);
-        $count_p = mysqli_num_rows($date_query);
+
 
         while($date_row = mysqli_fetch_assoc($date_query)) {
 

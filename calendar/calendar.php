@@ -3,6 +3,9 @@
     $colors_result = mysqli_query($con, $select_colors);
     $colors_content = "";
 
+    if(isset($_POST['search_prov'])) {
+        $search_prov = $_POST['search_prov'];
+    }
 
     if(isset($_POST['mounth'])) {
         $this_thursday = $_POST['mounth'];
@@ -111,7 +114,7 @@
                 ?>
                     <form action="#cal" method="post">
                         <div class="search_panel">
-                            <input type="text" class="search" placeholder="Search" name="search_prov">
+                            <input type="text" class="search" placeholder="Search" name="search_prov" value="<?= $search_prov ?>">
                             <input type="hidden" name="choose_calendar" value="year">
                             <button type="submit"><i class="fa fa-search"></i></button>
                         </div>

@@ -264,96 +264,110 @@
             console.log("Sorry, we are out of ");
         }
 
-        let sport_id = $(event.target).attr("data-id")
-        let type = 'checklist';
-        $.post(
-            'relese_checklist/view_sport_dates.php',
-            {sport_id, type},
-            function (result) {
-                $('.lock' + sport_id + " .boxer").html(result)
-            }
-        )
+        let user_id = $(".user_id").val()
+
+        if(user_id != undefined) {
+            let sport_id = $(event.target).attr("data-id")
+            let type = 'checklist';
+            $.post(
+                'relese_checklist/view_sport_dates.php',
+                {sport_id, type, user_id},
+                function (result) {
+                    $('.lock' + sport_id + " .boxer").html(result)
+                }
+            )
+        }
     }
 
 
 
-        function slide1( params) {
+    function slide1( params) {
         let a = $('.eee1')
-            switch (params) {
-                case "Baseball":
-                    a.removeClass();
-                    a.addClass("eee1 slide");
-                break;
-                case "Football":
-                    a.removeClass();
-                    a.addClass("eee1 slide2");
-                break;
-                case "Basketball":
-                    a.removeClass();
-                    a.addClass("eee1 slide3");
-                break;
-                case "Hockey":
-                    a.removeClass();
-                    a.addClass("eee1 slide4");
-                break;
-                case "Soccer":
-                    a.removeClass();
-                    a.addClass("eee1 slide5");
-                break;
-                case "Fighting":
-                    a.removeClass();
-                    a.addClass("eee1 slide6");
-                break;
-                case "Autosport":
-                    a.removeClass();
-                    a.addClass("eee1 slide7");
-                break;
-        default:
-        console.log("Sorry, we are out of ");
+        switch (params) {
+            case "Baseball":
+                a.removeClass();
+                a.addClass("eee1 slide");
+            break;
+            case "Football":
+                a.removeClass();
+                a.addClass("eee1 slide2");
+            break;
+            case "Basketball":
+                a.removeClass();
+                a.addClass("eee1 slide3");
+            break;
+            case "Hockey":
+                a.removeClass();
+                a.addClass("eee1 slide4");
+            break;
+            case "Soccer":
+                a.removeClass();
+                a.addClass("eee1 slide5");
+            break;
+            case "Fighting":
+                a.removeClass();
+                a.addClass("eee1 slide6");
+            break;
+            case "Autosport":
+                a.removeClass();
+                a.addClass("eee1 slide7");
+            break;
+            default:
+            console.log("Sorry, we are out of");
+        }
 
+        let user_id = $(".user_id").val()
 
-}
-
+        if (user_id != undefined) {
             let sport_id = $(event.target).attr("data-id")
-
             let type = 'release';
             $.post(
-                'relese_checklist/view_sport_dates.php',
-                {sport_id, type},
-                function (result) {
-                    $('.lock1' + sport_id + " .boxer").html(result)
+              'relese_checklist/view_sport_dates.php',
+              {sport_id, type, user_id},
+              function (result) {
+                  $('.lock1' + sport_id + " .boxer").html(result)
 
-                }
+              }
             )
         }
-        $('body').on('click', ".i-click", function() {
+    }
 
-            let date_id = $(this).attr('data-id')
-            let sport_id =  $(this).parents('.start2').find(".sport_type_id").val()
-            let favorite_type = $(this).parents('.bigger_block_slider').find("input.favorite_type").val()
-            let user_id = $(".user_id").val()
-            let action = ''
-            alert(user_id)
-            if(user_id != "undefined") {
-                if($(this).css('color') == "rgb(255, 255, 255)") {
-                    $(this).css('color', "gold")
-                    action = 'add'
+    $('body').on('click', ".i-click", function() {
 
-                }else {
-                    $(this).css('color', "white")
-                    action = 'delete'
+        let date_id = $(this).attr('data-id')
+        let sport_id =  $(this).parents('.start2').find(".sport_type_id").val()
+        let favorite_type = $(this).parents('.bigger_block_slider').find("input.favorite_type").val()
+        let user_id = $(".user_id").val()
+        let action = ''
+
+        if(user_id != undefined) {
+
+            if($(this).css('color') == "rgb(255, 255, 255)") {
+                $(this).css('color', "gold")
+                action = 'add'
+
+            }else {
+                $(this).css('color', "white")
+                action = 'delete'
+            }
+
+            $.ajax({
+                method:"POST",
+                url: "rate_test.php",
+                data:{date_id, sport_id, favorite_type, action, user_id},
+                success:function(r){
+                    console.log(r)
                 }
+            });
+        } else {
+            alert("You must be registered to perform this transaction․ Please register")
+            location.assign('login-register.php')
+        }
 
-                $.ajax({
-                    method:"POST",
-                    url: "rate_test.php",
-                    data:{date_id, sport_id, favorite_type, action, user_id},
-                    success:function(r){
-                        console.log(r)
-                    }
-                });
-            } 
-        });
+    });
+
+
+
 </script>
 <style>
     .bigger_block_slider{

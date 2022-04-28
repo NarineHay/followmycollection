@@ -30,11 +30,14 @@
        text-align: center;
         color: rgb(164, 156, 156);
         cursor: default;
+        border-radius: 5px;
+
     }
     .number_td_pas{
         text-align: center;
         color: rgb(29, 28, 28);
         cursor: default;
+        border-radius: 5px;
     }
 
 .add-f{
