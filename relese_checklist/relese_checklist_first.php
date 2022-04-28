@@ -12,7 +12,8 @@
            while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
 
                $take_dates.='
-                <div class="box1"><p class="">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id="'.$dates_row['id'].'"></i></div>
+
+                <div class="box1"><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].'"></i></div>
             ';
 
            }
@@ -332,7 +333,6 @@
             let favorite_type = $(this).parents('.bigger_block_slider').find("input.favorite_type").val()
             let user_id = $(".user_id").val()
             let action = ''
-         
             if(user_id != "undefined") {
                 if($(this).css('color') == "rgb(255, 255, 255)") {
                     $(this).css('color', "gold")
@@ -355,10 +355,10 @@
             }
 
         });
-       
+   
+</script>
+<style>
 
-    </script>
-    <style>
     .bigger_block_slider{
         width: 81vw;
         overflow:hidden;
