@@ -5,7 +5,7 @@
 }
 .container55{
     width:100%;
-    height:100vh;
+    margin-bottom: 3%;
 }
 .section{
     width:100%;
@@ -34,6 +34,9 @@ img{
     width: 100%;
     height: 200px;
 }
+#exampleModal{
+    fill: #fff;
+}
 .hash2{
     width: 100%;
     height: 100px;
@@ -45,7 +48,6 @@ img{
 }
 .content_box{
     width: 70%;
-    height: 600px;
 }
 .cont_box_first{
     width: 100%;
@@ -77,7 +79,7 @@ img{
 .pic_text{
     font-family: 'Roboto', sans-serif;
     font-weight: 500,Medium;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 70px;
     letter-spacing: 5%;
     color: #133960;
@@ -85,7 +87,7 @@ img{
 .year_text{
     font-family: 'Roboto', sans-serif;
     font-weight: 500,Medium;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 70px;
     letter-spacing: 5%;
     color: #133960;
@@ -94,7 +96,7 @@ img{
 .manifuter_text{
     font-family: 'Roboto', sans-serif;
     font-weight: 500,Medium;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 70px;
     letter-spacing: 5%;
     color: #133960;
@@ -103,7 +105,7 @@ img{
 .colname_text{
     font-family: 'Roboto', sans-serif;
     font-weight: 500,Medium;
-    font-size: 24px;
+    font-size: 22px;
     line-height: 70px;
     letter-spacing: 5%;
     color: #133960;
@@ -128,14 +130,14 @@ img{
 }
 .colname{
     height: 70px;
-    width: 30.5%;
+    width: 28%;
     text-align: center;
     display: flex;
     justify-content: start;
 }
 .picturestar{
     height: 70px;
-    width: 5%;
+    width: 10%;
     align-items: center;
     display: flex;
     justify-content: start;
@@ -146,7 +148,13 @@ img{
 .star_o1{
     font-size: 40px; 
 }
-.cont_box_second{
+.empty_text{
+    margin: 10px auto;
+    font-size: 26px;
+    color: #fff;
+}
+.cont_box_second {
+    padding: 3%;
     width: 100%;
     height: inherit;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45)), #6EA4AE;
@@ -164,13 +172,15 @@ img{
     display: flex;
     flex-direction: row;
     padding-left: 35px;
+    margin-top: 1.5%;
+    
 }
 .second_box1{
     width: 16.5%;
-    height: 70px;
+    height: 62px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    padding-left: 2%;
 }
 .second_box2{
     width: 17%;
@@ -183,6 +193,7 @@ img{
 .second_box4{
     width: 30%;
     height: 70px;
+    overflow: hidden;
 }
 .second_box5{
     width: 9%;
@@ -209,7 +220,7 @@ img{
     letter-spacing: 5%;
     color: #fff;
     text-align: start;
-    padding-left: 17%;
+    padding-left: 8%;
 }
 .second_box2_text{
     font-family: 'Roboto', sans-serif;
@@ -218,7 +229,8 @@ img{
     line-height: 70px;
     letter-spacing: 5%;
     color: #fff;
-    text-align: center;
+    text-align: start;
+    padding-left: 19%;
 }
 .white_box{
     width: 100px;
@@ -228,6 +240,10 @@ img{
 }
 
 @media(max-width:1280px){
+    .second_box1{
+       
+        padding-left: 0%;
+    }
     .second_box2{
         width: 17%;
         height: 70px;
@@ -263,6 +279,10 @@ img{
     }
 }
 @media(max-width:1100px){
+    .second_box1{
+       
+        padding-left: 0%;
+    }
     .second_box2{
         width: 50%;
         height: 70px;
@@ -330,6 +350,7 @@ img{
         letter-spacing: 5%;
         color: #fff;
         text-align: start;
+        padding-left: 0%;
     }
     .second_box4 {
         width: 100%;
@@ -337,6 +358,10 @@ img{
     }
 }
 @media(max-width:850px){
+    .second_box1{
+       
+        padding-left: 0%;
+    }
     .second_box2{
         width: 50%;
         height: 70px;
@@ -388,6 +413,10 @@ img{
     }
 }
 @media(max-width:650px){
+    .second_box1{
+       
+        padding-left: 0%;
+    }
     .second_box2{
         width: 50%;
         height: 70px;
@@ -436,5 +465,6 @@ img{
     .second_box4 {
         width: 100%;
         height: 70px;
+       
     }
 }

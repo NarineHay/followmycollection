@@ -5,6 +5,8 @@
 
     if(isset($_POST['search_prov'])) {
         $search_prov = $_POST['search_prov'];
+    }else {
+        $search_prov = "";
     }
 
     if(isset($_POST['mounth'])) {
