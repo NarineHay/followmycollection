@@ -2,7 +2,6 @@
 
 if(isset($_POST['mounth'])) {
     $mounth = $_POST['mounth'];
-    echo $mounth;
     $year = $_POST['year'];
     $mounth_number = $_POST['mounth_number'];
     $last_mounth_number = $mounth_number - 1;
@@ -18,13 +17,16 @@ if(isset($_POST['mounth'])) {
     $year = date('Y');
     $first_day = date('w', strtotime('first day of this month'));
     $last_day_prew_mounth = date('d', strtotime('last day of previous month'));
-    $mounth_number = 1;
-    $last_mounth_number = $mounth_number;
+    $mounth_number = date('n');
+
 }
 
-$select_date = "SELECT DAY(collections.release_date) as dd1, collections.sport_type, sports_type.sport_logo, sports_type.background FROM collections, sports_type where collections.sport_type = sports_type.sport_logo AND release_date BETWEEN  '$from_date' AND '$to_date'";
-$date_query = mysqli_query($con, $select_date);
-$count_p = mysqli_num_rows($date_query);
+$from_date = date("Y/m/d", strtotime("$mounth $year"));
+$to_date = date("Y/m/d", strtotime("+1 MONTH - 1 DAY", strtotime($from_date)));
+
+    $select_date = "SELECT DAY(collections.release_date) as dd1, collections.sport_type, sports_type.sport_logo, sports_type.background FROM collections, sports_type where collections.sport_type = sports_type.sport_logo AND release_date BETWEEN  '$from_date' AND '$to_date'";
+    $date_query = mysqli_query($con, $select_date);
+    $count_p = mysqli_num_rows($date_query);
 
 $k1 = "";
 
@@ -43,8 +45,7 @@ $p='';
 $num_of_days = cal_days_in_month(CAL_GREGORIAN, $mounth_number, $year);
 // $k=($first_day*1 + $num_of_days*1 - 1) / 7;
 
-$from_date = date("Y/m/d", strtotime("$mounth $year"));
-$to_date = date("Y/m/d", strtotime("+1 MONTH - 1 DAY", strtotime($from_date)));
+
 
 
 for ($i = 0; $i < 6; $i++) {

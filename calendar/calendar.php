@@ -5,6 +5,8 @@
 
     if(isset($_POST['search_prov'])) {
         $search_prov = $_POST['search_prov'];
+    }else {
+        $search_prov = '';
     }
 
     if(isset($_POST['mounth'])) {
@@ -16,6 +18,7 @@
         $this_year = date('Y');
         $mounth_number = date('n');
     }
+    $mounth_number1 = date('n');
 
     $this_mounth=date('F');
 
@@ -41,7 +44,10 @@
 
 
 <div class="left">
-        <div class="mounth_year"> <?= $this_mounth ?> <?= $this_year ?> </div>
+        <div class="mounth_year">
+            <span data-mounth="<?= $mounth_number1 ?>"> <?= $this_mounth ?> </span>
+            <span> <?= $this_year ?> </span>
+        </div>
         <div class="right_icons">
             <i class="fa fa-angle-left before_select_calendar"></i>
             <i class="fa fa-angle-right after_select_calendar"></i>
@@ -49,7 +55,7 @@
         <div class="left_calendar">
             <table class="select_calendar">
                 <thead>
-                    <tr>
+                    <tr class="select_calendar_days">
                         <th>M</th>
                         <th>T</th>
                         <th>W</th>

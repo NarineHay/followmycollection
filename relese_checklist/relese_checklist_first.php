@@ -318,7 +318,6 @@
 
         let user_id = $(".user_id").val()
 
-        if (user_id != undefined) {
             let sport_id = $(event.target).attr("data-id")
             let type = 'release';
             $.post(
@@ -329,7 +328,6 @@
 
               }
             )
-        }
     }
 
     $('body').on('click', ".i-click", function() {
