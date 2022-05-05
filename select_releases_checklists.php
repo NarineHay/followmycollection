@@ -35,8 +35,11 @@
         <?php require "calendar/calendar.php"?>
         
     </div>
+    <div class="up_foo">
+
+    </div>
 </section>
 
-<?php //require "footer.php"?>
+<?php require "footer.php"?>
 
 </body>

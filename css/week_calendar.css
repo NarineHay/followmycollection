@@ -16,6 +16,9 @@
     margin: 0 auto;
     height: auto;
 }
+.up_foo{
+    height: 200px;
+}
 .fel{
     width: 100%;
     height: 100%;
@@ -126,7 +129,7 @@
 
 .right_header {
     width: 100%;
-    height: 14%;
+    height: 11%;
 }
 
 .data_content {
@@ -276,6 +279,9 @@
     margin: 5px;
 }
 @media(min-width:2560px){
+    .up_foo{
+        height: 680px;
+    }
     .mounth_year {
         width: 95%;
         margin: 0 auto;
@@ -402,6 +408,9 @@
     }
 }
 @media(max-width:1275px){
+    .up_foo{
+        height: 370px;
+    }
     .calendar_header {
        display: none;
     }
@@ -546,6 +555,9 @@
 }
 }
 @media(max-width:550px){
+    .up_foo{
+        height: 370px;
+    }
     .search_content {
     width: 50%;
     height: 130%;
@@ -553,7 +565,7 @@
     display: flex;
     align-items: center;
     padding-left: 0%;
-}
+    }
      .data_content {
         width: 50%;
         height: 130%;

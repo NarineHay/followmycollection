@@ -1,6 +1,7 @@
 <?php
         $sport_types= 'select * from sports_type';
         $sport_types_querry=mysqli_query($con,$sport_types);
+        $sport_id='55555';
         $take_types='';
         $take_types1='';
         $color_type=2;
@@ -13,7 +14,7 @@
 
                $take_dates.='
 
-                <div class="box1"><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].'"></i></div>
+                <div class="box1"><a class="single_date"href="single_chechklist.php?date=' . $dates_row['data'] . '">'.$dates_row['data'].'</a><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].'"></i></div>
 
             ';
 
@@ -122,7 +123,7 @@
                     </div>
                 </div>
                 <div class="d-flex innline lock11">
-                    <div class="d-flex boxer ">
+                    <div class="d-flex boxer hh">
                         <?= $take_dates ?>
                     </div>
                 </div>
@@ -181,7 +182,10 @@
                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
                 }
                 if($(window).width() > '1275') {
-                    $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "pointer-events": 'none'})
+                    $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "padding-left": '1px', "pointer-events": 'none'})
+                }
+                if($(window).width() > '2560') {
+                    $(this).css({"clip-path" : 'polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)', "padding-top": '28px', "padding-left": '1px', "pointer-events": 'none'})
 
                 }
             }
@@ -202,8 +206,10 @@
                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
                 }
                 if($(window).width() > '1275') {
-                    $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "pointer-events": 'none'})
-
+                    $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "padding-left": '1px', "pointer-events": 'none'})
+                }
+                if($(window).width() > '2560') {
+                    $(this).css({"clip-path" : 'polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)', "padding-top": '28px', "padding-left": '1px', "pointer-events": 'none'})
                 }
             }
         });
@@ -268,11 +274,13 @@
 
         if(user_id != undefined) {
             let sport_id = $(event.target).attr("data-id")
+            console.log(sport_id)
             let type = 'checklist';
             $.post(
                 'relese_checklist/view_sport_dates.php',
                 {sport_id, type, user_id},
                 function (result) {
+                    console.log(result)
                     $('.lock' + sport_id + " .boxer").html(result)
                 }
             )
@@ -350,7 +358,7 @@
                 $(this).css('color', "white")
                 action = 'delete'
             }
-
+            
             $.ajax({
                 method:"POST",
                 url: "rate_test.php",
@@ -366,7 +374,17 @@
 
     });
 
-
+    $(".single_page").click(function() {
+        let take_dates= $(this).html()
+        $.post(
+            'single_chechklist.php',
+            {take_dates},
+            function (aaa) {
+                location.href = "single_chechklist.php"
+            }
+        )
+       
+    })
 
 </script>
 <style>
@@ -374,4 +392,5 @@
         width: 81vw;
         overflow:hidden;
     }
+
 </style>

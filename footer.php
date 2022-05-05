@@ -12,6 +12,7 @@ $row=mysqli_fetch_assoc($res);
  }
 
 ?>
+
 <section id="footer">
     <div class="container">
         <div class="row row-collection">
@@ -49,9 +50,9 @@ $row=mysqli_fetch_assoc($res);
                              <i class="fa fa-instagram"></i>
                          </a>
                      </div>
-                     <div class="social-div i-telegram">
-                         <a href="https://web.telegram.org/#/login" target="_blank">
-                             <i class="fab fa-telegram-plane" aria-hidden="true"></i>
+                     <div class="social-div">
+                         <a href="https://web.telegram.org/" target="_blank">
+                         <i class="fab fa-telegram-plane"></i>
                          </a>
                      </div>
                 </div>
