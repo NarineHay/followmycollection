@@ -12,25 +12,31 @@ if(!empty($_POST['sport_id'])) {
 
     $dates_querry=mysqli_query($con, $dates);
     $take_dates='';
-    while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
 
+    while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
         if($dates_row["status"] == 1) {
             $color = "gold";
-        }else {
+        } else {
             $color = "white";
         }
-
-        $take_dates.='
-                <div class="box1"><p class="single_page">'.$dates_row['data'].'</p><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].' style="color:' . $color . '"></i></div>
-            ';
-
+        $take_dates.=
+        '
+        <div class="box1"><a class="single_date" href="single_chechklist.php?date=' . $dates_row['data'] . '&sport_type=' . $sport_id . '">'.$dates_row['data'].'</a><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].' style="color:' . $color . '"></i></div>
+        ';
     }
 
     echo $take_dates;
 }
 ?>
 <script>
- $(".single_page").click(function() {
-    location.href = "single_chechklist.php"
-})
+$(".single_page").click(function() {
+        let take_dates= $(this).html()
+        $.post(
+            'single_chechklist.php',
+            {take_dates},
+            function (aaa) {
+                location.href = "single_chechklist.php"
+            }
+        )
+    })
 </script>

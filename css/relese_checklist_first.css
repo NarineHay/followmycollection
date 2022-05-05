@@ -3,21 +3,24 @@ body{
 }
 .date_control{
   display: none;
-    
 }
 .single_page{
     cursor: pointer;
-   
+}
+.single_date{
+    text-decoration: none;
+    color: #fff;
+}
+.single_date:hover{
+    text-decoration: none;
+    color: #fff;
 }
 .star_o{
     font-size: 20px;
     margin-top: 6px;
-   
 }
-.mayr div.active {
-    clip-path: polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%);
-    padding-top: 56px;
-    pointer-events: none;
+.mayr div, .mayr1 div {
+    cursor: pointer;
 }
 .eee, .eee1 { 
     transition: margin-left 1.5s; 
@@ -234,6 +237,7 @@ body{
     padding-top: 5px;
     display: flex;
     justify-content: space-around;
+  
 }
 .inliner{
     width: 100%;
@@ -336,6 +340,14 @@ body{
 
 
 @media(max-width:1280px){
+    .single_date{
+        text-decoration: none;
+        color: #fff;
+    }
+    .single_date:hover{
+        text-decoration: none;
+        color: #fff;
+    }
     .lll{
         width: 57%;
     }
@@ -585,6 +597,14 @@ body{
     }
 }
 @media(max-width:550px){
+    .single_date{
+        text-decoration: none;
+        color: #fff;
+    }
+    .single_date:hover{
+        text-decoration: none;
+        color: #fff;
+    }
     .lll{
         width: 90%;
     }
@@ -643,20 +663,10 @@ body{
         color: #fff;
     }
     .lock{
-        width: unset;
-        height: unset;
-        background:unset;
-        justify-content: unset;
-        align-items: unset;
-        color: unset;
+       
     }
     .lock1{
-        width: unset;
-        height: unset;
-        background:unset;
-        justify-content: unset;
-        align-items: unset;
-        color: unset;
+       
     }
     .eee {
         transition: margin-left 1.5s;
@@ -865,6 +875,14 @@ body{
     }
 }
 @media(min-width:2560px){
+    .single_date{
+        text-decoration: none;
+        color: #fff;
+    }
+    .single_date:hover{
+        text-decoration: none;
+        color: #fff;
+    }
     .box1{
         border: 1px solid rgb(255, 255, 255);
         width: 290px;

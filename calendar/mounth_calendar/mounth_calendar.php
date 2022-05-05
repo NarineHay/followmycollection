@@ -21,12 +21,12 @@ if(isset($_POST['mounth'])) {
 
 }
 
+
 $from_date = date("Y/m/d", strtotime("$mounth $year"));
 $to_date = date("Y/m/d", strtotime("+1 MONTH - 1 DAY", strtotime($from_date)));
-
-    $select_date = "SELECT DAY(collections.release_date) as dd1, collections.sport_type, sports_type.sport_logo, sports_type.background FROM collections, sports_type where collections.sport_type = sports_type.sport_logo AND release_date BETWEEN  '$from_date' AND '$to_date'";
-    $date_query = mysqli_query($con, $select_date);
-    $count_p = mysqli_num_rows($date_query);
+$select_date = "SELECT DAY(collections.release_date) as dd1, collections.sport_type, sports_type.sport_logo, sports_type.background FROM collections, sports_type where collections.sport_type = sports_type.sport_logo AND release_date BETWEEN  '$from_date' AND '$to_date'";
+$date_query = mysqli_query($con, $select_date);
+$count_p = mysqli_num_rows($date_query);
 
 $k1 = "";
 
