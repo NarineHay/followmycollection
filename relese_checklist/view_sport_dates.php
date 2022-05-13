@@ -2,20 +2,16 @@
 
 require "../config/con1.php";
 
-
 if(!empty($_POST['sport_id'])) {
     $sport_id = $_POST['sport_id'];
     $type = $_POST['type'];
+
     if($_POST["user_id"] != '') {
         $user_id = $_POST["user_id"];
     }else {
         $user_id = 0;
     }
-
-
-
     $dates= "SELECT d.id, d.data, fd.sport_id, fd.status FROM dates as d LEFT JOIN favorite_dates as fd ON d.id = fd.date_id AND fd.status = 1 AND fd.sport_id = $sport_id AND fd.type = '$type' AND user_id = $user_id GROUP BY d.id";
-
     $dates_querry=mysqli_query($con, $dates);
     $take_dates='';
 

@@ -22,7 +22,9 @@
                                 <div class="card-body ">
                                     <form method="post" enctype="multipart/form-data" action="">
                                         <div class="form-group">
+
                                             <label>Name of collection  </label>
+
                                             <input type="text" placeholder="Name of collection  " class="form-control" name="name-collection" value="<?php echo isset($_POST["name-collection"]) ? $_POST["name-collection"] : ""; ?>" >
                                         </div>
 
@@ -56,7 +58,11 @@
                                             <input type="file" placeholder="" class="form-control" name="img">
                                         </div>
                                         <div class="form-group">
-                                            <label>Description  </label>
+                                            <label>Choose date</label>
+                                            <input type="date" placeholder="" class="form-control" name="release_date">
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Description</label>
                                             <ul id="ul">
                                                 <li>
                                                     <input type="text" placeholder="" class="form-control" name="desc[]">
@@ -66,20 +72,12 @@
                                               <i class="fa fa-plus" style="color: #133690;cursor: pointer;"></i>
                                             </div>
                                         </div>
-
-                                        <div class="form-check">
+                                        <div class="form-check" style="display:none">
                                              <label class="form-check-label" style="font-size: 22px">
-                                                    <input class="form-check-input" type="checkbox" value="new" name="product_type[]">
-                                                    <span class="form-check-sign"></span>NEW
+                                                    <input class="form-check-input" type="checkbox" checked value="new" name="product_type[]">
+                                                    <span class="form-check-sign"></span>new
                                             </label>
                                         </div>
-                                        <div class="form-check">
-                                             <label class="form-check-label" style="font-size: 22px">
-                                                    <input class="form-check-input" type="checkbox" value="set" name="product_type[]">
-                                                    <span class="form-check-sign"></span>SET
-                                            </label>
-                                        </div>
-
                                 </div>
                                 <div class="card-footer ">
                                     <button type="submit" class="btn btn-fill btn-add" name="btn-add-releases">Submit</button>
@@ -108,7 +106,6 @@
 
                                 </div>
                                 </div>
-
                                 <div class="card-body ">
                                     <form method="post" action="add_base_checklist.php">
 
@@ -165,7 +162,7 @@
                    $('#ul').append('<li><input type="text" placeholder="" class="form-control" name="desc[]"></li>')
                 })
 
-// -------------------import excel------------------
+// -------------------import excel----------------------------------------------------
 $(document).ready(function(){
   $('#import_excel_form').on('submit', function(event){
     event.preventDefault();
@@ -194,7 +191,8 @@ $(document).ready(function(){
       }
     })
   });
-// ------------------------add collection info-------------------------
+// ------------------------add collection info------------------------------------------
+
   $('#realese_info').on('submit', function(event){
     event.preventDefault();
       $.ajax({
@@ -214,7 +212,7 @@ $(document).ready(function(){
 
 // -------------------------cards number and cards name collection-----------------------
 
-  $('#cards_name_and_number').on('submit', function(event){
+$('#cards_name_and_number').on('submit', function(event){
     event.preventDefault();
       $.ajax({
       url:"../form/form_release_card_name_number.php",
@@ -231,7 +229,7 @@ $(document).ready(function(){
     })
   })
 });
-            </script>
 
+</script>
 </body>
 </html>

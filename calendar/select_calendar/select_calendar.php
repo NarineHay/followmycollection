@@ -5,7 +5,7 @@
     $first_day = date('w', strtotime('first day of this month'));
     $last_day_prew_mounth = date('d', strtotime('last day of previous month'));
     $mounth_number1 = date('n');
-
+    $table='';
     $this_day = date('d');
     $table = "";
 

@@ -1,12 +1,11 @@
 <?php
         $sport_types= 'select * from sports_type';
         $sport_types_querry=mysqli_query($con,$sport_types);
-       
+
         $take_types='';
         $take_types1='';
         $color_type=2;
         $count=0;
-
         $sport_id = '';
 
            $dates= "SELECT * FROM dates";
@@ -40,11 +39,12 @@
 
         
     ?>
+
 <div class="start">
-         <div class="nachalo">
-            <p class="p">CHECKLISTS</p>
-         </div>
-    </div>
+        <div class="nachalo">
+           <p class="p">CHECKLISTS</p>
+        </div>
+</div>
     <div class="container-fluid d-flex flex-column p-0 start2">
         <div class="mayr d-flex">
              <div class="sport1">
@@ -55,8 +55,8 @@
                     <?php
                         if (!empty($user_id)) {
                     ?>
-                            <input type="hidden" value="<?= $user_id ?>" class="user_id">
-                            <div class="sport9">My Checklists</div>
+                        <input type="hidden" value="<?= $user_id ?>" class="user_id">
+                        <div class="sport9">My Checklists</div>
                     <?php
                         }
                     ?>
@@ -160,7 +160,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 </div>
 <a name="cal"></a>
 <div class="start">
@@ -170,15 +170,12 @@
     </div>
     <script>
         $('.mayr>div').click(function(event){
-
             let mychild = document.querySelector('.mayr')
             for(let i = 0; i < mychild.children.length; i++) {
                 mychild.children[i].style = {}
             }
-            
             let sport_type_id = $(this).attr("data-id")
             $(this).parents('.start2').find('.sport_type_id').val(sport_type_id)
-
             if($(this).attr('class') != "sport1") {
                 if($(window).width() <= '1275'){
                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
@@ -200,18 +197,17 @@
                 }
                 if($(window).width() > '2560') {
                     $(this).css({"clip-path" : 'polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)', "padding-top": '28px', "padding-left": '1px', "pointer-events": 'none'})
-
                 }
             }
         });
-
         $('.mayr1>div').click(function(event){
-
             let mychild = document.querySelector('.mayr1')
             for(let i = 0; i < mychild.children.length; i++) {
                 mychild.children[i].style = {}
             }
-
+            let sport_type_id = $(this).attr("data-id")
+           
+            $(this).parents('.start2').find('.sport_id').val(sport_type_id)
 
             if($(this).attr('class') != "sport1") {
                 if($(window).width() <= '1275'){
@@ -224,8 +220,8 @@
                     $(this).css({"clip-path" : 'polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)', "padding-top": '28px', "padding-left": '1px', "pointer-events": 'none'})
                 }
             }
+
         });
-       
         let clicks = document.getElementsByClassName('click_me')
         for(let i = 0; i < clicks.length; i++) {
             clicks[i].addEventListener('click', f1)
@@ -235,17 +231,15 @@
                 clicks[q].addEventListener('click', f1)
             }
         }
-
-
-        
-
-    function slide( params) {
+        $(".mayr.date_control").click(function () {
+            console.log('box');
+        })
+        function slide( params) {
         let a = $('.eee')
+
         // let q = $(event.target).attr("data-id")
         // a.removeClass();
         // a.addClass("eee slide" + q);
-
-
         switch (params) {
             case "Baseball":
                 a.removeClass();
@@ -278,9 +272,7 @@
             default:
             console.log("Sorry, we are out of ");
         }
-
         let user_id = $(".user_id").val()
-
 
         let sport_id = $(event.target).attr("data-id")
         let type = 'checklist';
@@ -291,10 +283,8 @@
                 $('.lock' + sport_id + " .boxer").html(result)
             }
         )
+
     }
-
-
-
     function slide1( params) {
         let a = $('.eee1')
         switch (params) {
@@ -329,9 +319,8 @@
             default:
             console.log("Sorry, we are out of");
         }
-
         let user_id = $(".user_id").val()
-
+        if(user_id != undefined) {
             let sport_id = $(event.target).attr("data-id")
 
             let type = 'release';
@@ -340,29 +329,24 @@
               {sport_id, type, user_id},
               function (result) {
                   $('.lock1' + sport_id + " .boxer").html(result)
-
               }
             )
+        }
     }
-
-    $('body').on('click', ".i-click", function() {
-
+    $('body').on('click',".i-click",function() {
         let date_id = $(this).attr('data-id')
         let sport_id =  $(this).parents('.start2').find(".sport_type_id").val()
         let favorite_type = $(this).parents('.bigger_block_slider').find("input.favorite_type").val()
         let user_id = $(".user_id").val()
         let action = ''
-
         if(user_id != undefined) {
             if($(this).css('color') == "rgb(255, 255, 255)") {
                 $(this).css('color', "gold")
                 action = 'add'
-
             }else {
                 $(this).css('color', "white")
                 action = 'delete'
             }
-            
             $.ajax({
                 method:"POST",
                 url: "rate_test.php",
@@ -372,15 +356,16 @@
                 }
             });
         } else {
-            alert("You must be registered to perform this transaction․ Please register")
+            alert("You must be registered to perform this transaction. Please register")
             location.assign('login-register.php')
         }
-
     });
+
 
         $('.sport9').click(function () {
             location.assign('my_checklist.php')
         })
+
 
 
 </script>
@@ -389,5 +374,4 @@
         width: 81vw;
         overflow:hidden;
     }
-
 </style>

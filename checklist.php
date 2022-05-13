@@ -6,10 +6,8 @@ if(isset($_GET['id'])){
     $sql = "SELECT * FROM `collections` WHERE id = '$realise_id'";
     $rezult = mysqli_query($con,$sql);
     $tox = mysqli_fetch_assoc($rezult);
-
 }
 ?>
-
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/index.css">
@@ -20,21 +18,34 @@ if(isset($_GET['id'])){
     <body class="page_fix">
         <?php include "cookie.php";?>
         <section class="section1">
-            <div class="container">
+                    <div class="container">
+                        <div class="row ">
+                        	<?php
+                        	if(isset($_POST['sel'])){
+                        		$sel=$_POST['sel'];
+                                $sql="SELECT * FROM collections WHERE id='$sel'";
+                                $query=mysqli_query($con,$sql);
 
-                <div class="row ">
-                	<?php
-                	if(isset($_POST['sel'])){
-                		$sel=$_POST['sel'];
-                        $sql="SELECT * FROM collections WHERE id='$sel'";
-                        $query=mysqli_query($con,$sql);
-                                                
-                        $tox=mysqli_fetch_assoc($query);
-                		echo ' <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 " align="center" >
-                        <div class = "imgdiv">
-                            <img src="images_realeses/'. $tox['image'].'" class="personImg" >
-                        </div>
+                                $tox=mysqli_fetch_assoc($query);
+                        		echo ' <div class="col-lg-5 col-md-6 col-sm-12 col-xs-12 " align="center" >
+                                <div class = "imgdiv">
+                                    <img src="images_realeses/'. $tox['image'].'" class="personImg" >
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " align="center" >
+                                <div class="about">
+                            
+                                    <p>'. $tox['info'].'</p>
+                                    <br>
+                                    <br>
+                                </div>
+                            </div>';
+                        	}
+        ?>
+                        	<div class="col-md-12">
+                        <h2 class = "releases" align="center">CHECKLIST</h2>
                     </div>
+
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " align="center" >
                         <div class="about">
 

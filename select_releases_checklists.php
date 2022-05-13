@@ -35,7 +35,7 @@
         <?php require "calendar/calendar.php"?>
         
     </div>
-    <div class="up_foo">
+    <div class="">
 
     </div>
 </section>
