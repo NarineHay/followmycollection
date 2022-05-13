@@ -60,10 +60,10 @@ $insert_data = array(
 				':realese_id'		=>	$realese_id,
 				':card_number'		=>	$row[0],
 				':card_name'		=>	$row[1],
-				':team'		=>	$row[2],
-				':set_type'		=>	$row[3],
+				':team'				=>	$row[2],
+				':set_type'			=>	$row[3],
 				':variation'		=>	$row[4],
-				':parallel'		=>	$row[5],
+				':parallel'			=>	$row[5],
 				':print_run'		=>	$data_row6,
 
 			);

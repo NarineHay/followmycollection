@@ -1,24 +1,19 @@
 <?php
         $sport_types= 'select * from sports_type';
         $sport_types_querry=mysqli_query($con,$sport_types);
-        $sport_id='55555';
         $take_types='';
         $take_types1='';
         $color_type=2;
         $count=0;
-
-           $dates= "SELECT * FROM dates";
-           $dates_querry=mysqli_query($con,$dates);
-           $take_dates='';
-           while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
-
-               $take_dates.='
-
-                <div class="box1"><a class="single_date"href="single_chechklist.php?date=' . $dates_row['data'] . '">'.$dates_row['data'].'</a><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].'"></i></div>
-
-            ';
-
-           }
+        $dates= "SELECT * FROM dates";
+        $dates_querry=mysqli_query($con,$dates);
+        $take_dates='';
+        while ($dates_row = mysqli_fetch_assoc($dates_querry)) {
+            // $take_dates.='
+            // <div class="box1"><a class="single_date"href="single_chechklist.php?date=' . $dates_row['data'] . '">'.$dates_row['data'].'</a><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].'"></i></div>
+            // ';
+            
+        }
         while ($sport_types_row = mysqli_fetch_assoc($sport_types_querry)) {
             $count++;
             if($count==1){
@@ -26,23 +21,20 @@
             }else{
                 $active_class="";
             }
-
             $take_types.='
                 <div data-id="' . $sport_types_row['id'] . '" class="sport'.$color_type.'" onClick="slide('. "'" .$sport_types_row['sport_type']. "'"  .')">'.$sport_types_row['sport_type'].'<div class="date_control">'.$take_dates.'</div>'.'<div class="shadow"></div></div>
             ';
             $take_types1.='
                 <div data-id="' . $sport_types_row['id'] . '" class="sport'.$color_type.'" onClick="slide1('. "'" .$sport_types_row['sport_type']. "'"  .')">'.$sport_types_row['sport_type'].'<div class="date_control">'.$take_dates.'</div>'.'<div class="shadow"></div></div>
             ';
-
             $color_type++;
         }
-        
-    ?>
+?>
 <div class="start">
-         <div class="nachalo">
-            <p class="p">CHECKLISTS</p>
-         </div>
-    </div>
+        <div class="nachalo">
+           <p class="p">CHECKLISTS</p>
+        </div>
+</div>
     <div class="container-fluid d-flex flex-column p-0 start2">
         <div class="mayr d-flex">
              <div class="sport1">
@@ -53,8 +45,8 @@
                     <?php
                         if (!empty($user_id)) {
                     ?>
-                            <input type="hidden" value="<?= $user_id ?>" class="user_id">
-                            <div class="sport9">My Checklists</div>
+                        <input type="hidden" value="<?= $user_id ?>" class="user_id">
+                        <div class="sport9">My Checklists</div>
                     <?php
                         }
                     ?>
@@ -158,7 +150,7 @@
                     </div>
                 </div>
             </div>
-            </div>
+        </div>
 </div>
 <a name="cal"></a>
 <div class="start">
@@ -168,15 +160,12 @@
     </div>
     <script>
         $('.mayr>div').click(function(event){
-
             let mychild = document.querySelector('.mayr')
             for(let i = 0; i < mychild.children.length; i++) {
                 mychild.children[i].style = {}
             }
-            
             let sport_type_id = $(this).attr("data-id")
             $(this).parents('.start2').find('.sport_type_id').val(sport_type_id)
-
             if($(this).attr('class') != "sport1") {
                 if($(window).width() <= '1275'){
                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
@@ -186,21 +175,17 @@
                 }
                 if($(window).width() > '2560') {
                     $(this).css({"clip-path" : 'polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)', "padding-top": '28px', "padding-left": '1px', "pointer-events": 'none'})
-
                 }
             }
         });
-
         $('.mayr1>div').click(function(event){
-
             let mychild = document.querySelector('.mayr1')
             for(let i = 0; i < mychild.children.length; i++) {
                 mychild.children[i].style = {}
             }
-
             let sport_type_id = $(this).attr("data-id")
-            $(this).parents('.start2').find('.sport_type_id').val(sport_type_id)
-
+           
+            $(this).parents('.start2').find('.sport_id').val(sport_type_id)
             if($(this).attr('class') != "sport1") {
                 if($(window).width() <= '1275'){
                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
@@ -212,8 +197,8 @@
                     $(this).css({"clip-path" : 'polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%)', "padding-top": '28px', "padding-left": '1px', "pointer-events": 'none'})
                 }
             }
+
         });
-       
         let clicks = document.getElementsByClassName('click_me')
         for(let i = 0; i < clicks.length; i++) {
             clicks[i].addEventListener('click', f1)
@@ -227,16 +212,11 @@
         $(".mayr.date_control").click(function () {
             console.log('box');
         })
-
-        
-
-    function slide( params) {
-        let a = $('.eee')
+function slide( params) {
+    let a = $('.eee')
         // let q = $(event.target).attr("data-id")
         // a.removeClass();
         // a.addClass("eee slide" + q);
-
-
         switch (params) {
             case "Baseball":
                 a.removeClass();
@@ -269,9 +249,7 @@
             default:
             console.log("Sorry, we are out of ");
         }
-
         let user_id = $(".user_id").val()
-
         if(user_id != undefined) {
             let sport_id = $(event.target).attr("data-id")
             console.log(sport_id)
@@ -286,9 +264,6 @@
             )
         }
     }
-
-
-
     function slide1( params) {
         let a = $('.eee1')
         switch (params) {
@@ -323,9 +298,8 @@
             default:
             console.log("Sorry, we are out of");
         }
-
         let user_id = $(".user_id").val()
-
+        if(user_id != undefined) {
             let sport_id = $(event.target).attr("data-id")
             let type = 'release';
             $.post(
@@ -333,30 +307,24 @@
               {sport_id, type, user_id},
               function (result) {
                   $('.lock1' + sport_id + " .boxer").html(result)
-
               }
             )
+        }
     }
-
-    $('body').on('click', ".i-click", function() {
-
+    $('body').on('click',".i-click",function() {
         let date_id = $(this).attr('data-id')
         let sport_id =  $(this).parents('.start2').find(".sport_type_id").val()
         let favorite_type = $(this).parents('.bigger_block_slider').find("input.favorite_type").val()
         let user_id = $(".user_id").val()
         let action = ''
-
         if(user_id != undefined) {
-
             if($(this).css('color') == "rgb(255, 255, 255)") {
                 $(this).css('color', "gold")
                 action = 'add'
-
             }else {
                 $(this).css('color', "white")
                 action = 'delete'
             }
-            
             $.ajax({
                 method:"POST",
                 url: "rate_test.php",
@@ -366,29 +334,24 @@
                 }
             });
         } else {
-            alert("You must be registered to perform this transaction․ Please register")
+            alert("You must be registered to perform this transaction. Please register")
             location.assign('login-register.php')
         }
-
     });
-
-    $(".single_page").click(function() {
-        let take_dates= $(this).html()
-        $.post(
-            'single_chechklist.php',
-            {take_dates},
-            function (aaa) {
-                location.href = "single_chechklist.php"
-            }
-        )
-       
-    })
-
+    // $(".single_page").click(function() {
+    //     let take_dates= $(this).html()
+    //     $.post(
+    //         'single_chechklist.php',
+    //         {take_dates},
+    //         function (aaa) {
+    //             location.href = "single_chechklist.php"
+    //         }
+    //     )
+    // })
 </script>
 <style>
     .bigger_block_slider{
         width: 81vw;
         overflow:hidden;
     }
-
 </style>
