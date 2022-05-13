@@ -18,6 +18,7 @@ body{
 .star_o{
     font-size: 20px;
     margin-top: 6px;
+    cursor: pointer;
 }
 .mayr div, .mayr1 div {
     cursor: pointer;

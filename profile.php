@@ -28,7 +28,7 @@ require_once "user-logedin.php";
 if(isset($_GET["id"])) {
     $id = $_GET["id"];
     $button = "";
-    $checklist_url = "my_checklist.php?id= ". $id;
+    $checklist_url = "my_checklist.php?id=". $id;
 }else {
     $id = $_SESSION['user'];
     $button = '<button class="add" data-toggle="modal" data-target="#exampleModall">Edit</button>';

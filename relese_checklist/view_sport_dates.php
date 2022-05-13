@@ -5,7 +5,12 @@ require "../config/con1.php";
 if(!empty($_POST['sport_id'])) {
     $sport_id = $_POST['sport_id'];
     $type = $_POST['type'];
-    $user_id = $_POST["user_id"];
+
+    if($_POST["user_id"] != '') {
+        $user_id = $_POST["user_id"];
+    }else {
+        $user_id = 0;
+    }
     $dates= "SELECT d.id, d.data, fd.sport_id, fd.status FROM dates as d LEFT JOIN favorite_dates as fd ON d.id = fd.date_id AND fd.status = 1 AND fd.sport_id = $sport_id AND fd.type = '$type' AND user_id = $user_id GROUP BY d.id";
     $dates_querry=mysqli_query($con, $dates);
     $take_dates='';
@@ -16,24 +21,22 @@ if(!empty($_POST['sport_id'])) {
         } else {
             $color = "white";
         }
-        $take_dates.=
-        '
-        <div class="box1"><a class="single_date" href="single_chechklist.php?date=' . $dates_row['data'] . '&sport_type=' . $sport_id . '">'.$dates_row['data'].'</a><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].' style="color:' . $color . '"></i></div>
-        ';
+        if($type == 'release') {
+            $take_dates.=
+                '
+                    <div class="box1"><a class="single_date" href="single_release.php?date=' . $dates_row['data'] . '&sport_type=' . $sport_id . '">'.$dates_row['data'].'</a><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].' style="color:' . $color . '"></i></div>
+                ';
+        }else {
+            $take_dates.=
+                '
+                    <div class="box1"><a class="single_date" href="checklist.php?date=' . $dates_row['data'] . '&sport_type=' . $sport_id . '">'.$dates_row['data'].'</a><i class="star_o i-click fa fa-star" data-id='.$dates_row['id'].' style="color:' . $color . '"></i></div>
+                ';
+        }
     }
+
+
 
     echo $take_dates;
 }
 ?>
-<!-- <script>
-$(".single_page").click(function() {
-        let take_dates= $(this).html()
-        $.post(
-            'single_chechklist.php',
-            {take_dates},
-            function (aaa) {
-                location.href = "single_chechklist.php"
-            }
-        )
-    })
-</script> -->
+

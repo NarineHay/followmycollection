@@ -16,14 +16,22 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
 ?>
 
 <?php
+    $id_url = '';
+
+    if(isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $id_url = '$id=' . $id;
+    }else {
+        $id = $_GET['id'];
+        $id_url = '';
+    }
+
     if(isset($_GET['private'])) {
-        $id = $_GET['id'];
         $status = 1;
-        $buttons = '<a class="def_passive" href="Custom-checklist.php?private&">Privite<a class="def_active" href="Custom-checklist.php?public">Public</a>';
+        $buttons = '<a class="def_passive" href="Custom-checklist.php?private"' . $id_url . '>Privite<a class="def_active" href="Custom-checklist.php?public">Public</a>';
     }else if($_GET['public']) {
-        $id = $_GET['id'];
         $status = 0;
-        $buttons = '<a class="def_active" href="Custom-checklist.php?private">Privite</a><a class="def_passive" href="Custom-checklist.php?public">Public</a>';
+        $buttons = '<a class="def_active" href="Custom-checklist.php?public"' . $id_url . '>Privite</a><a class="def_passive" href="Custom-checklist.php?public">Public</a>';
     }
 
     $_SESSION["def_custom_name_status"]=$status;
@@ -63,6 +71,7 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
         <div class="w-100 cards mb-5 " >
         <?php
         $sql="SELECT * FROM custom_name_checklist where user_id=$user_id AND status=$status AND delete_status = 1";
+        echo $sql;
         $query=mysqli_query($con, $sql);
         $total_rows_query=mysqli_query($con, $sql);
         $num_rows=mysqli_num_rows($query);

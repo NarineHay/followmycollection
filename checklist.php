@@ -45,17 +45,42 @@ if(isset($_GET['id'])){
                         	<div class="col-md-12">
                         <h2 class = "releases" align="center">CHECKLIST</h2>
                     </div>
-                <?php
-if(isset($_SESSION['product'])){
-  $product=$_SESSION['product'];
-  $sport_type=$_SESSION['sport_type'];
-  $year_prod=$_SESSION['year_prod'];
-  $year=explode('-', $year_prod);
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " align="center" >
+                        <div class="about">
+
+                            <p>'. $tox['info'].'</p>
+                            <br>
+                            <br>
+                        </div>
+                    </div>';
+                	}
+
+                ?>
+                	<div class="col-md-12">
+                <h2 class = "releases" align="center">CHECKLIST</h2>
+            </div>
+                     <?php
+
+if(isset($_GET['date']) && isset($_GET['sport_type'])){
+
+    $type_id=$_GET['sport_type'];
+
+    $sport_type="SELECT sport_type from sports_type where id = $type_id";
+    $sport_type_querry=mysqli_query($con,$sport_type);
+    $sport_row=mysqli_fetch_assoc($sport_type_querry);
+    $sport_name=$sport_row['sport_type'];
+
+    $product = 'checklist';
+    $sport_type=$sport_name;
+    $year_prod=$_GET['date'];
+    $year=explode('-', $year_prod);
             $a=$year[0];
             $b=$year[1];
 
-$sql_sel="SELECT * FROM collections WHERE sport_type='$sport_type' AND SUBSTRING(year_of_releases, 1, 4) BETWEEN $a AND $b";
-     $res_sel=mysqli_query($con, $sql_sel);
+
+    $sql_sel="SELECT * FROM collections WHERE sport_type='$sport_type' AND SUBSTRING(year_of_releases, 1, 4) BETWEEN $a AND $b";
+    $res_sel=mysqli_query($con, $sql_sel);
 
   echo '<div class="col-md-12 text-center">
   <div class="col-md-5 mx-auto">
