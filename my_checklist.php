@@ -18,7 +18,7 @@ require_once "user-logedin.php";
         $custom_url = 'Custom-checklist.php?id=' . $id;
     }else {
         $favorite_url = 'favorite-checklists.php';
-        $custom_url = 'Custom-checklist.php';
+        $custom_url = 'Custom-checklist.php?public';
     }
 
 

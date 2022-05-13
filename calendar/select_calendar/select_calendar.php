@@ -7,7 +7,7 @@
     $mounth_number1 = date('n');
 
     $this_day = date('d');
-
+    $table = "";
 
     $k1 = "";
 

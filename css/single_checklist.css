@@ -14,13 +14,23 @@
 img{
     cursor: pointer;
 }
+
 .modal-body{
-    background-color: blue;
+    background-color: #ddd;
     width:500px;
     height:400px;
     text-align: center;
     color:white;
 }
+
+.reload_page {
+    cursor: pointer;
+}
+
+.favorite_release {
+    cursor: pointer;
+}
+
 .table > tbody > tr {
     background-color: rgb(47, 171, 187);
     color:white;
@@ -141,13 +151,13 @@ img{
     align-items: center;
     display: flex;
     justify-content: start;
-} 
-.star_o{
-   font-size: 40px; 
 }
-.star_o1{
-    font-size: 40px; 
+.star_o {
+    font-size: 30px;
+    margin-top: 6px;
+    color: white;
 }
+
 .empty_text{
     margin: 10px auto;
     font-size: 26px;
