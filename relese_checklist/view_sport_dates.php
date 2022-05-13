@@ -2,14 +2,11 @@
 
 require "../config/con1.php";
 
-
 if(!empty($_POST['sport_id'])) {
     $sport_id = $_POST['sport_id'];
     $type = $_POST['type'];
     $user_id = $_POST["user_id"];
-
     $dates= "SELECT d.id, d.data, fd.sport_id, fd.status FROM dates as d LEFT JOIN favorite_dates as fd ON d.id = fd.date_id AND fd.status = 1 AND fd.sport_id = $sport_id AND fd.type = '$type' AND user_id = $user_id GROUP BY d.id";
-
     $dates_querry=mysqli_query($con, $dates);
     $take_dates='';
 
@@ -28,7 +25,7 @@ if(!empty($_POST['sport_id'])) {
     echo $take_dates;
 }
 ?>
-<script>
+<!-- <script>
 $(".single_page").click(function() {
         let take_dates= $(this).html()
         $.post(
@@ -39,4 +36,4 @@ $(".single_page").click(function() {
             }
         )
     })
-</script>
+</script> -->
