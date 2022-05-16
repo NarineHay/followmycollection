@@ -45,7 +45,9 @@ if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
 <link rel="stylesheet" type="text/css" href="css/checklist.css?7">
 </head>
 <body>
+
 <?php include "cookie.php"; ?>
+
 <section class="hide_div"></section>
 <section class="section1 mt-5">
     <div class="notification_modal">
