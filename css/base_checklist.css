@@ -1,5 +1,5 @@
 .collectionName{
-    color:white !important;
+    color:#133960 !important;
     padding:10px 0;
     font-size:22px;
 }
@@ -8,8 +8,61 @@
     margin-bottom: 20px;
 }
 .collectionNameDiv{
-    background: #133960;
     height:50px;
+}
+.father_box{
+    background-color: #AFCDD3;
+    width: 100%;
+    padding: 4%;
+    border-radius: 12px 12px 12px 12px;
+}
+.card_pad{
+    padding: 5% !important;
+}
+.tr_for_body{
+    background-color:#6EA4AE ;
+}
+.tr_for_body :hover{
+    background-color:#AFCDD3;
+}
+    .fdfdf{
+        background-color:#bcdfe6;
+    }
+.text_fortr_body{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500,Medium;
+    font-size: 18px;
+    line-height: 70px;
+    letter-spacing: 5%;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    padding-left: 8%;
+    border: 5px solid #AFCDD3 !important;
+
+}
+.text_fortr_body1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500,Medium;
+    font-size: 18px;
+    line-height: 70px;
+    letter-spacing: 5%;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    border-top-left-radius:15px;
+    border-bottom-left-radius:15px;
+    border: 5px solid #AFCDD3 !important;
+}
+.text_fortr_body2{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500,Medium;
+    font-size: 18px;
+    line-height: 70px;
+    letter-spacing: 5%;
+    color: rgb(255, 255, 255);
+    text-align: start;
+    border-top-right-radius:15px;
+    border-bottom-right-radius:15px;
+    border: 5px solid #AFCDD3 !important;
 }
 .inpt2::-webkit-input-placeholder{ 
    color: #6ea4ae;
@@ -41,7 +94,7 @@
   /*background:  #03a9f4 !important; */
 }
  thead{
-    background: #6ea4ae;
+    background: #AFCDD3;
     font-size: 14px !important;
     text-align:center;
  }
@@ -55,6 +108,7 @@
  .toolbar{
     background: red;
  }
+
  .table>tbody>tr>td:nth-child(1) {
     background:#6ea4ae ;
 }
