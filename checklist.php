@@ -42,21 +42,6 @@ if(isset($_GET['id'])){
                             </div>';
                         	}
         ?>
-                        	<div class="col-md-12">
-                        <h2 class = "releases" align="center">CHECKLIST</h2>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 " align="center" >
-                        <div class="about">
-
-                            <p>'. $tox['info'].'</p>
-                            <br>
-                            <br>
-                        </div>
-                    </div>';
-                	}
-
-                ?>
                 	<div class="col-md-12">
                 <h2 class = "releases" align="center">CHECKLIST</h2>
             </div>
@@ -124,39 +109,40 @@ echo '</select></form>
 
                             <div class="card bootstrap-table">
 
-                                <div class="card-body table-full-width table-responsive filterable">
+                                <div class="card-body table-full-width table-responsive filterable card_pad">
+                                    <div class="father_box">
+                                        <table id="bootstrap-table-2" class="table">
+                                           <thead>
+                                            <!--<th data-field="state" data-checkbox="true"></th>-->
+                                            <th data-field="id" class="text-center">ID</th>
+                                            <th data-field="Card number">Card number</th>
+                                            <th data-field="Card name">Card name</th>
+                                            <th data-field="Team">Team</th>
+                                            <th data-field="Parallel">Parallel</th>
+                                            <th data-field="Print run">Print run</th>
+                                            </thead>
+                                            <tbody class="fdfdf">
+                                                 <?php
+                                                    $query=mysqli_query($con,$sql);
+                                                    $count = 0;
+                                                    $hesh='#';
+                                                    while($tox=mysqli_fetch_assoc($query)){
+                                                        $count++;
 
-                                    <table id="bootstrap-table-2" class="table">
-                                       <thead>
-                                        <!--<th data-field="state" data-checkbox="true"></th>-->
-                                        <th data-field="id" class="text-center">ID</th>
-                                        <th data-field="Card number">Card number</th>
-                                        <th data-field="Card name">Card name</th>
-                                        <th data-field="Team">Team</th>
-                                        <th data-field="Parallel">Parallel</th>
-                                        <th data-field="Print run">Print run</th>
-                                        </thead>
-                                        <tbody>
-                                             <?php
-                                                $query=mysqli_query($con,$sql);
-                                                $count = 0;
-                                                while($tox=mysqli_fetch_assoc($query)){
-                                                    $count++;
-
-                                            echo"
-                                                <tr>
-                                                  <td>".$count."<input  type='hidden' value='".$tox['id']."'/></td>
-                                                  <td>".$tox['card_number']."</td>
-                                                  <td>".$tox['card_name']."</td>
-                                                  <td>".$tox['team']."</td>
-                                                  <td>".$tox['parallel']."</td>
-                                                  <td>".$tox['print_run']."</td>
-                                                </tr>";
-                                        }
-                                        ?>
-                                        </tbody>
-                                        
-                                    </table>
+                                                echo"
+                                                    <tr class='tr_for_body'>
+                                                      <td class='text_fortr_body1'>".$hesh."<input  type='hidden' value='".$tox['id']."'/></td>
+                                                      <td class='text_fortr_body'>".$tox['card_number']."</td>
+                                                      <td class='text_fortr_body'>".$tox['card_name']."</td>
+                                                      <td class='text_fortr_body'>".$tox['team']."</td>
+                                                      <td class='text_fortr_body'>".$tox['parallel']."</td>
+                                                      <td class='text_fortr_body2'>".$tox['print_run']."</td>
+                                                    </tr>";
+                                            }
+                                            ?>
+                                            </tbody>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>
