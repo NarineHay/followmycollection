@@ -125,9 +125,10 @@ echo '</select></form>
                                                  <?php
                                                     $query=mysqli_query($con,$sql);
                                                     $count = 0;
-                                                    $hesh='#';
+                                                    $hesh=0;
                                                     while($tox=mysqli_fetch_assoc($query)){
                                                         $count++;
+                                                        $hesh++;
 
                                                 echo"
                                                     <tr class='tr_for_body'>
@@ -176,11 +177,11 @@ echo '</select></form>
 
             search: true,
             showColumns: true,
-            // pagination: true,
+            // pagination: false,
             searchAlign: 'left',
-            pageSize: 8,
+            // pageSize: 8,
             clickToSelect: false,
-            pageList: [8, 10, 25, 50, 100],
+            // pageList: [8, 10, 25, 50, 100],
 
             formatShowingRows: function(pageFrom, pageTo, totalRows) {
                 //do nothing here, we don't want to show the text "showing x of y from..."
