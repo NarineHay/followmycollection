@@ -2,6 +2,9 @@
 
     include "header.php";
     require "config/con1.php";
+    include "classes/pagination.php";
+    include "classes/table.php";
+
     if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
         if(!empty($_COOKIE['user'])){
             $user_id=$_COOKIE['user'];
@@ -15,6 +18,7 @@
     $from_data = explode("-", $data)[0];
     $to_data = explode("-", $data)[1];
     $type_id = $_GET['sport_type'];
+
     $sport_type="SELECT sport_type from sports_type where id = $type_id";
     $sport_type_querry=mysqli_query($con,$sport_type);
     $sport_row=mysqli_fetch_assoc($sport_type_querry);
@@ -22,9 +26,24 @@
     
     $collections_types= "SELECT * FROM collections where sport_type = '$sport_name' AND `year_of_releases` BETWEEN $from_data AND $to_data ";
     $collections_types_querry=mysqli_query($con,$collections_types);
+    $total_rows_query=mysqli_query($con, $collections_types);
     $take_collections_types = '';
-    $colections_count = mysqli_num_rows($collections_types_querry);
-    if($colections_count > 0) {
+    $num_rows = mysqli_num_rows($collections_types_querry);
+
+//    echo "<script>alert('" . $num_rows  . "')</script>";
+
+    $conditions = array('user_id' => $user_id, 'status' => $status, "delete_status" => 1);
+    $tables = new Tables();
+    $tables -> tblName = 'collections';
+    $tables -> limit = 20;
+    $table = $tables -> Table($con, $conditions);
+
+    $pagination = new Pagination();
+    $pagination -> limit = 20;
+    $pagination -> count_rows = mysqli_num_rows($total_rows_query);
+    $num_rows = mysqli_num_rows($collections_types_querry);
+
+    if($num_rows > 0) {
         while ($collections_row = mysqli_fetch_assoc($collections_types_querry)) {
             
                 $take_collections_types .=
@@ -97,7 +116,15 @@
                 </div>
                 <div class="cont_box_second">
                     <?= $take_collections_types?>
+                    <div class="mt-3">
+                        <nav aria-label="Page navigation ">
+                            <ul class="pagination justify-content-center r" >
+                                <?php echo $pp= $pagination->pages(); ?>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
+
             </div>
 
                 <!-- Modal -->

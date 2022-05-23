@@ -55,12 +55,12 @@
                     <?php
                         if (!empty($user_id)) {
                     ?>
-                        <input type="hidden" value="<?= $user_id ?>" class="user_id">
                         <div class="sport9">My Checklists</div>
                     <?php
                         }
                     ?>
         </div>
+        <input type="hidden" value="<?= $user_id ?>" class="user_id">
         <div class="bigger_block_slider">
             <div class="eee">
                 <input type="hidden" value="checklist" class="favorite_type">
@@ -170,6 +170,7 @@
     </div>
     <script>
         $('.mayr>div').click(function(event){
+
             let mychild = document.querySelector('.mayr')
             for(let i = 0; i < mychild.children.length; i++) {
                 mychild.children[i].style = {}
@@ -179,16 +180,14 @@
             if($(this).attr('class') != "sport1") {
                 if($(window).width() <= '1275'){
                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
-
-                    let user_id = $(".user_id").val()
                     let sport_id = $(this).attr("data-id")
-                    alert(sport_id)
                     let type = 'checklist';
+                    let user_id = $(".user_id").val()
                     $.post(
-                        'view_sport_dates.php',
+                        '/relese_checklist/view_sport_dates.php',
                         {sport_id, type, user_id},
                         function (result) {
-                            $(this).append(result)
+                            $(".sport2").append(result)
                         }
                     )
                 }
@@ -201,6 +200,7 @@
             }
         });
         $('.mayr1>div').click(function(event){
+
             let mychild = document.querySelector('.mayr1')
             for(let i = 0; i < mychild.children.length; i++) {
                 mychild.children[i].style = {}
@@ -212,6 +212,16 @@
             if($(this).attr('class') != "sport1") {
                 if($(window).width() <= '1275'){
                     $(this).css({'height': "350px","clip-path": 'unset','margin-top':' 0px','padding-top':'12px'})
+                    let sport_id = $(this).attr("data-id")
+                    let type = 'release';
+                    let user_id = $(".user_id").val()
+                    $.post(
+                        '/relese_checklist/view_sport_dates.php',
+                        {sport_id, type, user_id},
+                        function (result) {
+                            $(".sport2").append(result)
+                        }
+                    )
                 }
                 if($(window).width() > '1275') {
                     $(this).css({"clip-path": 'polygon(20% 40%, 76% 40%, 100% 100%, 0% 100%)', "padding-top": '56px', "padding-left": '1px', "pointer-events": 'none'})
@@ -273,7 +283,6 @@
             console.log("Sorry, we are out of ");
         }
         let user_id = $(".user_id").val()
-
         let sport_id = $(event.target).attr("data-id")
         let type = 'checklist';
         $.post(

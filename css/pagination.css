@@ -8,6 +8,7 @@
 .active-page{
     background: #133960;
     color: #fff;
+    cursor: default;
 }
 .pg-link{
     color: #133960 !important;
