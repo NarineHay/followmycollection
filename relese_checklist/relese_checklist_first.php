@@ -356,6 +356,7 @@
                 $(this).css('color', "white")
                 action = 'delete'
             }
+            
             $.ajax({
                 method:"POST",
                 url: "rate_test.php",
