@@ -9,6 +9,45 @@ if(isset($_GET['id'])){
 }
 ?>
 <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+<style>
+    .paging_simple_numbers {
+        display: flex;
+        justify-content: center;
+
+    }
+
+    .dataTables_info {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+
+    .paginate_button {
+        border-radius: 50%;
+        background: #6ea4ae;
+        font-size: 20px;
+        padding: 1px 10px;
+        margin: 0 4px;
+    }
+
+    .paginate_button:not(.current) {
+        cursor: pointer;
+    }
+
+
+    .current {
+        background: #133960;
+        color: #fff;
+        cursor: default ;
+    }
+
+    .current:hover {
+        background: #133960;
+        color: #fff;
+    }
+</style>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/index.css">
 <link rel="stylesheet" href="css/base_checklist.css">
@@ -176,7 +215,7 @@ echo '</select></form>
 
             search: true,
             showColumns: true,
-            // pagination: true,
+            pagination: false,
             searchAlign: 'left',
             pageSize: 8,
             clickToSelect: false,

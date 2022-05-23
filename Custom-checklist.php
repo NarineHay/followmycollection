@@ -1,18 +1,18 @@
 <?php
-include "header.php";
-include "config/con1.php";
-require_once "user-logedin.php";
-include "classes/pagination.php";
-include "classes/table.php";
+    include "header.php";
+    include "config/con1.php";
+    require_once "user-logedin.php";
+    include "classes/pagination.php";
+    include "classes/table.php";
 
-if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
-    if(!empty($_COOKIE['user'])){
-        $user_id=$_COOKIE['user'];
+    if(isset($_COOKIE['user']) || isset($_SESSION['user'])){
+        if(!empty($_COOKIE['user'])){
+            $user_id=$_COOKIE['user'];
+        }
+        if(!empty($_SESSION['user'])){
+            $user_id=$_SESSION['user'];
+        }
     }
-    if(!empty($_SESSION['user'])){
-        $user_id=$_SESSION['user'];
-    }
-}
 ?>
 
 <?php
