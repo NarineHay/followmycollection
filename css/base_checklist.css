@@ -16,8 +16,20 @@
     padding: 4%;
     border-radius: 12px 12px 12px 12px;
 }
+.secfather{
+    background-color: #AFCDD3;
+    padding: 4%;
+    border-radius: 12px 12px 12px 12px;
+    width: 100%;
+}
+.sec_card_pad{
+    padding: 5% !important;
+}
 .card_pad{
     padding: 5% !important;
+}
+.cont_tr{
+    background: #6ea4ae;
 }
 .tr_for_body{
     background-color:#6EA4AE ;

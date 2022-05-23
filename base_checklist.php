@@ -61,7 +61,7 @@ if(isset($_GET['id'])) {
 while($tox1=mysqli_fetch_assoc($query)){
         $count++;
 
-        $content .= " <tr>
+        $content .= " <tr class='cont_tr'>
                         <td>".$count."<input class='row-id' type='hidden' value='".$tox1['id']."'/></td>
                         <td><input type='checkbox' class='check-card'></td>
                         <td class='card_number'>".$tox1['card_number']."</td>
@@ -103,7 +103,8 @@ while($tox1=mysqli_fetch_assoc($query)){
                   </div>
 
 
-                 <div class="content">
+                <div class="content">
+               
                 <div class="container-fluid">
                     <div class="row">
 
@@ -111,7 +112,8 @@ while($tox1=mysqli_fetch_assoc($query)){
                         <div class="col-md-12">
 
                             <div class="card bootstrap-table">
-                                <div class="card-body table-full-width table-responsive filterable">
+                                <div class="card-body table-full-width table-responsive filterable sec_card_pad">
+                                <div class="secfather">  
                                     <div class="pull-left search">
                                         <input class="form-control all-search" type="text" placeholder="Search">
                                     </div>
@@ -181,7 +183,7 @@ while($tox1=mysqli_fetch_assoc($query)){
                                 </div>
                                     <div>
                                         <nav aria-label="Page navigation ">
-                                            <ul class="pagination justify-content-center r" >
+                                            <ul class="pagination justify-content-center r" style="margin-top: 10px;">
                                                 <?php echo $pp = $pagination->pages(); ?>
                                             </ul>
                                         </nav>
@@ -192,6 +194,7 @@ while($tox1=mysqli_fetch_assoc($query)){
                         </div>
                     </div>
                 </div>
+                </div> 
             </div>
 
         <div class="modal fade" id="selectPersonalChecklist" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
